@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		02 Redis 运维 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 科学上网工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/06%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B7%A5%E5%85%B7/01%20heroku%E6%90%AD%E5%BB%BAv2ray/">
+										01 heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	02 Redis 运维
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-12-18 13:35:57</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="Redis-运维"><a href="#Redis-运维" class="headerlink" title="Redis 运维"></a>Redis 运维</h1><blockquote>
+<p><strong>Redis</strong> 是一个高性能的 key-value 数据库。</p>
+<p>SET 操作每秒钟 110000 次；GET 操作每秒钟 81000 次。</p>
+</blockquote>
+<ul>
+<li>一、Redis 安装<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#window-%E4%B8%8B%E5%AE%89%E8%A3%85">Window 下安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#linux-%E4%B8%8B%E5%AE%89%E8%A3%85">Linux 下安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#ubuntu-%E4%B8%8B%E5%AE%89%E8%A3%85">Ubuntu 下安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8">开机启动</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E5%BC%80%E6%94%BE%E9%98%B2%E7%81%AB%E5%A2%99%E7%AB%AF%E5%8F%A3">开放防火墙端口</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#redis-%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC">Redis 安装脚本</a></li>
+</ul>
+</li>
+<li>二、Redis 单机使用和配置<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E5%90%AF%E5%8A%A8-redis">启动 Redis</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#redis-%E5%B8%B8%E8%A7%81%E9%85%8D%E7%BD%AE">Redis 常见配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E8%AE%BE%E4%B8%BA%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B">设为守护进程</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95">压力测试</a></li>
+</ul>
+</li>
+<li>三、Redis 集群使用和配置<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E9%9B%86%E7%BE%A4%E8%A7%84%E5%88%92">集群规划</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E9%83%A8%E7%BD%B2%E9%9B%86%E7%BE%A4">部署集群</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E9%83%A8%E7%BD%B2%E5%93%A8%E5%85%B5">部署哨兵</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E6%89%A9%E5%AE%B9">扩容</a></li>
+</ul>
+</li>
+<li>四、Redis 命令<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E9%80%9A%E7%94%A8%E5%91%BD%E4%BB%A4">通用命令</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E9%9B%86%E7%BE%A4%E5%91%BD%E4%BB%A4">集群命令</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E4%BA%94%E5%AE%A2%E6%88%B7%E7%AB%AF">五、客户端</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-ops.md#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li>
+</ul>
+<h2 id="一、Redis-安装"><a href="#一、Redis-安装" class="headerlink" title="一、Redis 安装"></a>一、Redis 安装</h2><h3 id="Window-下安装"><a href="#Window-下安装" class="headerlink" title="Window 下安装"></a>Window 下安装</h3><p><strong>下载地址：</strong><a target="_blank" rel="noopener" href="https://github.com/MSOpenTech/redis/releases%E3%80%82">https://github.com/MSOpenTech/redis/releases。</a></p>
+<p>Redis 支持 32 位和 64 位。这个需要根据你系统平台的实际情况选择，这里我们下载 <strong>Redis-x64-xxx.zip</strong>压缩包到 C 盘，解压后，将文件夹重新命名为 <strong>redis</strong>。</p>
+<p>打开一个 <strong>cmd</strong> 窗口 使用 cd 命令切换目录到 <strong>C:\redis</strong> 运行 <strong>redis-server.exe redis.windows.conf</strong> 。</p>
+<p>如果想方便的话，可以把 redis 的路径加到系统的环境变量里，这样就省得再输路径了，后面的那个 redis.windows.conf 可以省略，如果省略，会启用默认的。</p>
+<p>这时候另启一个 cmd 窗口，原来的不要关闭，不然就无法访问服务端了。</p>
+<p>切换到 redis 目录下运行 <strong>redis-cli.exe -h 127.0.0.1 -p 6379</strong> 。</p>
+<h3 id="Linux-下安装"><a href="#Linux-下安装" class="headerlink" title="Linux 下安装"></a>Linux 下安装</h3><p><strong>下载地址：</strong> <a target="_blank" rel="noopener" href="http://redis.io/download%EF%BC%8C%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E6%96%87%E6%A1%A3%E7%89%88%E6%9C%AC%E3%80%82">http://redis.io/download，下载最新文档版本。</a></p>
+<p>下载、解压、编译 Redis</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://download.redis.io/releases/redis-5.0.4.tar.gz</span><br><span class="line">tar xzf redis-5.0.4.tar.gz</span><br><span class="line">cd redis-5.0.4</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<p>为了编译 Redis 源码，你需要 gcc-c++和 tcl。如果你的系统是 CentOS，可以直接执行命令：<code>yum install -y gcc-c++ tcl</code> 来安装。</p>
+<p>进入到解压后的 <code>src</code> 目录，通过如下命令启动 Redis:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src/redis-server</span><br></pre></td></tr></table></figure>
+
+<p>您可以使用内置的客户端与 Redis 进行交互:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ src/redis-cli</span><br><span class="line">redis&gt; set foo bar</span><br><span class="line">OK</span><br><span class="line">redis&gt; get foo</span><br><span class="line">&quot;bar&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Ubuntu-下安装"><a href="#Ubuntu-下安装" class="headerlink" title="Ubuntu 下安装"></a>Ubuntu 下安装</h3><p>在 Ubuntu 系统安装 Redis 可以使用以下命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install redis-server</span><br></pre></td></tr></table></figure>
+
+<h3 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h3><ul>
+<li>开机启动配置：<code>echo &quot;/usr/local/bin/redis-server /etc/redis.conf&quot; &gt;&gt; /etc/rc.local</code></li>
+</ul>
+<h3 id="开放防火墙端口"><a href="#开放防火墙端口" class="headerlink" title="开放防火墙端口"></a>开放防火墙端口</h3><ul>
+<li>添加规则：<code>iptables -I INPUT -p tcp -m tcp --dport 6379 -j ACCEPT</code></li>
+<li>保存规则：<code>service iptables save</code></li>
+<li>重启 iptables：<code>service iptables restart</code></li>
+</ul>
+<h3 id="Redis-安装脚本"><a href="#Redis-安装脚本" class="headerlink" title="Redis 安装脚本"></a>Redis 安装脚本</h3><blockquote>
+<p>CentOS7 环境安装脚本：<a target="_blank" rel="noopener" href="https://github.com/dunwu/linux-tutorial/tree/master/codes/linux/soft">软件运维配置脚本集合</a></p>
+</blockquote>
+<p><strong>安装说明</strong></p>
+<ul>
+<li>采用编译方式安装 Redis, 并将其注册为 systemd 服务</li>
+<li>安装路径为：<code>/usr/local/redis</code></li>
+<li>默认下载安装 <code>5.0.4</code> 版本，端口号为：<code>6379</code>，密码为空</li>
+</ul>
+<p><strong>使用方法</strong></p>
+<ul>
+<li>默认安装 - 执行以下任意命令即可：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://gitee.com/turnon/linux-tutorial/raw/master/codes/linux/soft/redis-install.sh | bash</span><br><span class="line">wget -qO- https://gitee.com/turnon/linux-tutorial/raw/master/codes/linux/soft/redis-install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自定义安装 - 下载脚本到本地，并按照以下格式执行：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh redis-install.sh [version] [port] [password]</span><br></pre></td></tr></table></figure>
+
+<p>参数说明：</p>
+<ul>
+<li><code>version</code> - redis 版本号</li>
+<li><code>port</code> - redis 服务端口号</li>
+<li><code>password</code> - 访问密码</li>
+</ul>
+<h2 id="二、Redis-单机使用和配置"><a href="#二、Redis-单机使用和配置" class="headerlink" title="二、Redis 单机使用和配置"></a>二、Redis 单机使用和配置</h2><h3 id="启动-Redis"><a href="#启动-Redis" class="headerlink" title="启动 Redis"></a>启动 Redis</h3><p><strong>启动 redis 服务</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/redis/src</span><br><span class="line">./redis-server</span><br></pre></td></tr></table></figure>
+
+<p><strong>启动 redis 客户端</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/redis/src</span><br><span class="line">./redis-cli</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看 redis 是否启动</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli</span><br></pre></td></tr></table></figure>
+
+<p>以上命令将打开以下终端：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
+
+<p>127.0.0.1 是本机 IP ，6379 是 redis 服务端口。现在我们输入 PING 命令。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis 127.0.0.1:6379&gt; ping</span><br><span class="line">PONG</span><br></pre></td></tr></table></figure>
+
+<p>以上说明我们已经成功启动了 redis。</p>
+<h3 id="Redis-常见配置"><a href="#Redis-常见配置" class="headerlink" title="Redis 常见配置"></a>Redis 常见配置</h3><blockquote>
+<p>Redis 默认的配置文件是根目录下的 <code>redis.conf</code> 文件。</p>
+<p>如果需要指定特定文件作为配置文件，需要使用命令： <code>./redis-server -c xxx.conf</code></p>
+<p>每次修改配置后，需要重启才能生效。</p>
+<p>Redis 官方默认配置：</p>
+<ul>
+<li>自描述文档 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/antirez/redis/2.8/redis.conf">redis.conf for Redis 2.8</a></li>
+<li>自描述文档 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/antirez/redis/2.6/redis.conf">redis.conf for Redis 2.6</a>.</li>
+<li>自描述文档 <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/antirez/redis/2.4/redis.conf">redis.conf for Redis 2.4</a>.</li>
+</ul>
+<p>自 Redis2.6 起就可以直接通过命令行传递 Redis 配置参数。这种方法可以用于测试。自 Redis2.6 起就可以直接通过命令行传递 Redis 配置参数。这种方法可以用于测试。</p>
+</blockquote>
+<h3 id="设为守护进程"><a href="#设为守护进程" class="headerlink" title="设为守护进程"></a>设为守护进程</h3><p>Redis 默认以非守护进程方式启动，而通常我们会将 Redis 设为守护进程启动方式，配置：<code>daemonize yes</code></p>
+<h4 id="远程访问"><a href="#远程访问" class="headerlink" title="远程访问"></a>远程访问</h4><p>Redis 默认绑定 127.0.0.1，这样就只能本机才能访问，若要 Redis 允许远程访问，需要配置：<code>bind 0.0.0.0</code></p>
+<h4 id="设置密码"><a href="#设置密码" class="headerlink" title="设置密码"></a>设置密码</h4><p>Redis 默认访问不需要密码，如果需要设置密码，需要如下配置：</p>
+<ul>
+<li><code>protected-mode yes</code></li>
+<li><code>requirepass &lt;密码&gt;</code></li>
+</ul>
+<h4 id="配置参数表"><a href="#配置参数表" class="headerlink" title="配置参数表"></a>配置参数表</h4><table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>daemonize no</code></td>
+<td>Redis 默认不是以守护进程的方式运行，可以通过该配置项修改，使用 yes 启用守护进程（Windows 不支持守护线程的配置为 no ）</td>
+</tr>
+<tr>
+<td><code>pidfile /var/run/redis.pid</code></td>
+<td>当 Redis 以守护进程方式运行时，Redis 默认会把 pid 写入 /var/run/redis.pid 文件，可以通过 pidfile 指定</td>
+</tr>
+<tr>
+<td><code>port 6379</code></td>
+<td>指定 Redis 监听端口，默认端口为 6379，作者在自己的一篇博文中解释了为什么选用 6379 作为默认端口，因为 6379 在手机按键上 MERZ 对应的号码，而 MERZ 取自意大利歌女 Alessia Merz 的名字</td>
+</tr>
+<tr>
+<td><code>bind 127.0.0.1</code></td>
+<td>绑定的主机地址</td>
+</tr>
+<tr>
+<td><code>timeout 300</code></td>
+<td>当客户端闲置多长时间后关闭连接，如果指定为 0，表示关闭该功能</td>
+</tr>
+<tr>
+<td><code>loglevel notice</code></td>
+<td>指定日志记录级别，Redis 总共支持四个级别：debug、verbose、notice、warning，默认为 notice</td>
+</tr>
+<tr>
+<td><code>logfile stdout</code></td>
+<td>日志记录方式，默认为标准输出，如果配置 Redis 为守护进程方式运行，而这里又配置为日志记录方式为标准输出，则日志将会发送给 /dev/null</td>
+</tr>
+<tr>
+<td><code>databases 16</code></td>
+<td>设置数据库的数量，默认数据库为 0，可以使用 SELECT 命令在连接上指定数据库 id</td>
+</tr>
+<tr>
+<td><code>save &lt;seconds&gt; &lt;changes&gt;</code> Redis 默认配置文件中提供了三个条件：<strong>save 900 1</strong>、<strong>save 300 10</strong>、<strong>save 60 10000</strong> 分别表示 900 秒（15 分钟）内有 1 个更改，300 秒（5 分钟）内有 10 个更改以及 60 秒内有 10000 个更改。</td>
+<td>指定在多长时间内，有多少次更新操作，就将数据同步到数据文件，可以多个条件配合</td>
+</tr>
+<tr>
+<td><code>rdbcompression yes</code></td>
+<td>指定存储至本地数据库时是否压缩数据，默认为 yes，Redis 采用 LZF 压缩，如果为了节省 CPU 时间，可以关闭该选项，但会导致数据库文件变的巨大</td>
+</tr>
+<tr>
+<td><code>dbfilename dump.rdb</code></td>
+<td>指定本地数据库文件名，默认值为 dump.rdb</td>
+</tr>
+<tr>
+<td><code>dir ./</code></td>
+<td>指定本地数据库存放目录</td>
+</tr>
+<tr>
+<td><code>slaveof &lt;masterip&gt; &lt;masterport&gt;</code></td>
+<td>设置当本机为 slav 服务时，设置 master 服务的 IP 地址及端口，在 Redis 启动时，它会自动从 master 进行数据同步</td>
+</tr>
+<tr>
+<td><code>masterauth &lt;master-password&gt;</code></td>
+<td>当 master 服务设置了密码保护时，slav 服务连接 master 的密码</td>
+</tr>
+<tr>
+<td><code>requirepass foobared</code></td>
+<td>设置 Redis 连接密码，如果配置了连接密码，客户端在连接 Redis 时需要通过 AUTH 命令提供密码，默认关闭</td>
+</tr>
+<tr>
+<td><code>maxclients 128</code></td>
+<td>设置同一时间最大客户端连接数，默认无限制，Redis 可以同时打开的客户端连接数为 Redis 进程可以打开的最大文件描述符数，如果设置 maxclients 0，表示不作限制。当客户端连接数到达限制时，Redis 会关闭新的连接并向客户端返回 max number of clients reached 错误信息</td>
+</tr>
+<tr>
+<td><code>maxmemory &lt;bytes&gt;</code></td>
+<td>指定 Redis 最大内存限制，Redis 在启动时会把数据加载到内存中，达到最大内存后，Redis 会先尝试清除已到期或即将到期的 Key，当此方法处理 后，仍然到达最大内存设置，将无法再进行写入操作，但仍然可以进行读取操作。Redis 新的 vm 机制，会把 Key 存放内存，Value 会存放在 swap 区</td>
+</tr>
+<tr>
+<td><code>appendonly no</code></td>
+<td>指定是否在每次更新操作后进行日志记录，Redis 在默认情况下是异步的把数据写入磁盘，如果不开启，可能会在断电时导致一段时间内的数据丢失。因为 redis 本身同步数据文件是按上面 save 条件来同步的，所以有的数据会在一段时间内只存在于内存中。默认为 no</td>
+</tr>
+<tr>
+<td><code>appendfilename appendonly.aof</code></td>
+<td>指定更新日志文件名，默认为 appendonly.aof</td>
+</tr>
+<tr>
+<td><code>appendfsync everysec</code></td>
+<td>指定更新日志条件，共有 3 个可选值：<strong>no</strong>：表示等操作系统进行数据缓存同步到磁盘（快）<strong>always</strong>：表示每次更新操作后手动调用 fsync() 将数据写到磁盘（慢，安全）<strong>everysec</strong>：表示每秒同步一次（折中，默认值）</td>
+</tr>
+<tr>
+<td><code>vm-enabled no</code></td>
+<td>指定是否启用虚拟内存机制，默认值为 no，简单的介绍一下，VM 机制将数据分页存放，由 Redis 将访问量较少的页即冷数据 swap 到磁盘上，访问多的页面由磁盘自动换出到内存中（在后面的文章我会仔细分析 Redis 的 VM 机制）</td>
+</tr>
+<tr>
+<td><code>vm-swap-file /tmp/redis.swap</code></td>
+<td>虚拟内存文件路径，默认值为 /tmp/redis.swap，不可多个 Redis 实例共享</td>
+</tr>
+<tr>
+<td><code>vm-max-memory 0</code></td>
+<td>将所有大于 vm-max-memory 的数据存入虚拟内存，无论 vm-max-memory 设置多小，所有索引数据都是内存存储的(Redis 的索引数据 就是 keys)，也就是说，当 vm-max-memory 设置为 0 的时候，其实是所有 value 都存在于磁盘。默认值为 0</td>
+</tr>
+<tr>
+<td><code>vm-page-size 32</code></td>
+<td>Redis swap 文件分成了很多的 page，一个对象可以保存在多个 page 上面，但一个 page 上不能被多个对象共享，vm-page-size 是要根据存储的 数据大小来设定的，作者建议如果存储很多小对象，page 大小最好设置为 32 或者 64bytes；如果存储很大大对象，则可以使用更大的 page，如果不确定，就使用默认值</td>
+</tr>
+<tr>
+<td><code>vm-pages 134217728</code></td>
+<td>设置 swap 文件中的 page 数量，由于页表（一种表示页面空闲或使用的 bitmap）是在放在内存中的，，在磁盘上每 8 个 pages 将消耗 1byte 的内存。</td>
+</tr>
+<tr>
+<td><code>vm-max-threads 4</code></td>
+<td>设置访问 swap 文件的线程数,最好不要超过机器的核数,如果设置为 0,那么所有对 swap 文件的操作都是串行的，可能会造成比较长时间的延迟。默认值为 4</td>
+</tr>
+<tr>
+<td><code>glueoutputbuf yes</code></td>
+<td>设置在向客户端应答时，是否把较小的包合并为一个包发送，默认为开启</td>
+</tr>
+<tr>
+<td><code>hash-max-zipmap-entries 64 hash-max-zipmap-value 512</code></td>
+<td>指定在超过一定的数量或者最大的元素超过某一临界值时，采用一种特殊的哈希算法</td>
+</tr>
+<tr>
+<td><code>activerehashing yes</code></td>
+<td>指定是否激活重置哈希，默认为开启（后面在介绍 Redis 的哈希算法时具体介绍）</td>
+</tr>
+<tr>
+<td><code>include /path/to/local.conf</code></td>
+<td>指定包含其它的配置文件，可以在同一主机上多个 Redis 实例之间使用同一份配置文件，而同时各个实例又拥有自己的特定配置文件</td>
+</tr>
+</tbody></table>
+<h3 id="压力测试"><a href="#压力测试" class="headerlink" title="压力测试"></a>压力测试</h3><blockquote>
+<p>参考官方文档：<a target="_blank" rel="noopener" href="https://redis.io/topics/benchmarks">How fast is Redis?</a></p>
+</blockquote>
+<p>Redis 自带了一个性能测试工具：<code>redis-benchmark</code></p>
+<p><strong>（1）基本测试</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-benchmark -q -n 100000</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-q</code> 表示静默（quiet）执行</li>
+<li><code>-n 100000</code> 请求 10 万次</li>
+</ul>
+<p><strong>（2）测试指定读写指令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ redis-benchmark -t set,lpush -n 100000 -q</span><br><span class="line">SET: 74239.05 requests per second</span><br><span class="line">LPUSH: 79239.30 requests per second</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）测试 pipeline 模式下指定读写指令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">redis-benchmark -n 1000000 -t set,get -P 16 -q</span><br><span class="line">SET: 403063.28 requests per second</span><br><span class="line">GET: 508388.41 requests per second</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、Redis-集群使用和配置"><a href="#三、Redis-集群使用和配置" class="headerlink" title="三、Redis 集群使用和配置"></a>三、Redis 集群使用和配置</h2><p>Redis 3.0 后支持集群模式。</p>
+<h3 id="集群规划"><a href="#集群规划" class="headerlink" title="集群规划"></a>集群规划</h3><p><code>Redis</code> 集群一般由 <strong>多个节点</strong> 组成，节点数量至少为 <code>6</code> 个，才能保证组成 <strong>完整高可用</strong> 的集群。</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/1dc2983e882c8a6737b94237cc8aaa34e75178dd/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306431633339323f773d3134363726683d38303326663d706e6726733d3433343238"><img src="https://camo.githubusercontent.com/1dc2983e882c8a6737b94237cc8aaa34e75178dd/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306431633339323f773d3134363726683d38303326663d706e6726733d3433343238" alt="img"></a></p>
+<p>理想情况当然是所有节点各自在不同的机器上，首先于资源，本人在部署 Redis 集群时，只得到 3 台服务器。所以，我计划每台服务器部署 2 个 Redis 节点。</p>
+<p>【示例】最简高可用 Redis 集群规划</p>
+<p>机器配置：16G 内存 + 8 核 CPU + 1T 磁盘</p>
+<p>Redis 进程分配 10 G 内存。一般线上生产环境，Redis 的内存尽量不要超过 10g，超过 10g 可能会有问题。</p>
+<p>集群拓扑：三主三从；三哨兵，每个哨兵监听所有主节点。</p>
+<p>估算性能：</p>
+<ul>
+<li>容量：三主，占用 30 G 内存，所以最大存储容量为 30 G。假设每条数据记录平均 大小为 10 K，则最大能存储 300 万条数据。</li>
+<li>吞吐量：单机一般 TPS/QPS 为 五万到八万左右。假设为五万，那么三主三从架构理论上能达到 TPS 15 万，QPS 30 万。</li>
+</ul>
+<h3 id="部署集群"><a href="#部署集群" class="headerlink" title="部署集群"></a>部署集群</h3><blockquote>
+<p>Redis 集群节点的安装与单节点服务相同，差异仅在于部署方式。</p>
+<p>注意：为了演示方便，本示例将所有 Redis 集群节点都部署在一台机器上，实际生产环境中，基本都会将节点部署在不同机器上。要求更高的，可能还要考虑多机房部署。</p>
+</blockquote>
+<p>（1）创建节点目录</p>
+<p>我个人偏好将软件放在 <code>/opt</code> 目录下，在我的机器中，Redis 都安装在 <code>/usr/local/redis</code> 目录下。所以，下面的命令和配置都假设 Redis 安装目录为 <code>/usr/local/redis</code> 。</p>
+<p>确保机器上已经安装了 Redis 后，执行以下命令，创建 Redis 集群节点实例目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/local/redis/conf/7001</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/7002</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/7003</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/7004</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/7005</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/7006</span><br></pre></td></tr></table></figure>
+
+<p>（2）配置集群节点</p>
+<p>每个实例目录下，新建 <code>redis.conf</code> 配置文件。</p>
+<p>实例配置模板以 7001 节点为例（其他节点，完全替换配置中的端口号 7001 即可），如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 端口号</span><br><span class="line">port 7001</span><br><span class="line"># 绑定的主机端口（0.0.0.0 表示允许远程访问）</span><br><span class="line">bind 0.0.0.0</span><br><span class="line"># 以守护进程方式启动</span><br><span class="line">daemonize yes</span><br><span class="line"></span><br><span class="line"># 开启集群模式</span><br><span class="line">cluster-enabled yes</span><br><span class="line"># 集群的配置，配置文件首次启动自动生成</span><br><span class="line">cluster-config-file /usr/local/redis/conf/7001/7001.conf</span><br><span class="line"># 请求超时时间，设置 10 秒</span><br><span class="line">cluster-node-timeout 10000</span><br><span class="line"></span><br><span class="line"># 开启 AOF 持久化</span><br><span class="line">appendonly yes</span><br><span class="line"># 数据存放目录</span><br><span class="line">dir /usr/local/redis/conf/7001</span><br><span class="line"># 进程文件</span><br><span class="line">pidfile /usr/local/redis/conf/7001/7001.pid</span><br><span class="line"># 日志文件</span><br><span class="line">logfile /usr/local/redis/conf/7001/7001.log</span><br></pre></td></tr></table></figure>
+
+<p>（3）批量启动 Redis 节点</p>
+<p>Redis 的 utils/create-cluster 目录下自带了一个名为 create-cluster 的脚本工具，可以利用它来新建、启动、停止、重启 Redis 节点。</p>
+<p>脚本中有几个关键参数：</p>
+<ul>
+<li><code>PORT</code>=30000 - 初始端口号</li>
+<li><code>TIMEOUT</code>=2000 - 超时时间</li>
+<li><code>NODES</code>=6 - 节点数</li>
+<li><code>REPLICAS</code>=1 - 备份数</li>
+</ul>
+<p>脚本中的每个命令项会根据初始端口号，以及设置的节点数，遍历的去执行操作。</p>
+<p>由于前面的规划中，节点端口是从 7001 ~ 7006，所以需要将 PORT 变量设为 7000。</p>
+<p>脚本中启动每个 Redis 节点是通过指定命令行参数来配置属性。所以，我们需要改一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">PORT=7000</span><br><span class="line">TIMEOUT=2000</span><br><span class="line">NODES=6</span><br><span class="line">ENDPORT=$((PORT+NODES))</span><br><span class="line"></span><br><span class="line"># ...</span><br><span class="line"></span><br><span class="line">if [ &quot;$1&quot; == &quot;start&quot; ]</span><br><span class="line">then</span><br><span class="line">    while [ $((PORT &lt; ENDPORT)) != &quot;0&quot; ]; do</span><br><span class="line">        PORT=$((PORT+1))</span><br><span class="line">        echo &quot;Starting $PORT&quot;</span><br><span class="line">        /usr/local/redis/src/redis-server /usr/local/redis/conf/$&#123;PORT&#125;/redis.conf</span><br><span class="line">    done</span><br><span class="line">    exit 0</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>好了，在每台服务器上，都执行 <code>./create-cluster start</code> 来启动节点。</p>
+<p>然后，通过 ps 命令来确认 Redis 进程是否已经工作：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># root @ dbClusterDev01 in /usr/local/redis/conf [11:07:55]</span><br><span class="line">$ ps -ef | grep redis</span><br><span class="line">root      4604     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7001 [cluster]</span><br><span class="line">root      4609     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7002 [cluster]</span><br><span class="line">root      4614     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7003 [cluster]</span><br><span class="line">root      4619     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7004 [cluster]</span><br><span class="line">root      4624     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7005 [cluster]</span><br><span class="line">root      4629     1  0 11:07 ?        00:00:00 /opt/redis/src/redis-server 0.0.0.0:7006 [cluster]</span><br></pre></td></tr></table></figure>
+
+<p>（4）启动集群</p>
+<p>通过 <code>redis-cli --cluster create</code> 命令可以自动配置集群，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./redis-cli --cluster create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.2:7003 127.0.0.2:7004 127.0.0.3:7005 127.0.0.3:7006 --cluster-replicas 1</span><br></pre></td></tr></table></figure>
+
+<p>redis-cluster 会根据设置的节点数和副本数自动分片（分配 Hash 虚拟槽 slot），如果满意，输入 yes ，直接开始分片。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; Performing hash slots allocation on 6 nodes...</span><br><span class="line">Master[0] -&gt; Slots 0 - 5460</span><br><span class="line">Master[1] -&gt; Slots 5461 - 10922</span><br><span class="line">Master[2] -&gt; Slots 10923 - 16383</span><br><span class="line">Adding replica 127.0.0.2:7004 to 127.0.0.1:7001</span><br><span class="line">Adding replica 127.0.0.3:7006 to 127.0.0.2:7003</span><br><span class="line">Adding replica 127.0.0.1:7002 to 127.0.0.3:7005</span><br><span class="line">M: b721235997deb6b9a7a2be690b5b9663db8057c6 127.0.0.1:7001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">S: bda9b7036df0bbefe601bda4ce45d3787a2e9bd9 127.0.0.1:7002</span><br><span class="line">   replicates 3623fff69b5243ed18c02a2fbb6f53069b0f1505</span><br><span class="line">M: 91523c0391a044da6cc9f53bb965aabe89502187 127.0.0.2:7003</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">S: 9d899cbe49dead7b8c4f769920cdb75714a441ae 127.0.0.2:7004</span><br><span class="line">   replicates b721235997deb6b9a7a2be690b5b9663db8057c6</span><br><span class="line">M: 3623fff69b5243ed18c02a2fbb6f53069b0f1505 127.0.0.3:7005</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">S: a2869dc153ea4977ca790b76483574a5d56cb40e 127.0.0.3:7006</span><br><span class="line">   replicates 91523c0391a044da6cc9f53bb965aabe89502187</span><br><span class="line">Can I set the above configuration? (type &#x27;yes&#x27; to accept): yes</span><br><span class="line">&gt;&gt;&gt; Nodes configuration updated</span><br><span class="line">&gt;&gt;&gt; Assign a different config epoch to each node</span><br><span class="line">&gt;&gt;&gt; Sending CLUSTER MEET messages to join the cluster</span><br><span class="line">Waiting for the cluster to join</span><br><span class="line">....</span><br><span class="line">&gt;&gt;&gt; Performing Cluster Check (using node 127.0.0.1:7001)</span><br><span class="line">M: b721235997deb6b9a7a2be690b5b9663db8057c6 127.0.0.1:7001</span><br><span class="line">   slots:[0-5460] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: a2869dc153ea4977ca790b76483574a5d56cb40e 127.0.0.1:7006</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 91523c0391a044da6cc9f53bb965aabe89502187</span><br><span class="line">M: 91523c0391a044da6cc9f53bb965aabe89502187 127.0.0.1:7003</span><br><span class="line">   slots:[5461-10922] (5462 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">M: 3623fff69b5243ed18c02a2fbb6f53069b0f1505 127.0.0.1:7005</span><br><span class="line">   slots:[10923-16383] (5461 slots) master</span><br><span class="line">   1 additional replica(s)</span><br><span class="line">S: 9d899cbe49dead7b8c4f769920cdb75714a441ae 127.0.0.1:7004</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates b721235997deb6b9a7a2be690b5b9663db8057c6</span><br><span class="line">S: bda9b7036df0bbefe601bda4ce45d3787a2e9bd9 127.0.0.1:7002</span><br><span class="line">   slots: (0 slots) slave</span><br><span class="line">   replicates 3623fff69b5243ed18c02a2fbb6f53069b0f1505</span><br><span class="line">[OK] All nodes agree about slots configuration.</span><br><span class="line">&gt;&gt;&gt; Check for open slots...</span><br><span class="line">&gt;&gt;&gt; Check slots coverage...</span><br><span class="line">[OK] All 16384 slots covered.</span><br></pre></td></tr></table></figure>
+
+<p>（5）日常维护操作</p>
+<ul>
+<li>关闭集群 - <code>./create-cluster stop</code></li>
+<li>检查集群是否健康（指定任意节点即可）：<code>./redis-cli --cluster check &lt;ip:port&gt;</code></li>
+<li>尝试修复集群节点：<code>./redis-cli --cluster fix &lt;ip:port&gt;</code></li>
+</ul>
+<h3 id="部署哨兵"><a href="#部署哨兵" class="headerlink" title="部署哨兵"></a>部署哨兵</h3><p>redis-cluster 实现了 Redis 的分片、复制。</p>
+<p>但 redis-cluster 没有解决故障转移问题，一旦任意分片的 Master 节点宕机、网络不通，就会导致 redis-cluster 的集群不能工作。为了解决高可用的问题，Redis 提供了 Redis 哨兵来监控 Redis 节点状态，并且会在 Master 宕机时，发起选举，将这个 Master 的一个 Slave 节点选举为 Master。</p>
+<p>（1）创建节点目录</p>
+<p>我个人偏好将软件放在 <code>/opt</code> 目录下，在我的机器中，Redis 都安装在 <code>/usr/local/redis</code> 目录下。所以，下面的命令和配置都假设 Redis 安装目录为 <code>/usr/local/redis</code> 。</p>
+<p>确保机器上已经安装了 Redis 后，执行以下命令，创建 Redis 集群节点实例目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/local/redis/conf/27001</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/27002</span><br><span class="line">sudo mkdir -p /usr/local/redis/conf/27003</span><br></pre></td></tr></table></figure>
+
+<p>（2）配置集群节点</p>
+<p>每个实例目录下，新建 <code>redis.conf</code> 配置文件。</p>
+<p>实例配置模板以 7001 节点为例（其他节点，完全替换配置中的端口号 7001 即可），如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">port 27001</span><br><span class="line">daemonize yes</span><br><span class="line">sentinel monitor redis-master 172.22.6.3 7001 2</span><br><span class="line">sentinel down-after-milliseconds redis-master 5000</span><br><span class="line">sentinel failover-timeout redis-master 900000</span><br><span class="line">sentinel parallel-syncs redis-master 1</span><br><span class="line">#sentinel auth-pass redis-master 123456</span><br><span class="line">logfile /usr/local/redis/conf/27001/27001.log</span><br></pre></td></tr></table></figure>
+
+<p>（3）批量启动哨兵节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/opt/redis/src/redis-sentinel /usr/local/redis/conf/27001/sentinel.conf</span><br><span class="line">/opt/redis/src/redis-sentinel /usr/local/redis/conf/27002/sentinel.conf</span><br><span class="line">/opt/redis/src/redis-sentinel /usr/local/redis/conf/27003/sentinel.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><p>（1）查看信息</p>
+<p>进入任意节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-cli -h 172.22.6.3 -p 7001</span><br></pre></td></tr></table></figure>
+
+<p>cluster info 查看集群节点状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">172.22.6.3:7001&gt; cluster nodes</span><br><span class="line">f158bf70bb2767cac271ce4efcfc14ba0b7ca98b 172.22.6.3:7006@17006 slave e7aa182e756b76ec85b471797db9b66e4b2da725 0 1594528179000 6 connected</span><br><span class="line">f348e67648460c7a800120d69b4977bf2e4524cb 172.22.6.3:7001@17001 myself,master - 0 1594528179000 1 connected 0-5460</span><br><span class="line">52601e2d4af0e64b83f4cc6d20e8316d0ac38b99 172.22.6.3:7004@17004 slave 4802fafe897160c46392c6e569d6f5e466cca696 0 1594528178000 4 connected</span><br><span class="line">c6c6a68674ae8aac3c6ec792c8af4dc1228c6c31 172.22.6.3:7005@17005 slave f348e67648460c7a800120d69b4977bf2e4524cb 0 1594528179852 5 connected</span><br><span class="line">e7aa182e756b76ec85b471797db9b66e4b2da725 172.22.6.3:7002@17002 master - 0 1594528178000 2 connected 5461-10922</span><br><span class="line">4802fafe897160c46392c6e569d6f5e466cca696 172.22.6.3:7003@17003 master - 0 1594528178000 3 connected 10923-16383</span><br></pre></td></tr></table></figure>
+
+<p>cluster info 查看集群信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">172.22.6.3:7001&gt; cluster info</span><br><span class="line">cluster_state:ok</span><br><span class="line">cluster_slots_assigned:16384</span><br><span class="line">cluster_slots_ok:16384</span><br><span class="line">cluster_slots_pfail:0</span><br><span class="line">cluster_slots_fail:0</span><br><span class="line">cluster_known_nodes:6</span><br><span class="line">cluster_size:3</span><br><span class="line">cluster_current_epoch:6</span><br><span class="line">cluster_my_epoch:1</span><br><span class="line">cluster_stats_messages_ping_sent:3406</span><br><span class="line">cluster_stats_messages_pong_sent:3569</span><br><span class="line">cluster_stats_messages_publish_sent:5035</span><br><span class="line">cluster_stats_messages_sent:12010</span><br><span class="line">cluster_stats_messages_ping_received:3564</span><br><span class="line">cluster_stats_messages_pong_received:3406</span><br><span class="line">cluster_stats_messages_meet_received:5</span><br><span class="line">cluster_stats_messages_publish_received:5033</span><br><span class="line">cluster_stats_messages_received:12008</span><br></pre></td></tr></table></figure>
+
+<p>（2）添加节点到集群</p>
+<p>将已启动的节点实例添加到集群中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli --cluster add-node 127.0.0.1:7007 127.0.0.1:7008</span><br></pre></td></tr></table></figure>
+
+<p><strong>添加主节点</strong></p>
+<p>添加一组主节点</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./redis-cli --cluster add-node 172.22.6.3:7007 172.22.6.3:7001</span><br><span class="line">./redis-cli --cluster add-node 172.22.6.3:7008 172.22.6.3:7001</span><br><span class="line">./redis-cli --cluster add-node 172.22.6.3:7009 172.22.6.3:7001</span><br></pre></td></tr></table></figure>
+
+<p>查看节点状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">172.22.6.3:7001&gt; cluster nodes</span><br><span class="line">f158bf70bb2767cac271ce4efcfc14ba0b7ca98b 172.22.6.3:7006@17006 slave e7aa182e756b76ec85b471797db9b66e4b2da725 0 1594529342575 6 connected</span><br><span class="line">f348e67648460c7a800120d69b4977bf2e4524cb 172.22.6.3:7001@17001 myself,master - 0 1594529340000 1 connected 0-5460</span><br><span class="line">55cacf121662833a4a19dbeb4a5df712cfedf77f 172.22.6.3:7009@17009 master - 0 1594529342000 0 connected</span><br><span class="line">c6c6a68674ae8aac3c6ec792c8af4dc1228c6c31 172.22.6.3:7005@17005 slave f348e67648460c7a800120d69b4977bf2e4524cb 0 1594529341573 5 connected</span><br><span class="line">4802fafe897160c46392c6e569d6f5e466cca696 172.22.6.3:7003@17003 master - 0 1594529343577 3 connected 10923-16383</span><br><span class="line">e7aa182e756b76ec85b471797db9b66e4b2da725 172.22.6.3:7002@17002 master - 0 1594529342000 2 connected 5461-10922</span><br><span class="line">e5ba78fe629115977a74fbbe1478caf8868d6d55 172.22.6.3:7007@17007 master - 0 1594529341000 0 connected</span><br><span class="line">52601e2d4af0e64b83f4cc6d20e8316d0ac38b99 172.22.6.3:7004@17004 slave 4802fafe897160c46392c6e569d6f5e466cca696 0 1594529340000 4 connected</span><br><span class="line">79d4fffc2cec210556c3b4c44e63ab506e87eda3 172.22.6.3:7008@17008 master - 0 1594529340000 7 connected</span><br></pre></td></tr></table></figure>
+
+<p>可以发现，新加入的三个主节点，还没有分配哈希槽，所以，暂时还无法访问。</p>
+<p><strong>添加从节点</strong></p>
+<p>–slave：设置该参数，则新节点以 slave 的角色加入集群<br>–master-id：这个参数需要设置了–slave 才能生效，–master-id 用来指定新节点的 master 节点。如果不设置该参数，则会随机为节点选择 master 节点。</p>
+<p>语法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli --cluster add-node  新节点IP地址：端口    存在节点IP：端口 --cluster-slave （从节点） --cluster-master-id （master节点的ID）</span><br><span class="line">redis-cli --cluster add-node   10.42.141.119:6379  10.42.166.105:6379  --cluster-slave   --cluster-master-id  dfa238fff8a7a49230cff7eb74f573f5645c8ec5</span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./redis-cli --cluster add-node 172.22.6.3:7010 172.22.6.3:7007 --cluster-slave</span><br><span class="line">./redis-cli --cluster add-node 172.22.6.3:7011 172.22.6.3:7008 --cluster-slave</span><br><span class="line">./redis-cli --cluster add-node 172.22.6.3:7012 172.22.6.3:7009 --cluster-slave</span><br></pre></td></tr></table></figure>
+
+<p>查看状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">172.22.6.3:7001&gt; cluster nodes</span><br><span class="line">ef5c1b9ce4cc795dc12b2c1e8736a572647b4c3e 172.22.6.3:7011@17011 slave 79d4fffc2cec210556c3b4c44e63ab506e87eda3 0 1594529492043 7 connected</span><br><span class="line">f158bf70bb2767cac271ce4efcfc14ba0b7ca98b 172.22.6.3:7006@17006 slave e7aa182e756b76ec85b471797db9b66e4b2da725 0 1594529491943 6 connected</span><br><span class="line">f348e67648460c7a800120d69b4977bf2e4524cb 172.22.6.3:7001@17001 myself,master - 0 1594529488000 1 connected 0-5460</span><br><span class="line">5140d1129ed850df59c51cf818c4eb74545d9959 172.22.6.3:7010@17010 slave e5ba78fe629115977a74fbbe1478caf8868d6d55 0 1594529488000 0 connected</span><br><span class="line">55cacf121662833a4a19dbeb4a5df712cfedf77f 172.22.6.3:7009@17009 master - 0 1594529488000 8 connected</span><br><span class="line">c6c6a68674ae8aac3c6ec792c8af4dc1228c6c31 172.22.6.3:7005@17005 slave f348e67648460c7a800120d69b4977bf2e4524cb 0 1594529490000 5 connected</span><br><span class="line">4802fafe897160c46392c6e569d6f5e466cca696 172.22.6.3:7003@17003 master - 0 1594529489939 3 connected 10923-16383</span><br><span class="line">e7aa182e756b76ec85b471797db9b66e4b2da725 172.22.6.3:7002@17002 master - 0 1594529491000 2 connected 5461-10922</span><br><span class="line">e5ba78fe629115977a74fbbe1478caf8868d6d55 172.22.6.3:7007@17007 master - 0 1594529490942 0 connected</span><br><span class="line">52601e2d4af0e64b83f4cc6d20e8316d0ac38b99 172.22.6.3:7004@17004 slave 4802fafe897160c46392c6e569d6f5e466cca696 0 1594529491000 4 connected</span><br><span class="line">02e9f57b5b45c350dc57acf1c8efa8db136db7b7 172.22.6.3:7012@17012 master - 0 1594529489000 0 connected</span><br><span class="line">79d4fffc2cec210556c3b4c44e63ab506e87eda3 172.22.6.3:7008@17008 master - 0 1594529489000 7 connected</span><br></pre></td></tr></table></figure>
+
+<p>分配哈希槽</p>
+<p>执行 <code>./redis-cli --cluster rebalance 172.22.6.3:7001 --cluster-threshold 1 --cluster-use-empty-masters</code></p>
+<p>参数说明：</p>
+<p>rebalance：表明让 Redis 自动根据节点数进行均衡哈希槽分配。</p>
+<p>–cluster-use-empty-masters：表明</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/9d9495e4c9bebf5f76ed89e418bc86eaf0843f19/687474703a2f2f64756e77752e746573742e757063646e2e6e65742f736e61702f32303230303731323132353832372e706e67"><img src="https://camo.githubusercontent.com/9d9495e4c9bebf5f76ed89e418bc86eaf0843f19/687474703a2f2f64756e77752e746573742e757063646e2e6e65742f736e61702f32303230303731323132353832372e706e67" alt="img"></a></p>
+<p>执行结束后，查看状态：</p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/e69e7dbb661edff3386f23411b981adba7a2d1f0/687474703a2f2f64756e77752e746573742e757063646e2e6e65742f736e61702f32303230303731323133303233342e706e67"><img src="https://camo.githubusercontent.com/e69e7dbb661edff3386f23411b981adba7a2d1f0/687474703a2f2f64756e77752e746573742e757063646e2e6e65742f736e61702f32303230303731323133303233342e706e67" alt="img"></a></p>
+<h2 id="四、Redis-命令"><a href="#四、Redis-命令" class="headerlink" title="四、Redis 命令"></a>四、Redis 命令</h2><h3 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h3><blockquote>
+<p>命令详细用法，请参考 <a target="_blank" rel="noopener" href="https://redis.io/commands"><strong>Redis 命令官方文档</strong></a></p>
+<p>搬迁两张 cheat sheet 图，原址：<a target="_blank" rel="noopener" href="https://www.cheatography.com/tasjaevan/cheat-sheets/redis/">https://www.cheatography.com/tasjaevan/cheat-sheets/redis/</a></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/0006abe609fd7250e5bf793e5cf91b0d335b762f/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306238656135373f773d3232333026683d3239313426663d706e6726733d323436343333"><img src="https://camo.githubusercontent.com/0006abe609fd7250e5bf793e5cf91b0d335b762f/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306238656135373f773d3232333026683d3239313426663d706e6726733d323436343333" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://camo.githubusercontent.com/97c9bfa2bacb2b7a4e9ea9b46163bc836b509143/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306539626133633f773d3232323926683d3238393026663d706e6726733d313932393937"><img src="https://camo.githubusercontent.com/97c9bfa2bacb2b7a4e9ea9b46163bc836b509143/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f31302f31302f313664623532353062306539626133633f773d3232323926683d3238393026663d706e6726733d313932393937" alt="img"></a></p>
+<h3 id="集群命令"><a href="#集群命令" class="headerlink" title="集群命令"></a>集群命令</h3><ul>
+<li>集群<ul>
+<li><code>cluster info</code> - 打印集群的信息</li>
+<li><code>cluster nodes</code> - 列出集群当前已知的所有节点（ node），以及这些节点的相关信息。</li>
+</ul>
+</li>
+<li>节点<ul>
+<li><code>cluster meet &lt;ip&gt; &lt;port&gt;</code> - 将 ip 和 port 所指定的节点添加到集群当中，让它成为集群的一份子。</li>
+<li><code>cluster forget &lt;node_id&gt;</code> - 从集群中移除 node_id 指定的节点。</li>
+<li><code>cluster replicate &lt;node_id&gt;</code> - 将当前节点设置为 node_id 指定的节点的从节点。</li>
+<li><code>cluster saveconfig</code> - 将节点的配置文件保存到硬盘里面。</li>
+</ul>
+</li>
+<li>槽(slot)<ul>
+<li><code>cluster addslots &lt;slot&gt; [slot ...]</code> - 将一个或多个槽（ slot）指派（ assign）给当前节点。</li>
+<li><code>cluster delslots &lt;slot&gt; [slot ...]</code> - 移除一个或多个槽对当前节点的指派。</li>
+<li><code>cluster flushslots</code> - 移除指派给当前节点的所有槽，让当前节点变成一个没有指派任何槽的节点。</li>
+<li><code>cluster setslot &lt;slot&gt; node &lt;node_id&gt;</code> - 将槽 slot 指派给 node_id 指定的节点，如果槽已经指派给另一个节点，那么先让另一个节点删除该槽&gt;，然后再进行指派。</li>
+<li><code>cluster setslot &lt;slot&gt; migrating &lt;node_id&gt;</code> - 将本节点的槽 slot 迁移到 node_id 指定的节点中。</li>
+<li><code>cluster setslot &lt;slot&gt; importing &lt;node_id&gt;</code> - 从 node_id 指定的节点中导入槽 slot 到本节点。</li>
+<li><code>cluster setslot &lt;slot&gt; stable</code> - 取消对槽 slot 的导入（ import）或者迁移（ migrate）。</li>
+</ul>
+</li>
+<li>键<ul>
+<li><code>cluster keyslot &lt;key&gt;</code> - 计算键 key 应该被放置在哪个槽上。</li>
+<li><code>cluster countkeysinslot &lt;slot&gt;</code> - 返回槽 slot 目前包含的键值对数量。</li>
+<li><code>cluster getkeysinslot &lt;slot&gt; &lt;count&gt;</code> - 返回 count 个 slot 槽中的键。</li>
+</ul>
+</li>
+</ul>
+<h4 id="重新分片"><a href="#重新分片" class="headerlink" title="重新分片"></a>重新分片</h4><p>添加节点：./redis-cli –cluster add-node 192.168.1.136:7007 192.168.1.136:7001 –cluster-slave</p>
+<p>redis-cli –cluster reshard 172.22.6.3 7001</p>
+<h2 id="五、客户端"><a href="#五、客户端" class="headerlink" title="五、客户端"></a>五、客户端</h2><p>推荐使用 <a target="_blank" rel="noopener" href="https://github.com/uglide/RedisDesktopManager"><strong>RedisDesktopManager</strong></a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>官网<ul>
+<li><a target="_blank" rel="noopener" href="https://redis.io/">Redis 官网</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/antirez/redis">Redis github</a></li>
+<li><a target="_blank" rel="noopener" href="http://redis.cn/">Redis 官方文档中文版</a></li>
+</ul>
+</li>
+<li>书籍<ul>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/11791607.html">《Redis 实战》</a></li>
+<li><a target="_blank" rel="noopener" href="https://item.jd.com/11486101.html">《Redis 设计与实现》</a></li>
+</ul>
+</li>
+<li>教程<ul>
+<li><a target="_blank" rel="noopener" href="http://redisdoc.com/">Redis 命令参考</a></li>
+</ul>
+</li>
+<li>文章<ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/5b8fc5536fb9a05d2d01fb11">深入剖析 Redis 系列(三) - Redis 集群模式搭建与原理详解</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  02 Nginx 极简教程
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+                02 grep
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

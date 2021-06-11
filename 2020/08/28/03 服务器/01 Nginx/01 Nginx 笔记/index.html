@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		01 Nginx 笔记 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2020/08/28/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/24/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/11/07/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/heroku%E6%90%AD%E5%BB%BAv2ray/">
+										heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/21/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/14/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/17/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/26/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	01 Nginx 笔记
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-08-28 22:24:56</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="一、nginx架构"><a href="#一、nginx架构" class="headerlink" title="一、nginx架构"></a>一、nginx架构</h1><p><img src="https://wujun234.github.io/images/1545712500935.png" alt="进程模型"></p>
+<h4 id="1-进程模型"><a href="#1-进程模型" class="headerlink" title="1. 进程模型"></a>1. 进程模型</h4><p>Nginx 分一个master进程和多个worker进程。</p>
+<ul>
+<li>master进程：读取和评估配置，并管理worker进程。接收来外界信号，向worker进程发送信号，监控worker进程运行状态，当worker进程异常退出后，会自动重新启动新的worker进程。</li>
+<li>worker进程：对请求进行实际处理。worker进程之间对等且互相独立，竞争客户端请求，一个请求只能在一个worker进程中处理。worker进程的数量可在配置文件中设置的，一般设置与机器CPU核数一致。</li>
+</ul>
+<h4 id="2-异步非阻塞"><a href="#2-异步非阻塞" class="headerlink" title="2. 异步非阻塞"></a>2. 异步非阻塞</h4><p>master进程根据配置建立好socket，再fork出多个worker进程。worker进程竞争请求，每个worker只有一个主线程，有一个函数，执行无限循环，不断处理收到的来自客户端的请求。异步非阻塞，同时处理的请求只有一个，只是在请求间不断地切换而已。</p>
+<h4 id="3-流畅修改"><a href="#3-流畅修改" class="headerlink" title="3. 流畅修改"></a>3. 流畅修改</h4><p>重启或修改nginx配置，服务不会中断。<br>　　master进程接到信号，先重新加载配置文件，再启动新worker进程，并向所有老worker进程发送信号。老worker收到信号后，不再接收新的请求，处理完当前进程中请求后退出。</p>
+<h4 id="4-模型优点"><a href="#4-模型优点" class="headerlink" title="4. 模型优点"></a>4. 模型优点</h4><ul>
+<li>独立进程，不需要加锁，节省开销。</li>
+<li>独立进程，互相不影响，一个进程出问题，其它进程还在工作，服务不会中断，降低了风险。</li>
+</ul>
+<h1 id="二、Nginx-安装"><a href="#二、Nginx-安装" class="headerlink" title="二、Nginx 安装"></a>二、Nginx 安装</h1><ol>
+<li>安装Nginx</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#1、下载 Nginx</span><br><span class="line">wget http:&#x2F;&#x2F;nginx.org&#x2F;download&#x2F;nginx-1.6.2.tar.gz</span><br><span class="line">#2、解压安装包</span><br><span class="line">tar zxvf nginx-1.6.2.tar.gz</span><br><span class="line">#3、进入安装包目录</span><br><span class="line">cd nginx-1.6.2</span><br><span class="line">#4、编译安装</span><br><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx --with-http_stub_status_module --with-http_ssl_module --with-pcre&#x3D;&#x2F;usr&#x2F;local&#x2F;src&#x2F;pcre-8.35</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">#5、查看nginx版本</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;webserver&#x2F;nginx&#x2F;sbin&#x2F;nginx -v</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>配置Nginx</li>
+</ol>
+<ul>
+<li>创建用户 user：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;sbin&#x2F;groupadd user</span><br><span class="line">&#x2F;usr&#x2F;sbin&#x2F;useradd -g user user</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>配置nginx.conf</li>
+</ul>
+<ol>
+<li>控制Nginx<ul>
+<li>启动nginx：运行可执行文件 -s 参数控制Nginx ：</li>
+<li>stop：快速关闭服务</li>
+<li>quit：正常关闭服务</li>
+<li>reload： 重新加载配置文件</li>
+<li>reopen： 重启 Nginx</li>
+</ul>
+</li>
+</ol>
+<h1 id="三、配置文件结构"><a href="#三、配置文件结构" class="headerlink" title="三、配置文件结构"></a>三、配置文件结构</h1><p>nginx的配置系统由一个主配置文件nginx.conf和其他一些辅助的配置文件构成。 # 号表示注释。</p>
+<p>####指令组成 指令由指令名称及其参数组成。</p>
+<ul>
+<li>简单指令，以分号结尾。如果指令含空格，要用引号括起来。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user nobody;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>块指令，包含大括号括起来的复合配置块。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  # configuration of HTTP virtual server 2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>####include指令 为了使配置更易于维护，可将复杂或可服用指令拆分存储在其他.conf，并在主nginx.conf文件中使用include指令引用引进来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include conf.d&#x2F;http;</span><br></pre></td></tr></table></figure>
+
+<p>####指令上下文 如果块指令在大括号内部有其他指令，则称为上下文</p>
+<ul>
+<li>main : 任何上下文之外的就属于main，与具体业务功能无关的一些参数。</li>
+<li>http：main中，与提供http服务相关的一些配置参数。如keepalive、gzip。</li>
+<li>server : http中，每个虚拟主机对应一个server配置项，包含该虚拟主机相关的配置。</li>
+<li>location : http中，某些特定的URL对应的一系列配置项。</li>
+<li>mail : 实现email相关的SMTP/IMAP/POP3代理时，共享的一些配置项。</li>
+<li>events : main中，一般连接处理</li>
+<li>stream : TCP协议流量</li>
+</ul>
+<p>指令上下文之间可能互相包含。</p>
+<h4 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">user  nobody;</span><br><span class="line">worker_processes  1;</span><br><span class="line">error_log  logs&#x2F;error.log  info;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen          80;</span><br><span class="line">        server_name     [www.linuxidc.com](http:&#x2F;&#x2F;www.linuxidc.com&#x2F;);</span><br><span class="line">        access_log      logs&#x2F;linuxidc.access.log main;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            index index.html;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;[linuxidc.com&#x2F;htdocs](http:&#x2F;&#x2F;linuxidc.com&#x2F;htdocs);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen          80;</span><br><span class="line">        server_name     [www.Androidj.com](http:&#x2F;&#x2F;www.androidj.com&#x2F;);</span><br><span class="line">        access_log      logs&#x2F;androidj.access.log main;</span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            index index.html;</span><br><span class="line">            root  &#x2F;var&#x2F;www&#x2F;[androidj.com&#x2F;htdocs](http:&#x2F;&#x2F;androidj.com&#x2F;htdocs);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mail &#123;</span><br><span class="line">    auth_http  127.0.0.1:80&#x2F;auth.php;</span><br><span class="line">    pop3_capabilities  &quot;TOP&quot;  &quot;USER&quot;;</span><br><span class="line">    imap_capabilities  &quot;IMAP4rev1&quot;  &quot;UIDPLUS&quot;;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen     110;</span><br><span class="line">        protocol   pop3;</span><br><span class="line">        proxy      on;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen      25;</span><br><span class="line">        protocol    smtp;</span><br><span class="line">        proxy       on;</span><br><span class="line">        smtp_auth   login plain;</span><br><span class="line">        xclient     off;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、nginx-模块"><a href="#四、nginx-模块" class="headerlink" title="四、nginx 模块"></a>四、nginx 模块</h1><p>nginx是由core和一系列的功能模块所组成。 nginx core实现了底层的通讯协议，为其他模块和nginx进程构建了基本的运行时环境，并且构建了其他各模块的协作基础。</p>
+<ul>
+<li><strong>event module</strong>: 事件处理模块。提供了各具体事件的处理。</li>
+<li><strong>phase handler</strong>: handler 模块。主要负责处理客户端请求并产生待响应内容。</li>
+<li><strong>output filter</strong>: filter 模块。主要是负责对输出的内容进行处理，可以对输出进行修改。</li>
+<li><strong>upstream</strong>: upstream 模块。实现反向代理的功能，将真正的请求转发到后端服务器上，并从后端服务器上读取响应，发回客户端。upstream模块是一种特殊的handler。</li>
+<li><strong>load-balancer</strong>: 负载均衡模块。实现特定的算法，在众多的后端服务器中，选择一个服务器出来作为某个请求的转发服务器。</li>
+</ul>
+<h1 id="五、nginx-应用"><a href="#五、nginx-应用" class="headerlink" title="五、nginx 应用"></a>五、nginx 应用</h1><ol>
+<li>代理服务器(反向、正向)</li>
+<li>HTTP 服务器(包含动静分离)</li>
+<li>负载均衡</li>
+</ol>
+<h2 id="代理服务器"><a href="#代理服务器" class="headerlink" title="代理服务器"></a>代理服务器</h2><h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><h5 id="1-传递请求"><a href="#1-传递请求" class="headerlink" title="1. 传递请求"></a>1. 传递请求</h5><p>当NGINX代理请求时，它将请求发送到指定的代理服务器，获取响应，并将其发送回客户端。 <strong><em>\</em>_ pass指令</strong>：地址可指定为域名或IP地址(可包括端口)。也可以指向一组命名的服务器。如果URI与地址一起指定，将替换匹配请求的URI。</p>
+<ul>
+<li>proxy_pass 将请求传递给 HTTP 代理服务器</li>
+<li>fastcgi_pass 将请求传递给 FastCGI 服务器</li>
+<li>uwsgi_pass 将请求传递给 uwsgi 服务器</li>
+<li>scgi_pass 将请求传递给 SCGI 服务器</li>
+<li>memcached_pass 将请求传递给 memcached 服务器</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F;some&#x2F;path&#x2F; &#123;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;www.example.com&#x2F;link&#x2F;;</span><br><span class="line">&#125;</span><br><span class="line">location ~ \.php &#123;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;127.0.0.1:8000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-传递请求标头"><a href="#2-传递请求标头" class="headerlink" title="2. 传递请求标头"></a>2. 传递请求标头</h5><p><strong>proxy_set_header</strong>:修改、设置 header 字段，可以在一个或多个 location、server、http 块中指定。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F;some&#x2F;path&#x2F; &#123;</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-配置缓冲区"><a href="#3-配置缓冲区" class="headerlink" title="3. 配置缓冲区"></a>3. 配置缓冲区</h5><p>默认情况下，NGINX 缓存来自代理服务器的响应，直到收到整个响应。 proxy_buffering：启用和禁用缓冲 proxy_buffers ：请求缓冲区的大小和数量 proxy_buffer_size ：响应缓冲区的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F;some&#x2F;path&#x2F; &#123;</span><br><span class="line">    proxy_buffers 16 4k;</span><br><span class="line">    proxy_buffer_size 2k;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;localhost:8000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-选择传出IP地址"><a href="#4-选择传出IP地址" class="headerlink" title="4. 选择传出IP地址"></a>4. 选择传出IP地址</h5><p>代理服务器配置为只接受特定 IP 的连接时。 proxy_bind：指定 IP</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">location &#x2F;app1&#x2F; &#123;</span><br><span class="line">    proxy_bind 127.0.0.1;</span><br><span class="line">    proxy_pass http:&#x2F;&#x2F;example.com&#x2F;app1&#x2F;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><p>客户端向代理发送一个请求并指定目标，然后代理向原始服务器转交请求并将获得的内容返回给客户端。目前不支持HTTPS。</p>
+<ul>
+<li>resolver：配置正向代理的DNS服务器</li>
+<li>listen：正向代理的端口</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">resolver 114.114.114.114 8.8.8.8;</span><br><span class="line">server &#123;</span><br><span class="line">    resolver_timeout 5s;</span><br><span class="line">    listen 81;</span><br><span class="line">    access_log  e:&#x2F;wwwrootproxy.access.log;</span><br><span class="line">    error_log   e:&#x2F;wwwrootproxy.error.log;</span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;$host$request_uri;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="HTTP服务器"><a href="#HTTP服务器" class="headerlink" title="HTTP服务器"></a>HTTP服务器</h2><h5 id="Web服务器"><a href="#Web服务器" class="headerlink" title="Web服务器"></a>Web服务器</h5><h5 id="1-日志"><a href="#1-日志" class="headerlink" title="1. 日志"></a>1. 日志</h5><ul>
+<li>access_log 访问日志，可结合if参数条件记录</li>
+<li>error_log 错误日志</li>
+</ul>
+<h5 id="2-server"><a href="#2-server" class="headerlink" title="2. server"></a>2. server</h5><ul>
+<li>server：http中，定义多个虚拟服务器</li>
+<li>listen：指定侦听请求的IP地址和端口。如果省略端口，则使用标准端口。 如果省略地址，将侦听所有地址。</li>
+<li>server_name：如多个server匹配listen，可指定主机头域</li>
+</ul>
+<h5 id="3-资源定位"><a href="#3-资源定位" class="headerlink" title="3. 资源定位"></a>3. 资源定位</h5><ul>
+<li>root：指定搜索文件的根目录，可放在http，server或location</li>
+<li>index：指令定义索引文件的名称，默认为index.html 匹配root+URI+index</li>
+<li>try_files：检查指定的文件或目录是否存在，如果没有则返回配置的URI、状态代码、代理。</li>
+</ul>
+<h5 id="4-返回特定状态码"><a href="#4-返回特定状态码" class="headerlink" title="4. 返回特定状态码"></a>4. 返回特定状态码</h5><ul>
+<li>return [响应代码] [重定向URL]|[响应文本]：返回指令</li>
+</ul>
+<h5 id="5-重写URI"><a href="#5-重写URI" class="headerlink" title="5. 重写URI"></a>5. 重写URI</h5><ul>
+<li>rewrite regex replacement [flag]：location 和 server中，结合正则表达式和标志位实现url重写以及重定向<ul>
+<li>last： 停止执行当前上下文中的重写指令</li>
+<li>break：停止执行当前虚拟主机的后续rewrite指令集</li>
+<li>redirect ：返回302临时重定向</li>
+<li>permanent ：返回301永久重定向</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-重写HTTP响应"><a href="#6-重写HTTP响应" class="headerlink" title="6. 重写HTTP响应"></a>6. 重写HTTP响应</h5><ul>
+<li>sub_filter：重写或更改响应中的内容</li>
+<li>error_page : 处理错误</li>
+</ul>
+<h5 id="7-压缩和解压"><a href="#7-压缩和解压" class="headerlink" title="7. 压缩和解压"></a>7. 压缩和解压</h5><ul>
+<li>gzip：向客户端发送响应之前，NGINX会执行压缩</li>
+<li>gunzip：为了服务于不接受压缩数据的客户端</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">map $status $loggable &#123;</span><br><span class="line">  ~^[23] 0;</span><br><span class="line">  default 1;</span><br><span class="line">&#125;</span><br><span class="line">access_log &#x2F;access.log combined if&#x3D;$loggable;</span><br><span class="line">error_log &#x2F;error.log;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80;      </span><br><span class="line">        server_name  localhost;</span><br><span class="line">        client_max_body_size 1024M; </span><br><span class="line">        gzip on;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;  </span><br><span class="line">            root &#x2F;data&#x2F;www;</span><br><span class="line">            index  index.html;</span><br><span class="line">            try_files $uri &#x2F;images&#x2F;default.gif;</span><br><span class="line">            try_files $uri $uri&#x2F; $uri.html &#x3D;404;</span><br><span class="line">            try_files $uri $uri&#x2F; @backend;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location &#x2F;users&#x2F; &#123;</span><br><span class="line">            rewrite ^&#x2F;users&#x2F;(.*)$ &#x2F;show?user&#x3D;$1 break;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location @backend &#123;</span><br><span class="line">            proxy_pass http:&#x2F;&#x2F;backend.example.com;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location &#x2F;wrong&#x2F;url &#123;</span><br><span class="line">            return 404;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">            gunzip on;</span><br><span class="line">            sub_filter &#39;href&#x3D;&quot;http:&#x2F;&#x2F;127.0.0.1:8080&#x2F;&#39; &#39;href&#x3D;&quot;https:&#x2F;&#x2F;$host&#x2F;&#39;;</span><br><span class="line">            sub_filter &#x2F;blog&#x2F; &#x2F;blog-staging&#x2F;;</span><br><span class="line">            sub_filter_once on;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 &#x2F;404.html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果访问<a target="_blank" rel="noopener" href="http://localhost就会默认访问到/data/www%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2%E7%9A%84index.html%E3%80%82">http://localhost就会默认访问到/data/www目录下面的index.html。</a></p>
+<h5 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h5><p>根据请求URI拆分动静资源，分开导流向不同的代理或提供不同的文件</p>
+<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><p>根据规则随机的将请求分发到指定的服务器上处理，负载均衡配置一般都需要同时配置反向代理，通过反向代理跳转到负载均衡。</p>
+<p>Nginx 目前支持自带 3 种负载均衡策略，还有 2 种常用的第三方策略。</p>
+<h5 id="1-RR-默认"><a href="#1-RR-默认" class="headerlink" title="1. RR(默认)"></a>1. RR(默认)</h5><p>每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">upstream test &#123;</span><br><span class="line">    server localhost:8080;</span><br><span class="line">    server localhost:8081;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;test;</span><br><span class="line">        proxy_set_header Host $host:$server_port;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-权重"><a href="#2-权重" class="headerlink" title="2. 权重"></a>2. 权重</h5><p>指定轮询几率，weight 和访问比率成正比，用于后端服务器性能不均的情况。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream test &#123;</span><br><span class="line">    server localhost:8080 weight&#x3D;9;</span><br><span class="line">    server localhost:8081 weight&#x3D;1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-ip-hash"><a href="#3-ip-hash" class="headerlink" title="3. ip_hash"></a>3. ip_hash</h5><p>ip_hash 的每个请求按访问 ip 的 hash 结果分配，每个访客固定访问一个服务器，可解决程序状态问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">upstream test &#123;</span><br><span class="line">    ip_hash;</span><br><span class="line">    server localhost:8080;</span><br><span class="line">    server localhost:8081;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="4-fair-第三方"><a href="#4-fair-第三方" class="headerlink" title="4. fair(第三方)"></a>4. fair(第三方)</h5><p>按后端服务器的响应时间来分配请求，响应时间短的优先分配。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">upstream backend &#123;</span><br><span class="line">    fair;</span><br><span class="line">    server localhost:8080;</span><br><span class="line">    server localhost:8081;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-url-hash-第三方"><a href="#5-url-hash-第三方" class="headerlink" title="5. url_hash(第三方)"></a>5. url_hash(第三方)</h5><p>按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。 在upstream中加入hash语句，server语句中不能写入weight等其他的参数，hash_method是使用的hash算法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">upstream backend &#123;</span><br><span class="line">    hash $request_uri;</span><br><span class="line">    hash_method crc32;</span><br><span class="line">    server localhost:8080;</span><br><span class="line">    server localhost:8081;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/08/28/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/08/28/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+                01 JMeter - 性能测试
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		给博客添加网页鼠标点击特效功能 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/24/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/11/07/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/heroku%E6%90%AD%E5%BB%BAv2ray/">
+										heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/21/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/14/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/17/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/26/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	给博客添加网页鼠标点击特效功能
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-09-26 00:16:10</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p>今天浏览到一个网站，发现在网页上点击的时候，会依次出现社会主义核心价值观。觉的很有意思，就把代码偷过来了。就是一个JavaScript脚本。</p>
+<p>然后把它添加到博客的模板文件里。</p>
+<p>一般在<code>_includes</code>或者<code>_layouts</code>文件夹里。找一下看看哪个html文件里<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>，大概率就是博客的主模板文件了。然后拉到最后，在<code>&lt;/body&gt;</code>上面插入下面任意一个代码。</p>
+<h2 id="1、鼠标点击心形特效"><a href="#1、鼠标点击心形特效" class="headerlink" title="1、鼠标点击心形特效"></a>1、鼠标点击心形特效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">		(function(window,document,undefined)&#123;</span><br><span class="line">			var hearts &#x3D; [];</span><br><span class="line">			window.requestAnimationFrame &#x3D; (function()&#123;</span><br><span class="line">				return window.requestAnimationFrame ||</span><br><span class="line">				window.webkitRequestAnimationFrame ||</span><br><span class="line">				window.mozRequestAnimationFrame ||</span><br><span class="line">				window.oRequestAnimationFrame ||</span><br><span class="line">				window.msRequestAnimationFrame ||</span><br><span class="line">				function (callback)&#123;</span><br><span class="line">					setTimeout(callback,1000&#x2F;60);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;)();</span><br><span class="line">			init();</span><br><span class="line">			function init()&#123;</span><br><span class="line">				css(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;);</span><br><span class="line">				attachEvent();</span><br><span class="line">				gameloop();</span><br><span class="line">			&#125;</span><br><span class="line">			function gameloop()&#123;</span><br><span class="line">				for(var i&#x3D;0;i&lt;hearts.length;i++)&#123;</span><br><span class="line">					if(hearts[i].alpha &lt;&#x3D;0)&#123;</span><br><span class="line">						document.body.removeChild(hearts[i].el);</span><br><span class="line">						hearts.splice(i,1);</span><br><span class="line">						continue;</span><br><span class="line">					&#125;</span><br><span class="line">					hearts[i].y--;</span><br><span class="line">					hearts[i].scale +&#x3D; 0.004;</span><br><span class="line">					hearts[i].alpha -&#x3D; 0.013;</span><br><span class="line">					hearts[i].el.style.cssText &#x3D; &quot;left:&quot;+hearts[i].x+&quot;px;top:&quot;+hearts[i].y+&quot;px;opacity:&quot;+hearts[i].alpha+&quot;;transform:scale(&quot;+hearts[i].scale+&quot;,&quot;+hearts[i].scale+&quot;) rotate(45deg);background:&quot;+hearts[i].color;</span><br><span class="line">				&#125;</span><br><span class="line">				requestAnimationFrame(gameloop);</span><br><span class="line">			&#125;</span><br><span class="line">			function attachEvent()&#123;</span><br><span class="line">				var old &#x3D; typeof window.οnclick&#x3D;&#x3D;&#x3D;&quot;function&quot; &amp;&amp; window.onclick;</span><br><span class="line">				window.onclick &#x3D; function(event)&#123;</span><br><span class="line">					old &amp;&amp; old();</span><br><span class="line">					createHeart(event);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			function createHeart(event)&#123;</span><br><span class="line">				var d &#x3D; document.createElement(&quot;div&quot;);</span><br><span class="line">				d.className &#x3D; &quot;heart&quot;;</span><br><span class="line">				hearts.push(&#123;</span><br><span class="line">					el : d,</span><br><span class="line">					x : event.clientX - 5,</span><br><span class="line">					y : event.clientY - 5,</span><br><span class="line">					scale : 1,</span><br><span class="line">					alpha : 1,</span><br><span class="line">					color : randomColor()</span><br><span class="line">				&#125;);</span><br><span class="line">				document.body.appendChild(d);</span><br><span class="line">			&#125;</span><br><span class="line">			function css(css)&#123;</span><br><span class="line">				var style &#x3D; document.createElement(&quot;style&quot;);</span><br><span class="line">				style.type&#x3D;&quot;text&#x2F;css&quot;;</span><br><span class="line">				try&#123;</span><br><span class="line">					style.appendChild(document.createTextNode(css));</span><br><span class="line">				&#125;catch(ex)&#123;</span><br><span class="line">					style.styleSheet.cssText &#x3D; css;</span><br><span class="line">				&#125;</span><br><span class="line">				document.getElementsByTagName(&#39;head&#39;)[0].appendChild(style);</span><br><span class="line">			&#125;</span><br><span class="line">			function randomColor()&#123;</span><br><span class="line">				return &quot;rgb(&quot;+(~~(Math.random()*255))+&quot;,&quot;+(~~(Math.random()*255))+&quot;,&quot;+(~~(Math.random()*255))+&quot;)&quot;;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)(window,document);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-鼠标点击社会主义核心价值观特效"><a href="#2-鼠标点击社会主义核心价值观特效" class="headerlink" title="2. 鼠标点击社会主义核心价值观特效"></a>2. 鼠标点击社会主义核心价值观特效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.3.1&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">        &#x2F;* 鼠标点击特效 - 7Core.CN *&#x2F;</span><br><span class="line">        var a_idx &#x3D; 0;jQuery(document).ready(function($) &#123;$(&quot;body&quot;).click(function(e) &#123;var a &#x3D; new Array(&quot;富强&quot;, &quot;民主&quot;, &quot;文明&quot;, &quot;和谐&quot;, &quot;自由&quot;, &quot;平等&quot;, &quot;公正&quot; ,&quot;法治&quot;, &quot;爱国&quot;, &quot;敬业&quot;, &quot;诚信&quot;, &quot;友善&quot;);var $i &#x3D; $(&quot;&lt;span&#x2F;&gt;&quot;).text(a[a_idx]);</span><br><span class="line">        a_idx &#x3D; (a_idx + 1) % a.length;var x &#x3D; e.pageX,y &#x3D; e.pageY;$i.css(&#123;&quot;z-index&quot;: 100000000,&quot;top&quot;: y - 20,&quot;left&quot;: x,&quot;position&quot;: &quot;absolute&quot;,&quot;font-weight&quot;: &quot;bold&quot;,&quot;color&quot;: &quot;#ff6651&quot;&#125;);$(&quot;body&quot;).append($i);$i.animate(&#123;&quot;top&quot;: y - 180,&quot;opacity&quot;: 0&#125;,1500,function() &#123;$i.remove();&#125;);&#125;);&#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">&#x2F;* 鼠标特效 *&#x2F;</span><br><span class="line">var a_idx &#x3D; 0;</span><br><span class="line">jQuery(document).ready(function($) &#123;</span><br><span class="line">    $(&quot;body&quot;).click(function(e) &#123;</span><br><span class="line">        var a &#x3D; new Array(&quot;❤凯鲁嘎吉❤&quot;,&quot;❤爱你❤&quot;,&quot;❤欢迎您❤&quot;,&quot;❤光临本园❤&quot;,&quot;❤加油❤&quot;,&quot;❤努力❤&quot;,&quot;❤奋斗❤&quot;,&quot;❤拼搏❤&quot;,&quot;❤凯鲁嘎吉❤&quot;,&quot;❤爱你❤&quot;,&quot;❤forever❤&quot;,&quot;❤爱你❤&quot;);</span><br><span class="line">        var $i &#x3D; $(&quot;&lt;span&gt;&lt;&#x2F;span&gt;&quot;).text(a[a_idx]);</span><br><span class="line">        a_idx &#x3D; (a_idx + 1) % a.length;</span><br><span class="line">        var x &#x3D; e.pageX,</span><br><span class="line">        y &#x3D; e.pageY;</span><br><span class="line">        $i.css(&#123;</span><br><span class="line">            &quot;z-index&quot;: 999999999999999999999999999999999999999999999999999999999999999999999,</span><br><span class="line">            &quot;top&quot;: y - 20,</span><br><span class="line">            &quot;left&quot;: x,</span><br><span class="line">            &quot;position&quot;: &quot;absolute&quot;,</span><br><span class="line">            &quot;font-weight&quot;: &quot;bold&quot;,</span><br><span class="line">            &quot;color&quot;: &quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;body&quot;).append($i);</span><br><span class="line">        $i.animate(&#123;</span><br><span class="line">            &quot;top&quot;: y - 180,</span><br><span class="line">            &quot;opacity&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        1500,</span><br><span class="line">        function() &#123;</span><br><span class="line">            $i.remove();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-鼠标环绕特效"><a href="#3-鼠标环绕特效" class="headerlink" title="3. 鼠标环绕特效"></a>3. 鼠标环绕特效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;section &gt;&lt;&#x2F;section&gt;</span><br><span class="line">&lt;script type&#x3D;&#39;text&#x2F;javascript&#39;&gt;</span><br><span class="line">!function () &#123; function o(w, v, i) &#123; return w.getAttribute(v) || i &#125; function j(i) &#123; return document.getElementsByTagName(i) &#125; function l() &#123; var i &#x3D; j(&quot;script&quot;), w &#x3D; i.length, v &#x3D; i[w - 1]; return &#123; l: w, z: o(v, &quot;zIndex&quot;, -1), o: o(v, &quot;opacity&quot;, 0.5), c: o(v, &quot;color&quot;, &quot;0,0,0&quot;), n: o(v, &quot;count&quot;, 99) &#125; &#125; function k() &#123; r &#x3D; u.width &#x3D; window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, n &#x3D; u.height &#x3D; window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight &#125; function b() &#123; e.clearRect(0, 0, r, n); var w &#x3D; [f].concat(t); var x, v, A, B, z, y; t.forEach(function (i) &#123; i.x +&#x3D; i.xa, i.y +&#x3D; i.ya, i.xa *&#x3D; i.x &gt; r || i.x &lt;0 ? -1 : 1, i.ya *&#x3D;i.y&gt;n || i.y &lt;0 ? -1 : 1, e.fillRect(i.x - 0.5, i.y - 0.5, 1, 1); for (v&#x3D;0; v &lt; w.length; v++) &#123; x &#x3D; w[v]; if (i !&#x3D;&#x3D; x &amp;&amp;null !&#x3D;&#x3D; x.x &amp;&amp;null !&#x3D;&#x3D; x.y) &#123; B &#x3D; i.x - x.x, z &#x3D; i.y - x.y, y &#x3D; B * B + z * z; y &lt;x.max &amp;&amp; (x&#x3D;&#x3D;&#x3D; f &amp;&amp; y&gt;&#x3D; x.max &#x2F; 2 &amp;&amp;(i.x -&#x3D; 0.03 * B, i.y -&#x3D; 0.03 * z), A &#x3D; (x.max - y) &#x2F; x.max, e.beginPath(), e.lineWidth &#x3D; A &#x2F; 2, e.strokeStyle &#x3D; &quot;rgba(&quot; + s.c + &quot;,&quot; + (A + 0.2) + &quot;)&quot;, e.moveTo(i.x, i.y), e.lineTo(x.x, x.y), e.stroke()) &#125; &#125; w.splice(w.indexOf(i), 1) &#125;), m(b) &#125; var u &#x3D; document.createElement(&quot;canvas&quot;),  s &#x3D; l(), c &#x3D; &quot;c_n&quot; + s.l, e &#x3D; u.getContext(&quot;2d&quot;), r, n, m &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (i) &#123; window.setTimeout(i, 1000 &#x2F; 45) &#125;, a &#x3D; Math.random, f &#x3D; &#123; x: null, y: null, max: 20000 &#125;; u.id &#x3D; c; u.className &#x3D; &quot;hidden-xs hidden-sm my_canvas&quot;; u.style.cssText &#x3D; &quot;position:fixed;top:0;left:0;z-index:&quot; + s.z + &quot;;opacity:&quot; + s.o; j(&quot;body&quot;)[0].appendChild(u); k(), window.onresize &#x3D; k; window.onmousemove &#x3D; function (i) &#123; i &#x3D; i || window.event, f.x &#x3D; i.clientX, f.y &#x3D; i.clientY &#125;, window.onmouseout &#x3D; function () &#123; f.x &#x3D; null, f.y &#x3D; null &#125;; for (var t &#x3D; [], p &#x3D; 0; s.n &gt; p; p++) &#123; var h &#x3D; a() * r, g &#x3D; a() * n, q &#x3D; 2 * a() - 1, d &#x3D; 2 * a() - 1; t.push(&#123; x: h, y: g, xa: q, ya: d, max: 6000 &#125;) &#125; setTimeout(function () &#123; b() &#125;, 100) &#125;();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>我也不知道第一行的<section ></section>是要干嘛，但是确实删了就不正常显示了。。。。</p>
+</blockquote>
+<h2 id="4-点击爆炸特效"><a href="#4-点击爆炸特效" class="headerlink" title="4.点击爆炸特效"></a>4.点击爆炸特效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;&quot;&gt; </span><br><span class="line">&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;script  type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">&#x2F;*</span><br><span class="line"> 2017 Julian Garnier</span><br><span class="line"> Released under the MIT license</span><br><span class="line">*&#x2F;</span><br><span class="line">var $jscomp&#x3D;&#123;scope:&#123;&#125;&#125;;$jscomp.defineProperty&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof Object.defineProperties?Object.defineProperty:function(e,r,p)&#123;if(p.get||p.set)throw new TypeError(&quot;ES3 does not support getters and setters.&quot;);e!&#x3D;Array.prototype&amp;&amp;e!&#x3D;Object.prototype&amp;&amp;(e[r]&#x3D;p.value)&#125;;$jscomp.getGlobal&#x3D;function(e)&#123;return&quot;undefined&quot;!&#x3D;typeof window&amp;&amp;window&#x3D;&#x3D;&#x3D;e?e:&quot;undefined&quot;!&#x3D;typeof global&amp;&amp;null!&#x3D;global?global:e&#125;;$jscomp.global&#x3D;$jscomp.getGlobal(this);$jscomp.SYMBOL_PREFIX&#x3D;&quot;jscomp_symbol_&quot;;</span><br><span class="line">$jscomp.initSymbol&#x3D;function()&#123;$jscomp.initSymbol&#x3D;function()&#123;&#125;;$jscomp.global.Symbol||($jscomp.global.Symbol&#x3D;$jscomp.Symbol)&#125;;$jscomp.symbolCounter_&#x3D;0;$jscomp.Symbol&#x3D;function(e)&#123;return $jscomp.SYMBOL_PREFIX+(e||&quot;&quot;)+$jscomp.symbolCounter_++&#125;;</span><br><span class="line">$jscomp.initSymbolIterator&#x3D;function()&#123;$jscomp.initSymbol();var e&#x3D;$jscomp.global.Symbol.iterator;e||(e&#x3D;$jscomp.global.Symbol.iterator&#x3D;$jscomp.global.Symbol(&quot;iterator&quot;));&quot;function&quot;!&#x3D;typeof Array.prototype[e]&amp;&amp;$jscomp.defineProperty(Array.prototype,e,&#123;configurable:!0,writable:!0,value:function()&#123;return $jscomp.arrayIterator(this)&#125;&#125;);$jscomp.initSymbolIterator&#x3D;function()&#123;&#125;&#125;;$jscomp.arrayIterator&#x3D;function(e)&#123;var r&#x3D;0;return $jscomp.iteratorPrototype(function()&#123;return r&lt;e.length?&#123;done:!1,value:e[r++]&#125;:&#123;done:!0&#125;&#125;)&#125;;</span><br><span class="line">$jscomp.iteratorPrototype&#x3D;function(e)&#123;$jscomp.initSymbolIterator();e&#x3D;&#123;next:e&#125;;e[$jscomp.global.Symbol.iterator]&#x3D;function()&#123;return this&#125;;return e&#125;;$jscomp.array&#x3D;$jscomp.array||&#123;&#125;;$jscomp.iteratorFromArray&#x3D;function(e,r)&#123;$jscomp.initSymbolIterator();e instanceof String&amp;&amp;(e+&#x3D;&quot;&quot;);var p&#x3D;0,m&#x3D;&#123;next:function()&#123;if(p&lt;e.length)&#123;var u&#x3D;p++;return&#123;value:r(u,e[u]),done:!1&#125;&#125;m.next&#x3D;function()&#123;return&#123;done:!0,value:void 0&#125;&#125;;return m.next()&#125;&#125;;m[Symbol.iterator]&#x3D;function()&#123;return m&#125;;return m&#125;;</span><br><span class="line">$jscomp.polyfill&#x3D;function(e,r,p,m)&#123;if(r)&#123;p&#x3D;$jscomp.global;e&#x3D;e.split(&quot;.&quot;);for(m&#x3D;0;m&lt;e.length-1;m++)&#123;var u&#x3D;e[m];u in p||(p[u]&#x3D;&#123;&#125;);p&#x3D;p[u]&#125;e&#x3D;e[e.length-1];m&#x3D;p[e];r&#x3D;r(m);r!&#x3D;m&amp;&amp;null!&#x3D;r&amp;&amp;$jscomp.defineProperty(p,e,&#123;configurable:!0,writable:!0,value:r&#125;)&#125;&#125;;$jscomp.polyfill(&quot;Array.prototype.keys&quot;,function(e)&#123;return e?e:function()&#123;return $jscomp.iteratorFromArray(this,function(e)&#123;return e&#125;)&#125;&#125;,&quot;es6-impl&quot;,&quot;es3&quot;);var $jscomp$this&#x3D;this;</span><br><span class="line">(function(e,r)&#123;&quot;function&quot;&#x3D;&#x3D;&#x3D;typeof define&amp;&amp;define.amd?define([],r):&quot;object&quot;&#x3D;&#x3D;&#x3D;typeof module&amp;&amp;module.exports?module.exports&#x3D;r():e.anime&#x3D;r()&#125;)(this,function()&#123;function e(a)&#123;if(!h.col(a))try&#123;return document.querySelectorAll(a)&#125;catch(c)&#123;&#125;&#125;function r(a,c)&#123;for(var d&#x3D;a.length,b&#x3D;2&lt;&#x3D;arguments.length?arguments[1]:void 0,f&#x3D;[],n&#x3D;0;n&lt;d;n++)if(n in a)&#123;var k&#x3D;a[n];c.call(b,k,n,a)&amp;&amp;f.push(k)&#125;return f&#125;function p(a)&#123;return a.reduce(function(a,d)&#123;return a.concat(h.arr(d)?p(d):d)&#125;,[])&#125;function m(a)&#123;if(h.arr(a))return a;</span><br><span class="line">h.str(a)&amp;&amp;(a&#x3D;e(a)||a);return a instanceof NodeList||a instanceof HTMLCollection?[].slice.call(a):[a]&#125;function u(a,c)&#123;return a.some(function(a)&#123;return a&#x3D;&#x3D;&#x3D;c&#125;)&#125;function C(a)&#123;var c&#x3D;&#123;&#125;,d;for(d in a)c[d]&#x3D;a[d];return c&#125;function D(a,c)&#123;var d&#x3D;C(a),b;for(b in a)d[b]&#x3D;c.hasOwnProperty(b)?c[b]:a[b];return d&#125;function z(a,c)&#123;var d&#x3D;C(a),b;for(b in c)d[b]&#x3D;h.und(a[b])?c[b]:a[b];return d&#125;function T(a)&#123;a&#x3D;a.replace(&#x2F;^#?([a-f\d])([a-f\d])([a-f\d])$&#x2F;i,function(a,c,d,k)&#123;return c+c+d+d+k+k&#125;);var c&#x3D;&#x2F;^#?([a-f\d]&#123;2&#125;)([a-f\d]&#123;2&#125;)([a-f\d]&#123;2&#125;)$&#x2F;i.exec(a);</span><br><span class="line">a&#x3D;parseInt(c[1],16);var d&#x3D;parseInt(c[2],16),c&#x3D;parseInt(c[3],16);return&quot;rgba(&quot;+a+&quot;,&quot;+d+&quot;,&quot;+c+&quot;,1)&quot;&#125;function U(a)&#123;function c(a,c,b)&#123;0&gt;b&amp;&amp;(b+&#x3D;1);1&lt;b&amp;&amp;--b;return b&lt;1&#x2F;6?a+6*(c-a)*b:.5&gt;b?c:b&lt;2&#x2F;3?a+(c-a)*(2&#x2F;3-b)*6:a&#125;var d&#x3D;&#x2F;hsl\((\d+),\s*([\d.]+)%,\s*([\d.]+)%\)&#x2F;g.exec(a)||&#x2F;hsla\((\d+),\s*([\d.]+)%,\s*([\d.]+)%,\s*([\d.]+)\)&#x2F;g.exec(a);a&#x3D;parseInt(d[1])&#x2F;360;var b&#x3D;parseInt(d[2])&#x2F;100,f&#x3D;parseInt(d[3])&#x2F;100,d&#x3D;d[4]||1;if(0&#x3D;&#x3D;b)f&#x3D;b&#x3D;a&#x3D;f;else&#123;var n&#x3D;.5&gt;f?f*(1+b):f+b-f*b,k&#x3D;2*f-n,f&#x3D;c(k,n,a+1&#x2F;3),b&#x3D;c(k,n,a);a&#x3D;c(k,n,a-1&#x2F;3)&#125;return&quot;rgba(&quot;+</span><br><span class="line">255*f+&quot;,&quot;+255*b+&quot;,&quot;+255*a+&quot;,&quot;+d+&quot;)&quot;&#125;function y(a)&#123;if(a&#x3D;&#x2F;([\+\-]?[0-9#\.]+)(%|px|pt|em|rem|in|cm|mm|ex|ch|pc|vw|vh|vmin|vmax|deg|rad|turn)?$&#x2F;.exec(a))return a[2]&#125;function V(a)&#123;if(-1&lt;a.indexOf(&quot;translate&quot;)||&quot;perspective&quot;&#x3D;&#x3D;&#x3D;a)return&quot;px&quot;;if(-1&lt;a.indexOf(&quot;rotate&quot;)||-1&lt;a.indexOf(&quot;skew&quot;))return&quot;deg&quot;&#125;function I(a,c)&#123;return h.fnc(a)?a(c.target,c.id,c.total):a&#125;function E(a,c)&#123;if(c in a.style)return getComputedStyle(a).getPropertyValue(c.replace(&#x2F;([a-z])([A-Z])&#x2F;g,&quot;$1-$2&quot;).toLowerCase())||&quot;0&quot;&#125;function J(a,c)&#123;if(h.dom(a)&amp;&amp;</span><br><span class="line">u(W,c))return&quot;transform&quot;;if(h.dom(a)&amp;&amp;(a.getAttribute(c)||h.svg(a)&amp;&amp;a[c]))return&quot;attribute&quot;;if(h.dom(a)&amp;&amp;&quot;transform&quot;!&#x3D;&#x3D;c&amp;&amp;E(a,c))return&quot;css&quot;;if(null!&#x3D;a[c])return&quot;object&quot;&#125;function X(a,c)&#123;var d&#x3D;V(c),d&#x3D;-1&lt;c.indexOf(&quot;scale&quot;)?1:0+d;a&#x3D;a.style.transform;if(!a)return d;for(var b&#x3D;[],f&#x3D;[],n&#x3D;[],k&#x3D;&#x2F;(\w+)\((.+?)\)&#x2F;g;b&#x3D;k.exec(a);)f.push(b[1]),n.push(b[2]);a&#x3D;r(n,function(a,b)&#123;return f[b]&#x3D;&#x3D;&#x3D;c&#125;);return a.length?a[0]:d&#125;function K(a,c)&#123;switch(J(a,c))&#123;case &quot;transform&quot;:return X(a,c);case &quot;css&quot;:return E(a,c);case &quot;attribute&quot;:return a.getAttribute(c)&#125;return a[c]||</span><br><span class="line">0&#125;function L(a,c)&#123;var d&#x3D;&#x2F;^(\*&#x3D;|\+&#x3D;|-&#x3D;)&#x2F;.exec(a);if(!d)return a;var b&#x3D;y(a)||0;c&#x3D;parseFloat(c);a&#x3D;parseFloat(a.replace(d[0],&quot;&quot;));switch(d[0][0])&#123;case &quot;+&quot;:return c+a+b;case &quot;-&quot;:return c-a+b;case &quot;*&quot;:return c*a+b&#125;&#125;function F(a,c)&#123;return Math.sqrt(Math.pow(c.x-a.x,2)+Math.pow(c.y-a.y,2))&#125;function M(a)&#123;a&#x3D;a.points;for(var c&#x3D;0,d,b&#x3D;0;b&lt;a.numberOfItems;b++)&#123;var f&#x3D;a.getItem(b);0&lt;b&amp;&amp;(c+&#x3D;F(d,f));d&#x3D;f&#125;return c&#125;function N(a)&#123;if(a.getTotalLength)return a.getTotalLength();switch(a.tagName.toLowerCase())&#123;case &quot;circle&quot;:return 2*</span><br><span class="line">Math.PI*a.getAttribute(&quot;r&quot;);case &quot;rect&quot;:return 2*a.getAttribute(&quot;width&quot;)+2*a.getAttribute(&quot;height&quot;);case &quot;line&quot;:return F(&#123;x:a.getAttribute(&quot;x1&quot;),y:a.getAttribute(&quot;y1&quot;)&#125;,&#123;x:a.getAttribute(&quot;x2&quot;),y:a.getAttribute(&quot;y2&quot;)&#125;);case &quot;polyline&quot;:return M(a);case &quot;polygon&quot;:var c&#x3D;a.points;return M(a)+F(c.getItem(c.numberOfItems-1),c.getItem(0))&#125;&#125;function Y(a,c)&#123;function d(b)&#123;b&#x3D;void 0&#x3D;&#x3D;&#x3D;b?0:b;return a.el.getPointAtLength(1&lt;&#x3D;c+b?c+b:0)&#125;var b&#x3D;d(),f&#x3D;d(-1),n&#x3D;d(1);switch(a.property)&#123;case &quot;x&quot;:return b.x;case &quot;y&quot;:return b.y;</span><br><span class="line">case &quot;angle&quot;:return 180*Math.atan2(n.y-f.y,n.x-f.x)&#x2F;Math.PI&#125;&#125;function O(a,c)&#123;var d&#x3D;&#x2F;-?\d*\.?\d+&#x2F;g,b;b&#x3D;h.pth(a)?a.totalLength:a;if(h.col(b))if(h.rgb(b))&#123;var f&#x3D;&#x2F;rgb\((\d+,\s*[\d]+,\s*[\d]+)\)&#x2F;g.exec(b);b&#x3D;f?&quot;rgba(&quot;+f[1]+&quot;,1)&quot;:b&#125;else b&#x3D;h.hex(b)?T(b):h.hsl(b)?U(b):void 0;else f&#x3D;(f&#x3D;y(b))?b.substr(0,b.length-f.length):b,b&#x3D;c&amp;&amp;!&#x2F;\s&#x2F;g.test(b)?f+c:f;b+&#x3D;&quot;&quot;;return&#123;original:b,numbers:b.match(d)?b.match(d).map(Number):[0],strings:h.str(a)||c?b.split(d):[]&#125;&#125;function P(a)&#123;a&#x3D;a?p(h.arr(a)?a.map(m):m(a)):[];return r(a,</span><br><span class="line">function(a,d,b)&#123;return b.indexOf(a)&#x3D;&#x3D;&#x3D;d&#125;)&#125;function Z(a)&#123;var c&#x3D;P(a);return c.map(function(a,b)&#123;return&#123;target:a,id:b,total:c.length&#125;&#125;)&#125;function aa(a,c)&#123;var d&#x3D;C(c);if(h.arr(a))&#123;var b&#x3D;a.length;2!&#x3D;&#x3D;b||h.obj(a[0])?h.fnc(c.duration)||(d.duration&#x3D;c.duration&#x2F;b):a&#x3D;&#123;value:a&#125;&#125;return m(a).map(function(a,b)&#123;b&#x3D;b?0:c.delay;a&#x3D;h.obj(a)&amp;&amp;!h.pth(a)?a:&#123;value:a&#125;;h.und(a.delay)&amp;&amp;(a.delay&#x3D;b);return a&#125;).map(function(a)&#123;return z(a,d)&#125;)&#125;function ba(a,c)&#123;var d&#x3D;&#123;&#125;,b;for(b in a)&#123;var f&#x3D;I(a[b],c);h.arr(f)&amp;&amp;(f&#x3D;f.map(function(a)&#123;return I(a,</span><br><span class="line">c)&#125;),1&#x3D;&#x3D;&#x3D;f.length&amp;&amp;(f&#x3D;f[0]));d[b]&#x3D;f&#125;d.duration&#x3D;parseFloat(d.duration);d.delay&#x3D;parseFloat(d.delay);return d&#125;function ca(a)&#123;return h.arr(a)?A.apply(this,a):Q[a]&#125;function da(a,c)&#123;var d;return a.tweens.map(function(b)&#123;b&#x3D;ba(b,c);var f&#x3D;b.value,e&#x3D;K(c.target,a.name),k&#x3D;d?d.to.original:e,k&#x3D;h.arr(f)?f[0]:k,w&#x3D;L(h.arr(f)?f[1]:f,k),e&#x3D;y(w)||y(k)||y(e);b.from&#x3D;O(k,e);b.to&#x3D;O(w,e);b.start&#x3D;d?d.end:a.offset;b.end&#x3D;b.start+b.delay+b.duration;b.easing&#x3D;ca(b.easing);b.elasticity&#x3D;(1E3-Math.min(Math.max(b.elasticity,1),999))&#x2F;</span><br><span class="line">1E3;b.isPath&#x3D;h.pth(f);b.isColor&#x3D;h.col(b.from.original);b.isColor&amp;&amp;(b.round&#x3D;1);return d&#x3D;b&#125;)&#125;function ea(a,c)&#123;return r(p(a.map(function(a)&#123;return c.map(function(b)&#123;var c&#x3D;J(a.target,b.name);if(c)&#123;var d&#x3D;da(b,a);b&#x3D;&#123;type:c,property:b.name,animatable:a,tweens:d,duration:d[d.length-1].end,delay:d[0].delay&#125;&#125;else b&#x3D;void 0;return b&#125;)&#125;)),function(a)&#123;return!h.und(a)&#125;)&#125;function R(a,c,d,b)&#123;var f&#x3D;&quot;delay&quot;&#x3D;&#x3D;&#x3D;a;return c.length?(f?Math.min:Math.max).apply(Math,c.map(function(b)&#123;return b[a]&#125;)):f?b.delay:d.offset+b.delay+</span><br><span class="line">b.duration&#125;function fa(a)&#123;var c&#x3D;D(ga,a),d&#x3D;D(S,a),b&#x3D;Z(a.targets),f&#x3D;[],e&#x3D;z(c,d),k;for(k in a)e.hasOwnProperty(k)||&quot;targets&quot;&#x3D;&#x3D;&#x3D;k||f.push(&#123;name:k,offset:e.offset,tweens:aa(a[k],d)&#125;);a&#x3D;ea(b,f);return z(c,&#123;children:[],animatables:b,animations:a,duration:R(&quot;duration&quot;,a,c,d),delay:R(&quot;delay&quot;,a,c,d)&#125;)&#125;function q(a)&#123;function c()&#123;return window.Promise&amp;&amp;new Promise(function(a)&#123;return p&#x3D;a&#125;)&#125;function d(a)&#123;return g.reversed?g.duration-a:a&#125;function b(a)&#123;for(var b&#x3D;0,c&#x3D;&#123;&#125;,d&#x3D;g.animations,f&#x3D;d.length;b&lt;f;)&#123;var e&#x3D;d[b],</span><br><span class="line">k&#x3D;e.animatable,h&#x3D;e.tweens,n&#x3D;h.length-1,l&#x3D;h[n];n&amp;&amp;(l&#x3D;r(h,function(b)&#123;return a&lt;b.end&#125;)[0]||l);for(var h&#x3D;Math.min(Math.max(a-l.start-l.delay,0),l.duration)&#x2F;l.duration,w&#x3D;isNaN(h)?1:l.easing(h,l.elasticity),h&#x3D;l.to.strings,p&#x3D;l.round,n&#x3D;[],m&#x3D;void 0,m&#x3D;l.to.numbers.length,t&#x3D;0;t&lt;m;t++)&#123;var x&#x3D;void 0,x&#x3D;l.to.numbers[t],q&#x3D;l.from.numbers[t],x&#x3D;l.isPath?Y(l.value,w*x):q+w*(x-q);p&amp;&amp;(l.isColor&amp;&amp;2&lt;t||(x&#x3D;Math.round(x*p)&#x2F;p));n.push(x)&#125;if(l&#x3D;h.length)for(m&#x3D;h[0],w&#x3D;0;w&lt;l;w++)p&#x3D;h[w+1],t&#x3D;n[w],isNaN(t)||(m&#x3D;p?m+(t+p):m+(t+&quot; &quot;));</span><br><span class="line">else m&#x3D;n[0];ha[e.type](k.target,e.property,m,c,k.id);e.currentValue&#x3D;m;b++&#125;if(b&#x3D;Object.keys(c).length)for(d&#x3D;0;d&lt;b;d++)H||(H&#x3D;E(document.body,&quot;transform&quot;)?&quot;transform&quot;:&quot;-webkit-transform&quot;),g.animatables[d].target.style[H]&#x3D;c[d].join(&quot; &quot;);g.currentTime&#x3D;a;g.progress&#x3D;a&#x2F;g.duration*100&#125;function f(a)&#123;if(g[a])g[a](g)&#125;function e()&#123;g.remaining&amp;&amp;!0!&#x3D;&#x3D;g.remaining&amp;&amp;g.remaining--&#125;function k(a)&#123;var k&#x3D;g.duration,n&#x3D;g.offset,w&#x3D;n+g.delay,r&#x3D;g.currentTime,x&#x3D;g.reversed,q&#x3D;d(a);if(g.children.length)&#123;var u&#x3D;g.children,v&#x3D;u.length;</span><br><span class="line">if(q&gt;&#x3D;g.currentTime)for(var G&#x3D;0;G&lt;v;G++)u[G].seek(q);else for(;v--;)u[v].seek(q)&#125;if(q&gt;&#x3D;w||!k)g.began||(g.began&#x3D;!0,f(&quot;begin&quot;)),f(&quot;run&quot;);if(q&gt;n&amp;&amp;q&lt;k)b(q);else if(q&lt;&#x3D;n&amp;&amp;0!&#x3D;&#x3D;r&amp;&amp;(b(0),x&amp;&amp;e()),q&gt;&#x3D;k&amp;&amp;r!&#x3D;&#x3D;k||!k)b(k),x||e();f(&quot;update&quot;);a&gt;&#x3D;k&amp;&amp;(g.remaining?(t&#x3D;h,&quot;alternate&quot;&#x3D;&#x3D;&#x3D;g.direction&amp;&amp;(g.reversed&#x3D;!g.reversed)):(g.pause(),g.completed||(g.completed&#x3D;!0,f(&quot;complete&quot;),&quot;Promise&quot;in window&amp;&amp;(p(),m&#x3D;c()))),l&#x3D;0)&#125;a&#x3D;void 0&#x3D;&#x3D;&#x3D;a?&#123;&#125;:a;var h,t,l&#x3D;0,p&#x3D;null,m&#x3D;c(),g&#x3D;fa(a);g.reset&#x3D;function()&#123;var a&#x3D;g.direction,c&#x3D;g.loop;g.currentTime&#x3D;</span><br><span class="line">0;g.progress&#x3D;0;g.paused&#x3D;!0;g.began&#x3D;!1;g.completed&#x3D;!1;g.reversed&#x3D;&quot;reverse&quot;&#x3D;&#x3D;&#x3D;a;g.remaining&#x3D;&quot;alternate&quot;&#x3D;&#x3D;&#x3D;a&amp;&amp;1&#x3D;&#x3D;&#x3D;c?2:c;b(0);for(a&#x3D;g.children.length;a--;)g.children[a].reset()&#125;;g.tick&#x3D;function(a)&#123;h&#x3D;a;t||(t&#x3D;h);k((l+h-t)*q.speed)&#125;;g.seek&#x3D;function(a)&#123;k(d(a))&#125;;g.pause&#x3D;function()&#123;var a&#x3D;v.indexOf(g);-1&lt;a&amp;&amp;v.splice(a,1);g.paused&#x3D;!0&#125;;g.play&#x3D;function()&#123;g.paused&amp;&amp;(g.paused&#x3D;!1,t&#x3D;0,l&#x3D;d(g.currentTime),v.push(g),B||ia())&#125;;g.reverse&#x3D;function()&#123;g.reversed&#x3D;!g.reversed;t&#x3D;0;l&#x3D;d(g.currentTime)&#125;;g.restart&#x3D;function()&#123;g.pause();</span><br><span class="line">g.reset();g.play()&#125;;g.finished&#x3D;m;g.reset();g.autoplay&amp;&amp;g.play();return g&#125;var ga&#x3D;&#123;update:void 0,begin:void 0,run:void 0,complete:void 0,loop:1,direction:&quot;normal&quot;,autoplay:!0,offset:0&#125;,S&#x3D;&#123;duration:1E3,delay:0,easing:&quot;easeOutElastic&quot;,elasticity:500,round:0&#125;,W&#x3D;&quot;translateX translateY translateZ rotate rotateX rotateY rotateZ scale scaleX scaleY scaleZ skewX skewY perspective&quot;.split(&quot; &quot;),H,h&#x3D;&#123;arr:function(a)&#123;return Array.isArray(a)&#125;,obj:function(a)&#123;return-1&lt;Object.prototype.toString.call(a).indexOf(&quot;Object&quot;)&#125;,</span><br><span class="line">pth:function(a)&#123;return h.obj(a)&amp;&amp;a.hasOwnProperty(&quot;totalLength&quot;)&#125;,svg:function(a)&#123;return a instanceof SVGElement&#125;,dom:function(a)&#123;return a.nodeType||h.svg(a)&#125;,str:function(a)&#123;return&quot;string&quot;&#x3D;&#x3D;&#x3D;typeof a&#125;,fnc:function(a)&#123;return&quot;function&quot;&#x3D;&#x3D;&#x3D;typeof a&#125;,und:function(a)&#123;return&quot;undefined&quot;&#x3D;&#x3D;&#x3D;typeof a&#125;,hex:function(a)&#123;return&#x2F;(^#[0-9A-F]&#123;6&#125;$)|(^#[0-9A-F]&#123;3&#125;$)&#x2F;i.test(a)&#125;,rgb:function(a)&#123;return&#x2F;^rgb&#x2F;.test(a)&#125;,hsl:function(a)&#123;return&#x2F;^hsl&#x2F;.test(a)&#125;,col:function(a)&#123;return h.hex(a)||h.rgb(a)||h.hsl(a)&#125;&#125;,A&#x3D;function()&#123;function a(a,</span><br><span class="line">d,b)&#123;return(((1-3*b+3*d)*a+(3*b-6*d))*a+3*d)*a&#125;return function(c,d,b,f)&#123;if(0&lt;&#x3D;c&amp;&amp;1&gt;&#x3D;c&amp;&amp;0&lt;&#x3D;b&amp;&amp;1&gt;&#x3D;b)&#123;var e&#x3D;new Float32Array(11);if(c!&#x3D;&#x3D;d||b!&#x3D;&#x3D;f)for(var k&#x3D;0;11&gt;k;++k)e[k]&#x3D;a(.1*k,c,b);return function(k)&#123;if(c&#x3D;&#x3D;&#x3D;d&amp;&amp;b&#x3D;&#x3D;&#x3D;f)return k;if(0&#x3D;&#x3D;&#x3D;k)return 0;if(1&#x3D;&#x3D;&#x3D;k)return 1;for(var h&#x3D;0,l&#x3D;1;10!&#x3D;&#x3D;l&amp;&amp;e[l]&lt;&#x3D;k;++l)h+&#x3D;.1;--l;var l&#x3D;h+(k-e[l])&#x2F;(e[l+1]-e[l])*.1,n&#x3D;3*(1-3*b+3*c)*l*l+2*(3*b-6*c)*l+3*c;if(.001&lt;&#x3D;n)&#123;for(h&#x3D;0;4&gt;h;++h)&#123;n&#x3D;3*(1-3*b+3*c)*l*l+2*(3*b-6*c)*l+3*c;if(0&#x3D;&#x3D;&#x3D;n)break;var m&#x3D;a(l,c,b)-k,l&#x3D;l-m&#x2F;n&#125;k&#x3D;l&#125;else if(0&#x3D;&#x3D;&#x3D;</span><br><span class="line">n)k&#x3D;l;else&#123;var l&#x3D;h,h&#x3D;h+.1,g&#x3D;0;do m&#x3D;l+(h-l)&#x2F;2,n&#x3D;a(m,c,b)-k,0&lt;n?h&#x3D;m:l&#x3D;m;while(1e-7&lt;Math.abs(n)&amp;&amp;10&gt;++g);k&#x3D;m&#125;return a(k,d,f)&#125;&#125;&#125;&#125;(),Q&#x3D;function()&#123;function a(a,b)&#123;return 0&#x3D;&#x3D;&#x3D;a||1&#x3D;&#x3D;&#x3D;a?a:-Math.pow(2,10*(a-1))*Math.sin(2*(a-1-b&#x2F;(2*Math.PI)*Math.asin(1))*Math.PI&#x2F;b)&#125;var c&#x3D;&quot;Quad Cubic Quart Quint Sine Expo Circ Back Elastic&quot;.split(&quot; &quot;),d&#x3D;&#123;In:[[.55,.085,.68,.53],[.55,.055,.675,.19],[.895,.03,.685,.22],[.755,.05,.855,.06],[.47,0,.745,.715],[.95,.05,.795,.035],[.6,.04,.98,.335],[.6,-.28,.735,.045],a],Out:[[.25,</span><br><span class="line">.46,.45,.94],[.215,.61,.355,1],[.165,.84,.44,1],[.23,1,.32,1],[.39,.575,.565,1],[.19,1,.22,1],[.075,.82,.165,1],[.175,.885,.32,1.275],function(b,c)&#123;return 1-a(1-b,c)&#125;],InOut:[[.455,.03,.515,.955],[.645,.045,.355,1],[.77,0,.175,1],[.86,0,.07,1],[.445,.05,.55,.95],[1,0,0,1],[.785,.135,.15,.86],[.68,-.55,.265,1.55],function(b,c)&#123;return.5&gt;b?a(2*b,c)&#x2F;2:1-a(-2*b+2,c)&#x2F;2&#125;]&#125;,b&#x3D;&#123;linear:A(.25,.25,.75,.75)&#125;,f&#x3D;&#123;&#125;,e;for(e in d)f.type&#x3D;e,d[f.type].forEach(function(a)&#123;return function(d,f)&#123;b[&quot;ease&quot;+a.type+c[f]]&#x3D;h.fnc(d)?</span><br><span class="line">d:A.apply($jscomp$this,d)&#125;&#125;(f)),f&#x3D;&#123;type:f.type&#125;;return b&#125;(),ha&#x3D;&#123;css:function(a,c,d)&#123;return a.style[c]&#x3D;d&#125;,attribute:function(a,c,d)&#123;return a.setAttribute(c,d)&#125;,object:function(a,c,d)&#123;return a[c]&#x3D;d&#125;,transform:function(a,c,d,b,f)&#123;b[f]||(b[f]&#x3D;[]);b[f].push(c+&quot;(&quot;+d+&quot;)&quot;)&#125;&#125;,v&#x3D;[],B&#x3D;0,ia&#x3D;function()&#123;function a()&#123;B&#x3D;requestAnimationFrame(c)&#125;function c(c)&#123;var b&#x3D;v.length;if(b)&#123;for(var d&#x3D;0;d&lt;b;)v[d]&amp;&amp;v[d].tick(c),d++;a()&#125;else cancelAnimationFrame(B),B&#x3D;0&#125;return a&#125;();q.version&#x3D;&quot;2.2.0&quot;;q.speed&#x3D;1;q.running&#x3D;v;q.remove&#x3D;</span><br><span class="line">function(a)&#123;a&#x3D;P(a);for(var c&#x3D;v.length;c--;)for(var d&#x3D;v[c],b&#x3D;d.animations,f&#x3D;b.length;f--;)u(a,b[f].animatable.target)&amp;&amp;(b.splice(f,1),b.length||d.pause())&#125;;q.getValue&#x3D;K;q.path&#x3D;function(a,c)&#123;var d&#x3D;h.str(a)?e(a)[0]:a,b&#x3D;c||100;return function(a)&#123;return&#123;el:d,property:a,totalLength:N(d)*(b&#x2F;100)&#125;&#125;&#125;;q.setDashoffset&#x3D;function(a)&#123;var c&#x3D;N(a);a.setAttribute(&quot;stroke-dasharray&quot;,c);return c&#125;;q.bezier&#x3D;A;q.easings&#x3D;Q;q.timeline&#x3D;function(a)&#123;var c&#x3D;q(a);c.pause();c.duration&#x3D;0;c.add&#x3D;function(d)&#123;c.children.forEach(function(a)&#123;a.began&#x3D;</span><br><span class="line">!0;a.completed&#x3D;!0&#125;);m(d).forEach(function(b)&#123;var d&#x3D;z(b,D(S,a||&#123;&#125;));d.targets&#x3D;d.targets||a.targets;b&#x3D;c.duration;var e&#x3D;d.offset;d.autoplay&#x3D;!1;d.direction&#x3D;c.direction;d.offset&#x3D;h.und(e)?b:L(e,b);c.began&#x3D;!0;c.completed&#x3D;!0;c.seek(d.offset);d&#x3D;q(d);d.began&#x3D;!0;d.completed&#x3D;!0;d.duration&gt;b&amp;&amp;(c.duration&#x3D;d.duration);c.children.push(d)&#125;);c.seek(0);c.reset();c.autoplay&amp;&amp;c.restart();return c&#125;;return c&#125;;q.random&#x3D;function(a,c)&#123;return Math.floor(Math.random()*(c-a+1))+a&#125;;return q&#125;);</span><br><span class="line"></span><br><span class="line">function updateCoords(e) &#123;</span><br><span class="line">    pointerX &#x3D; (e.clientX || e.touches[0].clientX) - canvasEl.getBoundingClientRect().left,</span><br><span class="line">    pointerY &#x3D; e.clientY || e.touches[0].clientY - canvasEl.getBoundingClientRect().top</span><br><span class="line">&#125;</span><br><span class="line">function setParticuleDirection(e) &#123;</span><br><span class="line">    var t &#x3D; anime.random(0, 360) * Math.PI &#x2F; 180</span><br><span class="line">      , a &#x3D; anime.random(50, 180)</span><br><span class="line">      , n &#x3D; [-1, 1][anime.random(0, 1)] * a;</span><br><span class="line">    return &#123;</span><br><span class="line">        x: e.x + n * Math.cos(t),</span><br><span class="line">        y: e.y + n * Math.sin(t)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function createParticule(e, t) &#123;</span><br><span class="line">    var a &#x3D; &#123;&#125;;</span><br><span class="line">    return a.x &#x3D; e,</span><br><span class="line">    a.y &#x3D; t,</span><br><span class="line">    a.color &#x3D; colors[anime.random(0, colors.length - 1)],</span><br><span class="line">    a.radius &#x3D; anime.random(16, 32),</span><br><span class="line">    a.endPos &#x3D; setParticuleDirection(a),</span><br><span class="line">    a.draw &#x3D; function() &#123;</span><br><span class="line">        ctx.beginPath(),</span><br><span class="line">        ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),</span><br><span class="line">        ctx.fillStyle &#x3D; a.color,</span><br><span class="line">        ctx.fill()</span><br><span class="line">    &#125;</span><br><span class="line">    ,</span><br><span class="line">    a</span><br><span class="line">&#125;</span><br><span class="line">function createCircle(e, t) &#123;</span><br><span class="line">    var a &#x3D; &#123;&#125;;</span><br><span class="line">    return a.x &#x3D; e,</span><br><span class="line">    a.y &#x3D; t,</span><br><span class="line">    a.color &#x3D; &quot;#F00&quot;,</span><br><span class="line">    a.radius &#x3D; .1,</span><br><span class="line">    a.alpha &#x3D; .5,</span><br><span class="line">    a.lineWidth &#x3D; 6,</span><br><span class="line">    a.draw &#x3D; function() &#123;</span><br><span class="line">        ctx.globalAlpha &#x3D; a.alpha,</span><br><span class="line">        ctx.beginPath(),</span><br><span class="line">        ctx.arc(a.x, a.y, a.radius, 0, 2 * Math.PI, !0),</span><br><span class="line">        ctx.lineWidth &#x3D; a.lineWidth,</span><br><span class="line">        ctx.strokeStyle &#x3D; a.color,</span><br><span class="line">        ctx.stroke(),</span><br><span class="line">        ctx.globalAlpha &#x3D; 1</span><br><span class="line">    &#125;</span><br><span class="line">    ,</span><br><span class="line">    a</span><br><span class="line">&#125;</span><br><span class="line">function renderParticule(e) &#123;</span><br><span class="line">    for (var t &#x3D; 0; t &lt; e.animatables.length; t++)</span><br><span class="line">        e.animatables[t].target.draw()</span><br><span class="line">&#125;</span><br><span class="line">function animateParticules(e, t) &#123;</span><br><span class="line">    for (var a &#x3D; createCircle(e, t), n &#x3D; [], i &#x3D; 0; i &lt; numberOfParticules; i++)</span><br><span class="line">        n.push(createParticule(e, t));</span><br><span class="line">    anime.timeline().add(&#123;</span><br><span class="line">        targets: n,</span><br><span class="line">        x: function(e) &#123;</span><br><span class="line">            return e.endPos.x</span><br><span class="line">        &#125;,</span><br><span class="line">        y: function(e) &#123;</span><br><span class="line">            return e.endPos.y</span><br><span class="line">        &#125;,</span><br><span class="line">        radius: .1,</span><br><span class="line">        duration: anime.random(1200, 1800),</span><br><span class="line">        easing: &quot;easeOutExpo&quot;,</span><br><span class="line">        update: renderParticule</span><br><span class="line">    &#125;).add(&#123;</span><br><span class="line">        targets: a,</span><br><span class="line">        radius: anime.random(80, 160),</span><br><span class="line">        lineWidth: 0,</span><br><span class="line">        alpha: &#123;</span><br><span class="line">            value: 0,</span><br><span class="line">            easing: &quot;linear&quot;,</span><br><span class="line">            duration: anime.random(600, 800)</span><br><span class="line">        &#125;,</span><br><span class="line">        duration: anime.random(1200, 1800),</span><br><span class="line">        easing: &quot;easeOutExpo&quot;,</span><br><span class="line">        update: renderParticule,</span><br><span class="line">        offset: 0</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">function debounce(fn, delay) &#123;</span><br><span class="line">  var timer</span><br><span class="line">  return function () &#123;</span><br><span class="line">    var context &#x3D; this</span><br><span class="line">    var args &#x3D; arguments</span><br><span class="line">    clearTimeout(timer)</span><br><span class="line">    timer &#x3D; setTimeout(function () &#123;</span><br><span class="line">      fn.apply(context, args)</span><br><span class="line">    &#125;, delay)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var canvasEl &#x3D; document.querySelector(&quot;.fireworks&quot;);</span><br><span class="line">if (canvasEl) &#123;</span><br><span class="line">    var ctx &#x3D; canvasEl.getContext(&quot;2d&quot;)</span><br><span class="line">      , numberOfParticules &#x3D; 30</span><br><span class="line">      , pointerX &#x3D; 0</span><br><span class="line">      , pointerY &#x3D; 0</span><br><span class="line">      , tap &#x3D; &quot;mousedown&quot;</span><br><span class="line">      , colors &#x3D; [&quot;#FF1461&quot;, &quot;#18FF92&quot;, &quot;#5A87FF&quot;, &quot;#FBF38C&quot;]</span><br><span class="line">      , setCanvasSize &#x3D; debounce(function() &#123;</span><br><span class="line">        canvasEl.width &#x3D; 2 * window.innerWidth,</span><br><span class="line">        canvasEl.height &#x3D; 2 * window.innerHeight,</span><br><span class="line">        canvasEl.style.width &#x3D; window.innerWidth + &quot;px&quot;,</span><br><span class="line">        canvasEl.style.height &#x3D; window.innerHeight + &quot;px&quot;,</span><br><span class="line">        canvasEl.getContext(&quot;2d&quot;).scale(2, 2)</span><br><span class="line">    &#125;,500)</span><br><span class="line">      , render &#x3D; anime(&#123;</span><br><span class="line">        duration: 1 &#x2F; 0,</span><br><span class="line">        update: function() &#123;</span><br><span class="line">            ctx.clearRect(0, 0, canvasEl.width, canvasEl.height)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    document.addEventListener(tap, function(e) &#123;</span><br><span class="line">        &quot;sidebar&quot; !&#x3D;&#x3D; e.target.id &amp;&amp; &quot;toggle-sidebar&quot; !&#x3D;&#x3D; e.target.id &amp;&amp; &quot;A&quot; !&#x3D;&#x3D; e.target.nodeName &amp;&amp; &quot;IMG&quot; !&#x3D;&#x3D; e.target.nodeName &amp;&amp; (render.play(),</span><br><span class="line">        updateCoords(e),</span><br><span class="line">        animateParticules(pointerX, pointerY))</span><br><span class="line">    &#125;, !1),</span><br><span class="line">    setCanvasSize(),</span><br><span class="line">    window.addEventListener(&quot;resize&quot;, setCanvasSize, !1)</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/09/30/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  centos服务器使用过程记录
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/09/24/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+                05 数据处理工具
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

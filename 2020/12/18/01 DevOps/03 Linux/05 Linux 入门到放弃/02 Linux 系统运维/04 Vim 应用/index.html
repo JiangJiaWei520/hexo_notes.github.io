@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		04 Vim 应用 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 科学上网工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/06%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B7%A5%E5%85%B7/01%20heroku%E6%90%AD%E5%BB%BAv2ray/">
+										01 heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	04 Vim 应用
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-12-18 13:35:52</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="Vim-应用"><a href="#Vim-应用" class="headerlink" title="Vim 应用"></a>Vim 应用</h1><h2 id="1-概念"><a href="#1-概念" class="headerlink" title="#1. 概念"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-%E6%A6%82%E5%BF%B5">#</a>1. 概念</h2><h3 id="1-1-什么是-vim"><a href="#1-1-什么是-vim" class="headerlink" title="#1.1. 什么是 vim"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-1-%E4%BB%80%E4%B9%88%E6%98%AF-vim">#</a>1.1. 什么是 vim</h3><p>Vim 是从 vi 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。和 Emacs 并列成为类 Unix 系统用户最喜欢的编辑器。</p>
+<h3 id="1-2-Vim-的模式"><a href="#1-2-Vim-的模式" class="headerlink" title="#1.2. Vim 的模式"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-2-vim-%E7%9A%84%E6%A8%A1%E5%BC%8F">#</a>1.2. Vim 的模式</h3><p>基本上 vi/vim 共分为三种模式，分别是<strong>命令模式（Command mode）</strong>，**插入模式（Insert mode）**和**底线命令模式（Last line mode）**。</p>
+<h4 id="1-2-1-命令模式"><a href="#1-2-1-命令模式" class="headerlink" title="#1.2.1. 命令模式"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-2-1-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F">#</a>1.2.1. 命令模式</h4><p><strong>用户刚刚启动 vi/vim，便进入了命令模式。</strong></p>
+<p>此状态下敲击键盘动作会被 Vim 识别为命令，而非输入字符。</p>
+<h4 id="1-2-2-插入模式"><a href="#1-2-2-插入模式" class="headerlink" title="#1.2.2. 插入模式"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-2-2-%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F">#</a>1.2.2. 插入模式</h4><p><strong>在命令模式下按下 <code>i</code> 就进入了输入模式。</strong></p>
+<p>在输入模式下，你可以输入文本内容。</p>
+<h4 id="1-2-3-底线命令模式"><a href="#1-2-3-底线命令模式" class="headerlink" title="#1.2.3. 底线命令模式"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_1-2-3-%E5%BA%95%E7%BA%BF%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F">#</a>1.2.3. 底线命令模式</h4><p><strong>在命令模式下按下 <code>:</code>（英文冒号）就进入了底线命令模式。</strong></p>
+<p>底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。</p>
+<h2 id="2-Vim-渐进学习"><a href="#2-Vim-渐进学习" class="headerlink" title="#2. Vim 渐进学习"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-vim-%E6%B8%90%E8%BF%9B%E5%AD%A6%E4%B9%A0">#</a>2. Vim 渐进学习</h2><h3 id="2-1-存活"><a href="#2-1-存活" class="headerlink" title="#2.1. 存活"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-1-%E5%AD%98%E6%B4%BB">#</a>2.1. 存活</h3><ol>
+<li>安装 <a target="_blank" rel="noopener" href="http://www.vim.org/">vim</a></li>
+<li>启动 vim</li>
+<li><strong>什么也别干！</strong>请先阅读</li>
+</ol>
+<p>当你安装好一个编辑器后，你一定会想在其中输入点什么东西，然后看看这个编辑器是什么样子。但 vim 不是这样的，请按照下面的命令操作：</p>
+<ul>
+<li>启 动 Vim 后，vim 在 <em>Normal</em> 模式下。</li>
+<li>让我们进入 <em>Insert</em> 模式，请按下键 i 。(注：你会看到 vim 左下角有一个–insert–字样，表示，你可以以插入的方式输入了）</li>
+<li>此时，你可以输入文本了，就像你用“记事本”一样。</li>
+<li>如果你想返回 <em>Normal</em> 模式，请按 <code>ESC</code> 键。</li>
+</ul>
+<p>现在，你知道如何在 <em>Insert</em> 和 <em>Normal</em> 模式下切换了。下面是一些命令，可以让你在 <em>Normal</em> 模式下幸存下来：</p>
+<blockquote>
+<ul>
+<li><code>i</code> → <em>Insert</em> 模式，按 <code>ESC</code> 回到 <em>Normal</em> 模式.</li>
+<li><code>x</code> → 删当前光标所在的一个字符。</li>
+<li><code>:wq</code> → 存盘 + 退出 (<code>:w</code> 存盘, <code>:q</code> 退出) （注：:w 后可以跟文件名）</li>
+<li><code>dd</code> → 删除当前行，并把删除的行存到剪贴板里</li>
+<li><code>p</code> → 粘贴剪贴板</li>
+</ul>
+<p><strong>推荐</strong></p>
+<ul>
+<li><code>hjkl</code> (强例推荐使用其移动光标，但不必需) → 你也可以使用光标键 (←↓↑→). 注: <code>j</code> 就像下箭头。</li>
+<li><code>:help &lt;command&gt;</code> → 显示相关命令的帮助。你也可以就输入 <code>:help</code> 而不跟命令。（注：退出帮助需要输入:q）</li>
+</ul>
+</blockquote>
+<p>你能在 vim 幸存下来只需要上述的那 5 个命令，你就可以编辑文本了，你一定要把这些命令练成一种下意识的状态。于是你就可以开始进阶到第二级了。</p>
+<p>当是，在你进入第二级时，需要再说一下 <em>Normal</em> 模式。在一般的编辑器下，当你需要 copy 一段文字的时候，你需要使用 <code>Ctrl</code> 键，比如：<code>Ctrl-C</code>。也就是说，<code>Ctrl</code> 键就好像功能键一样，当你按下了功能键 <code>Ctrl</code> 后，C 就不在是 C 了，而且就是一个命令或是一个快键键了，<strong>在 vim 的 Normal 模式下，所有的键都是功能键</strong>。这个你需要知道。</p>
+<blockquote>
+<p><strong>标记</strong></p>
+<ul>
+<li>下面的文字中，如果是 <code>Ctrl-λ</code>我会写成 <code>&lt;C-λ&gt;</code>.</li>
+<li>以 <code>:</code> 开始的命令你需要输入 <code>&lt;enter&gt;</code>回车，例如 — 如果我写成 <code>:q</code> 也就是说你要输入 <code>:q&lt;enter&gt;</code>.</li>
+</ul>
+</blockquote>
+<h3 id="2-2-感觉良好"><a href="#2-2-感觉良好" class="headerlink" title="#2.2. 感觉良好"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-2-%E6%84%9F%E8%A7%89%E8%89%AF%E5%A5%BD">#</a>2.2. 感觉良好</h3><p>上面的那些命令只能让你存活下来，现在是时候学习一些更多的命令了，下面是我的建议：（注：所有的命令都需要在 Normal 模式下使用，如果你不知道现在在什么样的模式，你就狂按几次 ESC 键）</p>
+<ol>
+<li><p>各种插入模式</p>
+<blockquote>
+<ul>
+<li><code>a</code> → 在光标后插入</li>
+<li><code>o</code> → 在当前行后插入一个新行</li>
+<li><code>O</code> → 在当前行前插入一个新行</li>
+<li><code>cw</code> → 替换从光标所在位置后到一个单词结尾的字符</li>
+</ul>
+</blockquote>
+</li>
+<li><p>简单的移动光标</p>
+<blockquote>
+<ul>
+<li><code>0</code> → 数字零，到行头</li>
+<li><code>^</code> → 到本行第一个不是 blank 字符的位置（所谓 blank 字符就是空格，tab，换行，回车等）</li>
+<li><code>$</code> → 到本行行尾</li>
+<li><code>g_</code> → 到本行最后一个不是 blank 字符的位置。</li>
+<li><code>/pattern</code> → 搜索 <code>pattern</code> 的字符串（注：如果搜索出多个匹配，可按 n 键到下一个）</li>
+</ul>
+</blockquote>
+</li>
+<li><p>拷贝/粘贴</p>
+<p>（注：p/P 都可以，p 是表示在当前位置之后，P 表示在当前位置之前）</p>
+<blockquote>
+<ul>
+<li><code>P</code> → 粘贴</li>
+<li><code>yy</code> → 拷贝当前行当行于 <code>ddP</code></li>
+</ul>
+</blockquote>
+</li>
+<li><p>Undo/Redo</p>
+<blockquote>
+<ul>
+<li><code>u</code> → undo</li>
+<li><code>&lt;C-r&gt;</code> → redo</li>
+</ul>
+</blockquote>
+</li>
+<li><p>打开/保存/退出/改变文件</p>
+<p>(Buffer)</p>
+<blockquote>
+<ul>
+<li><code>:e &lt;path/to/file&gt;</code> → 打开一个文件</li>
+<li><code>:w</code> → 存盘</li>
+<li><code>:saveas &lt;path/to/file&gt;</code> → 另存为 <code>&lt;path/to/file&gt;</code></li>
+<li><code>:x</code>， <code>ZZ</code> 或 <code>:wq</code> → 保存并退出 (<code>:x</code> 表示仅在需要时保存，ZZ 不需要输入冒号并回车)</li>
+<li><code>:q!</code> → 退出不保存 <code>:qa!</code> 强行退出所有的正在编辑的文件，就算别的文件有更改。</li>
+<li><code>:bn</code> 和 <code>:bp</code> → 你可以同时打开很多文件，使用这两个命令来切换下一个或上一个文件。（注：我喜欢使用:n 到下一个文件）</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<p>花点时间熟悉一下上面的命令，一旦你掌握他们了，你就几乎可以干其它编辑器都能干的事了。但是到现在为止，你还是觉得使用 vim 还是有点笨拙，不过没关系，你可以进阶到第三级了。</p>
+<h3 id="2-3-更好，更强，更快"><a href="#2-3-更好，更强，更快" class="headerlink" title="#2.3. 更好，更强，更快"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-3-%E6%9B%B4%E5%A5%BD%EF%BC%8C%E6%9B%B4%E5%BC%BA%EF%BC%8C%E6%9B%B4%E5%BF%AB">#</a>2.3. 更好，更强，更快</h3><p>先恭喜你！你干的很不错。我们可以开始一些更为有趣的事了。在第三级，我们只谈那些和 vi 可以兼容的命令。</p>
+<h4 id="2-3-1-更好"><a href="#2-3-1-更好" class="headerlink" title="#2.3.1. 更好"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-3-1-%E6%9B%B4%E5%A5%BD">#</a>2.3.1. 更好</h4><p>下面，让我们看一下 vim 是怎么重复自己的：1515G</p>
+<ol>
+<li><code>.</code> → (小数点) 可以重复上一次的命令</li>
+<li><code>N&lt;command&gt;</code> → 重复某个命令 N 次</li>
+</ol>
+<p>下面是一个示例，找开一个文件你可以试试下面的命令：</p>
+<blockquote>
+<ul>
+<li><code>2dd</code> → 删除 2 行</li>
+<li><code>3p</code> → 粘贴文本 3 次</li>
+<li><code>100idesu [ESC]</code> → 会写下 “desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu desu “</li>
+<li><code>.</code> → 重复上一个命令—— 100 “desu “.</li>
+<li><code>3.</code> → 重复 3 次 “desu” (注意：不是 300，你看，VIM 多聪明啊).</li>
+</ul>
+</blockquote>
+<h4 id="2-3-2-更强"><a href="#2-3-2-更强" class="headerlink" title="#2.3.2. 更强"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-3-2-%E6%9B%B4%E5%BC%BA">#</a>2.3.2. 更强</h4><p>你要让你的光标移动更有效率，你一定要了解下面的这些命令，<strong>千万别跳过</strong>。</p>
+<ol>
+<li><p>N<code>G</code> → 到第 N 行 （注：注意命令中的 G 是大写的，另我一般使用 : N 到第 N 行，如 :137 到第 137 行）</p>
+</li>
+<li><p><code>gg</code> → 到第一行。（注：相当于 1G，或 :1）</p>
+</li>
+<li><p><code>G</code> → 到最后一行。</p>
+</li>
+<li><p>按单词移动：</p>
+<blockquote>
+<ol>
+<li><code>w</code> → 到下一个单词的开头。</li>
+<li><code>e</code> → 到下一个单词的结尾。</li>
+</ol>
+<p>&gt; 如果你认为单词是由默认方式，那么就用小写的 e 和 w。默认上来说，一个单词由字母，数字和下划线组成（注：程序变量）</p>
+<p>&gt; 如果你认为单词是由 blank 字符分隔符，那么你需要使用大写的 E 和 W。（注：程序语句）</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-46f752c581d79057.jpg" alt="img"></p>
+</blockquote>
+</li>
+</ol>
+<p>下面，让我来说说最强的光标移动：</p>
+<blockquote>
+<ul>
+<li><code>%</code> : 匹配括号移动，包括 <code>(</code>, <code>&#123;</code>, <code>[</code>. （注：你需要把光标先移到括号上）</li>
+<li><code>*</code> 和 <code>#</code>: 匹配光标当前所在的单词，移动光标到下一个（或上一个）匹配单词（*是下一个，#是上一个）</li>
+</ul>
+</blockquote>
+<p>相信我，上面这三个命令对程序员来说是相当强大的。</p>
+<h4 id="2-3-3-更快"><a href="#2-3-3-更快" class="headerlink" title="#2.3.3. 更快"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-3-3-%E6%9B%B4%E5%BF%AB">#</a>2.3.3. 更快</h4><p>你一定要记住光标的移动，因为很多命令都可以和这些移动光标的命令连动。很多命令都可以如下来干：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;start position&gt;&lt;command&gt;&lt;end position&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如 <code>0y$</code> 命令意味着：</p>
+<ul>
+<li><code>0</code> → 先到行头</li>
+<li><code>y</code> → 从这里开始拷贝</li>
+<li><code>$</code> → 拷贝到本行最后一个字符</li>
+</ul>
+<p>你可可以输入 <code>ye</code>，从当前位置拷贝到本单词的最后一个字符。</p>
+<p>你也可以输入 <code>y2/foo</code> 来拷贝 2 个 “foo” 之间的字符串。</p>
+<p>还有很多时间并不一定你就一定要按 y 才会拷贝，下面的命令也会被拷贝：</p>
+<ul>
+<li><code>d</code> (删除 )</li>
+<li><code>v</code> (可视化的选择)</li>
+<li><code>gU</code> (变大写)</li>
+<li><code>gu</code> (变小写)</li>
+<li>等等</li>
+</ul>
+<p>（注：可视化选择是一个很有意思的命令，你可以先按 v，然后移动光标，你就会看到文本被选择，然后，你可能 d，也可 y，也可以变大写等）</p>
+<h3 id="2-4-Vim-超能力"><a href="#2-4-Vim-超能力" class="headerlink" title="#2.4. Vim 超能力"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-vim-%E8%B6%85%E8%83%BD%E5%8A%9B">#</a>2.4. Vim 超能力</h3><p>你只需要掌握前面的命令，你就可以很舒服的使用 VIM 了。但是，现在，我们向你介绍的是 VIM 杀手级的功能。下面这些功能是我只用 vim 的原因。</p>
+<h4 id="2-4-1-在当前行上移动光标-0-fFtT"><a href="#2-4-1-在当前行上移动光标-0-fFtT" class="headerlink" title="#2.4.1. 在当前行上移动光标: 0 ^ ####fFtT,``;`"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-1-%E5%9C%A8%E5%BD%93%E5%89%8D%E8%A1%8C%E4%B8%8A%E7%A7%BB%E5%8A%A8%E5%85%89%E6%A0%87-0-fftt">#</a>2.4.1. 在当前行上移动光标: <code>0</code> <code>^</code> <code>####</code>f<code>F</code>t<code>T</code>,``;`</h4><blockquote>
+<ul>
+<li><code>0</code> → 到行头</li>
+<li><code>^</code> → 到本行的第一个非 blank 字符</li>
+<li><code>$</code> → 到行尾</li>
+<li><code>g_</code> → 到本行最后一个不是 blank 字符的位置。</li>
+<li><code>fa</code> → 到下一个为 a 的字符处，你也可以 fs 到下一个为 s 的字符。</li>
+<li><code>t,</code> → 到逗号前的第一个字符。逗号可以变成其它字符。</li>
+<li><code>3fa</code> → 在当前行查找第三个出现的 a。</li>
+<li><code>F</code> 和 <code>T</code> → 和 <code>f</code> 和 <code>t</code> 一样，只不过是相反方向。<br><img src="http://upload-images.jianshu.io/upload_images/3101171-00835b8316330c58.jpg" alt="img"></li>
+</ul>
+</blockquote>
+<p>还有一个很有用的命令是 <code>dt&quot;</code> → 删除所有的内容，直到遇到双引号—— <code>&quot;。</code></p>
+<h4 id="2-4-2-区域选择-lt-action-gt-a-lt-object-gt-或-lt-action-gt-i-lt-object-gt"><a href="#2-4-2-区域选择-lt-action-gt-a-lt-object-gt-或-lt-action-gt-i-lt-object-gt" class="headerlink" title="#2.4.2. 区域选择 &lt;action&gt;a&lt;object&gt; 或 &lt;action&gt;i&lt;object&gt;"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-2-%E5%8C%BA%E5%9F%9F%E9%80%89%E6%8B%A9-action-a-object-%E6%88%96-action-i-object">#</a>2.4.2. 区域选择 <code>&lt;action&gt;a&lt;object&gt;</code> 或 <code>&lt;action&gt;i&lt;object&gt;</code></h4><p>在 visual 模式下，这些命令很强大，其命令格式为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;action&gt;a&lt;object&gt;` 和 `&lt;action&gt;i&lt;object&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>action 可以是任何的命令，如 <code>d</code> (删除), <code>y</code> (拷贝), <code>v</code> (可以视模式选择)。</li>
+<li>object 可能是： <code>w</code> 一个单词， <code>W</code> 一个以空格为分隔的单词， <code>s</code> 一个句字， <code>p</code> 一个段落。也可以是一个特别的字符：<code>&quot;、</code> <code>&#39;、</code> <code>)、</code> <code>&#125;、</code> <code>]。</code></li>
+</ul>
+<p>假设你有一个字符串 <code>(map (+) (&quot;foo&quot;))</code>.而光标键在第一个 <code>o</code>的位置。</p>
+<blockquote>
+<ul>
+<li><code>vi&quot;</code> → 会选择 <code>foo</code>.</li>
+<li><code>va&quot;</code> → 会选择 <code>&quot;foo&quot;</code>.</li>
+<li><code>vi)</code> → 会选择 <code>&quot;foo&quot;</code>.</li>
+<li><code>va)</code> → 会选择<code>(&quot;foo&quot;)</code>.</li>
+<li><code>v2i)</code> → 会选择 <code>map (+) (&quot;foo&quot;)</code></li>
+<li><code>v2a)</code> → 会选择 <code>(map (+) (&quot;foo&quot;))</code></li>
+</ul>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-0b109d66a6111c83.png" alt="img"></p>
+<h4 id="2-4-3-块操作-lt-C-v-gt"><a href="#2-4-3-块操作-lt-C-v-gt" class="headerlink" title="#2.4.3. 块操作: &lt;C-v&gt;"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-3-%E5%9D%97%E6%93%8D%E4%BD%9C-c-v">#</a>2.4.3. 块操作: <code>&lt;C-v&gt;</code></h4><p>块操作，典型的操作： <code>0 &lt;C-v&gt; &lt;C-d&gt; I-- [ESC]</code></p>
+<ul>
+<li><code>^</code> → 到行头</li>
+<li><code>&lt;C-v&gt;</code> → 开始块操作</li>
+<li><code>&lt;C-d&gt;</code> → 向下移动 (你也可以使用 hjkl 来移动光标，或是使用%，或是别的)</li>
+<li><code>I-- [ESC]</code> → I 是插入，插入“<code>--</code>”，按 ESC 键来为每一行生效。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-8b093a0f65707949.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<p>在 Windows 下的 vim，你需要使用 <code>&lt;C-q&gt;</code> 而不是 <code>&lt;C-v&gt;</code> ，<code>&lt;C-v&gt;</code> 是拷贝剪贴板。</p>
+<h4 id="2-4-4-自动提示：-lt-C-n-gt-和-lt-C-p-gt"><a href="#2-4-4-自动提示：-lt-C-n-gt-和-lt-C-p-gt" class="headerlink" title="#2.4.4. 自动提示： &lt;C-n&gt; 和 &lt;C-p&gt;"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-4-%E8%87%AA%E5%8A%A8%E6%8F%90%E7%A4%BA%EF%BC%9A-c-n-%E5%92%8C-c-p">#</a>2.4.4. 自动提示： <code>&lt;C-n&gt;</code> 和 <code>&lt;C-p&gt;</code></h4><p>在 Insert 模式下，你可以输入一个词的开头，然后按 <code>&lt;C-p&gt;或是&lt;C-n&gt;，自动补齐功能就出现了……</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-e2ae877e67880ff7.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<h4 id="2-4-5-宏录制：-qa-操作序列-q-a"><a href="#2-4-5-宏录制：-qa-操作序列-q-a" class="headerlink" title="#2.4.5. 宏录制： qa 操作序列 q, @a, @@"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-5-%E5%AE%8F%E5%BD%95%E5%88%B6%EF%BC%9A-qa-%E6%93%8D%E4%BD%9C%E5%BA%8F%E5%88%97-q-a">#</a>2.4.5. 宏录制： <code>qa</code> 操作序列 <code>q</code>, <code>@a</code>, <code>@@</code></h4><ul>
+<li><code>qa</code> 把你的操作记录在寄存器 <code>a。</code></li>
+<li>于是 <code>@a</code> 会 replay 被录制的宏。</li>
+<li><code>@@</code> 是一个快捷键用来 replay 最新录制的宏。</li>
+</ul>
+<blockquote>
+<p><strong>示例</strong></p>
+<p>在一个只有一行且这一行只有“1”的文本中，键入如下命令：</p>
+<ul>
+<li><pre><code class="text">qaYp&lt;C-a&gt;q
+</code></pre>
+<p>→</p>
+<ul>
+<li><code>qa</code> 开始录制</li>
+<li><code>Yp</code> 复制行.</li>
+<li><code>&lt;C-a&gt;</code> 增加 1.</li>
+<li><code>q</code> 停止录制.</li>
+</ul>
+</li>
+<li><p><code>@a</code> → 在 1 下面写下 2</p>
+</li>
+<li><p><code>@@</code> → 在 2 正面写下 3</p>
+</li>
+<li><p>现在做 <code>100@@</code> 会创建新的 100 行，并把数据增加到 103.</p>
+</li>
+</ul>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-f1889f8bca723964.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<h4 id="2-4-6-可视化选择：-v-V-lt-C-v-gt"><a href="#2-4-6-可视化选择：-v-V-lt-C-v-gt" class="headerlink" title="#2.4.6. 可视化选择： v,V,&lt;C-v&gt;"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-6-%E5%8F%AF%E8%A7%86%E5%8C%96%E9%80%89%E6%8B%A9%EF%BC%9A-v-v-c-v">#</a>2.4.6. 可视化选择： <code>v</code>,<code>V</code>,<code>&lt;C-v&gt;</code></h4><p>前面，我们看到了 <code>&lt;C-v&gt;</code>的示例 （在 Windows 下应该是），我们可以使用 <code>v</code> 和 <code>V</code>。一但被选好了，你可以做下面的事：</p>
+<ul>
+<li><code>J</code> → 把所有的行连接起来（变成一行）</li>
+<li><code>&lt;</code> 或 <code>&gt;</code> → 左右缩进</li>
+<li><code>=</code> → 自动给缩进 （注：这个功能相当强大，我太喜欢了）</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-fe1e19983fca213f.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<p>在所有被选择的行后加上点东西：</p>
+<ul>
+<li><code>&lt;C-v&gt;</code></li>
+<li>选中相关的行 (可使用 <code>j</code> 或 <code>&lt;C-d&gt;</code> 或是 <code>/pattern</code> 或是 <code>%</code> 等……)</li>
+<li><code>$</code> 到行最后</li>
+<li><code>A</code>, 输入字符串，按 <code>ESC。</code></li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-b192601247334c4e.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<h4 id="2-4-7-分屏-split-和-vsplit"><a href="#2-4-7-分屏-split-和-vsplit" class="headerlink" title="#2.4.7. 分屏: :split 和 vsplit."></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_2-4-7-%E5%88%86%E5%B1%8F-split-%E5%92%8C-vsplit">#</a>2.4.7. 分屏: <code>:split</code> 和 <code>vsplit</code>.</h4><p>下面是主要的命令，你可以使用 VIM 的帮助 <code>:help split</code>. 你可以参考本站以前的一篇文章<a target="_blank" rel="noopener" href="https://coolshell.cn/articles/1679.html">VIM 分屏</a>。</p>
+<blockquote>
+<ul>
+<li><code>:split</code> → 创建分屏 (<code>:vsplit</code>创建垂直分屏)</li>
+<li><code>&lt;C-w&gt;&lt;dir&gt;</code> : dir 就是方向，可以是 <code>hjkl</code> 或是 ←↓↑→ 中的一个，其用来切换分屏。</li>
+<li><code>&lt;C-w&gt;_</code> (或 <code>&lt;C-w&gt;|</code>) : 最大化尺寸 (| 垂直分屏)</li>
+<li><code>&lt;C-w&gt;+</code> (或 <code>&lt;C-w&gt;-</code>) : 增加尺寸</li>
+</ul>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/3101171-f329d01e299cb366.gif?imageMogr2/auto-orient/strip" alt="img"></p>
+<h2 id="3-Vim-Cheat-Sheet"><a href="#3-Vim-Cheat-Sheet" class="headerlink" title="#3. Vim Cheat Sheet"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-vim-cheat-sheet">#</a>3. Vim Cheat Sheet</h2><blockquote>
+<p>本节内容的原文地址：<a target="_blank" rel="noopener" href="http://cenalulu.github.io/linux/all-vim-cheatsheat/">http://cenalulu.github.io/linux/all-vim-cheatsheat/</a></p>
+</blockquote>
+<h3 id="3-1-经典版"><a href="#3-1-经典版" class="headerlink" title="#3.1. 经典版"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-1-%E7%BB%8F%E5%85%B8%E7%89%88">#</a>3.1. 经典版</h3><p>下面这个键位图应该是大家最常看见的经典版了。其实这个版本是一系列的入门教程键位图的组合结果。要查看不同编辑模式下的键位图，可以看<a target="_blank" rel="noopener" href="http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html">这里打包下载</a></p>
+<p>此外，<a target="_blank" rel="noopener" href="http://blog.ngedit.com/vi-vim-cheat-sheet-sch.gif">这里</a>还有简体中文版。</p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/vim-cheat-sheet.png!zp" alt="img"></p>
+<h3 id="3-2-入门版"><a href="#3-2-入门版" class="headerlink" title="#3.2. 入门版"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-2-%E5%85%A5%E9%97%A8%E7%89%88">#</a>3.2. 入门版</h3><p>基本操作的入门版。<a target="_blank" rel="noopener" href="https://github.com/ahrencode/Miscellaneous">原版出处</a>还有 keynote 版本可供 DIY 以及其他相关有用的 cheatsheet。</p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/basic-vim-cheat-sheet.png!zp" alt="img"></p>
+<h3 id="3-3-进阶版"><a href="#3-3-进阶版" class="headerlink" title="#3.3. 进阶版"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-3-%E8%BF%9B%E9%98%B6%E7%89%88">#</a>3.3. 进阶版</h3><p>下图是 300DPI 的超清大图，另外<a target="_blank" rel="noopener" href="http://michael.peopleofhonoronly.com/vim/">查看原文</a>还有更多版本：黑白，低分辨率，色盲等</p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/vim-cheat-sheet-for-programmers.png!zp" alt="img"></p>
+<h3 id="3-4-增强版"><a href="#3-4-增强版" class="headerlink" title="#3.4. 增强版"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-4-%E5%A2%9E%E5%BC%BA%E7%89%88">#</a>3.4. 增强版</h3><p>下图是一个更新时间较新的现代版，含有的信息也更丰富。<a target="_blank" rel="noopener" href="http://vimcheatsheet.com/">原文链接</a></p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/vim-cheat-sheet-02.png!zp" alt="img"></p>
+<h3 id="3-5-文字版"><a href="#3-5-文字版" class="headerlink" title="#3.5. 文字版"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_3-5-%E6%96%87%E5%AD%97%E7%89%88">#</a>3.5. 文字版</h3><p><a target="_blank" rel="noopener" href="http://tnerual.eriogerg.free.fr/vimqrc.pdf">原文链接</a></p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/vim-cheat-sheet-text-01.png!zp" alt="img"></p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/vim/vim-cheat-sheet-text-02.png!zp" alt="img"></p>
+<h2 id="4-资料"><a href="#4-资料" class="headerlink" title="#4. 资料"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/vim.html#_4-%E8%B5%84%E6%96%99">#</a>4. 资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://coolshell.cn/articles/5426.html">简明 VIM 练级攻略</a> ，Vim 渐进学习内容来源于这篇文章，作为 Vim 新手，我觉得入门效果很好。</li>
+<li><a target="_blank" rel="noopener" href="https://vim.sourceforge.io/docs.php">vim 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/mhinz/vim-galore">vim-galore</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/bcbe916f97e1">Vim 入门基础</a></li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  05 Linux 系统管理
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+                05 Iptables 应用
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

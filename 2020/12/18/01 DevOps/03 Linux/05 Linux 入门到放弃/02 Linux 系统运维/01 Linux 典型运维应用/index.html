@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		01 Linux 典型运维应用 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 科学上网工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/06%20%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E5%B7%A5%E5%85%B7/01%20heroku%E6%90%AD%E5%BB%BAv2ray/">
+										01 heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/18/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	01 Linux 典型运维应用
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-12-18 13:35:52</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="Linux-典型运维应用"><a href="#Linux-典型运维应用" class="headerlink" title="Linux 典型运维应用"></a>Linux 典型运维应用</h1><blockquote>
+<p>💡 如果没有特殊说明，本文的案例都是针对 Centos 发行版本。</p>
+</blockquote>
+<h2 id="1-网络操作"><a href="#1-网络操作" class="headerlink" title="#1. 网络操作"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_1-%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C">#</a>1. 网络操作</h2><h3 id="1-1-无法访问外网域名"><a href="#1-1-无法访问外网域名" class="headerlink" title="#1.1. 无法访问外网域名"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_1-1-%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%E5%9F%9F%E5%90%8D">#</a>1.1. 无法访问外网域名</h3><p>（1）在 hosts 中添加本机实际 IP 和本机实际域名的映射</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;192.168.0.1 hostname&quot;</span> &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>如果不知道本机域名，使用 <code>hostname</code> 命令查一下；如果不知道本机实际 IP，使用 <code>ifconfig</code> 查一下。</p>
+<p>（2）配置信赖的 DNS 服务器</p>
+<p>执行 <code>vi /etc/resolv.conf</code> ，添加以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver 114.114.114.114</span><br><span class="line">nameserver 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>114.114.114.114 是国内老牌 DNS</p>
+<p>8.8.8.8 是 Google DNS</p>
+<p>👉 参考：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/32229915">公共 DNS 哪家强</a></p>
+</blockquote>
+<p>（3）测试一下能否 ping 通 <a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a></p>
+<h3 id="1-2-开启、关闭防火墙"><a href="#1-2-开启、关闭防火墙" class="headerlink" title="#1.2. 开启、关闭防火墙"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_1-2-%E5%BC%80%E5%90%AF%E3%80%81%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99">#</a>1.2. 开启、关闭防火墙</h3><p>firewalld 的基本使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">启动：systemctl start firewalld</span><br><span class="line">关闭：systemctl stop firewalld</span><br><span class="line">查看状态：systemctl status firewalld</span><br><span class="line">开机禁用：systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">开机启用：systemctl <span class="built_in">enable</span> firewalld</span><br></pre></td></tr></table></figure>
+
+<p>systemctl 是 CentOS7 的服务管理工具中主要的工具，它融合之前 service 和 chkconfig 的功能于一体。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">启动一个服务：systemctl start firewalld.service</span><br><span class="line">关闭一个服务：systemctl stop firewalld.service</span><br><span class="line">重启一个服务：systemctl restart firewalld.service</span><br><span class="line">显示一个服务的状态：systemctl status firewalld.service</span><br><span class="line">在开机时启用一个服务：systemctl enable firewalld.service</span><br><span class="line">在开机时禁用一个服务：systemctl disable firewalld.service</span><br><span class="line">查看服务是否开机启动：systemctl is-enabled firewalld.service</span><br><span class="line">查看已启动的服务列表：systemctl list-unit-files|grep enabled</span><br><span class="line">查看启动失败的服务列表：systemctl --failed</span><br></pre></td></tr></table></figure>
+
+<p>配置 firewalld-cmd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">查看版本：firewall-cmd --version</span><br><span class="line">查看帮助：firewall-cmd --help</span><br><span class="line">显示状态：firewall-cmd --state</span><br><span class="line">查看所有打开的端口：firewall-cmd --zone=public --list-ports</span><br><span class="line">更新防火墙规则：firewall-cmd --reload</span><br><span class="line">查看区域信息:  firewall-cmd --get-active-zones</span><br><span class="line">查看指定接口所属区域：firewall-cmd --get-zone-of-interface=eth0</span><br><span class="line">拒绝所有包：firewall-cmd --panic-on</span><br><span class="line">取消拒绝状态：firewall-cmd --panic-off</span><br><span class="line">查看是否拒绝：firewall-cmd --query-panic</span><br></pre></td></tr></table></figure>
+
+<p>开启防火墙端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">添加：firewall-cmd --zone=public --add-port=80/tcp --permanent    （--permanent永久生效，没有此参数重启后失效）</span><br><span class="line">重新载入：firewall-cmd --reload</span><br><span class="line">查看：firewall-cmd --zone= public --query-port=80/tcp</span><br><span class="line">删除：firewall-cmd --zone= public --remove-port=80/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>👉 参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/moxiaoan/p/5683743.html">CentOS7 使用 firewalld 打开关闭防火墙与端口</a></p>
+</blockquote>
+<h3 id="1-3-配置网卡"><a href="#1-3-配置网卡" class="headerlink" title="#1.3. 配置网卡"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_1-3-%E9%85%8D%E7%BD%AE%E7%BD%91%E5%8D%A1">#</a>1.3. 配置网卡</h3><p>使用 root 权限编辑 <code>/etc/sysconfig/network-scripts/ifcfg-eno16777736X</code> 文件</p>
+<p>参考以下进行配置：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">TYPE</span>=<span class="string">Ethernet                        # 网络类型：Ethernet以太网</span></span><br><span class="line"><span class="attr">BOOTPROTO</span>=<span class="string">none                       # 引导协议：自动获取、static静态、none不指定</span></span><br><span class="line"><span class="attr">DEFROUTE</span>=<span class="string">yes                         # 启动默认路由</span></span><br><span class="line"><span class="attr">IPV4_FAILURE_FATAL</span>=<span class="string">no                # 不启用IPV4错误检测功能</span></span><br><span class="line"><span class="attr">IPV6INIT</span>=<span class="string">yes                         # 启用IPV6协议</span></span><br><span class="line"><span class="attr">IPV6_AUTOCONF</span>=<span class="string">yes                    # 自动配置IPV6地址</span></span><br><span class="line"><span class="attr">IPV6_DEFROUTE</span>=<span class="string">yes                    # 启用IPV6默认路由</span></span><br><span class="line"><span class="attr">IPV6_FAILURE_FATAL</span>=<span class="string">no                # 不启用IPV6错误检测功能</span></span><br><span class="line"><span class="attr">IPV6_PEERDNS</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV6_PEERROUTES</span>=<span class="string">yes</span></span><br><span class="line"><span class="attr">IPV6_PRIVACY</span>=<span class="string">&quot;no&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">NAME</span>=<span class="string">eno16777736                     # 网卡设备的别名（需要和文件名同名）</span></span><br><span class="line"><span class="attr">UUID</span>=<span class="string">90528772-9967-46da-b401-f82b64b4acbc  # 网卡设备的UUID唯一标识号</span></span><br><span class="line"><span class="attr">DEVICE</span>=<span class="string">eno16777736                   # 网卡的设备名称</span></span><br><span class="line"><span class="attr">ONBOOT</span>=<span class="string">yes                           # 开机自动激活网卡</span></span><br><span class="line"><span class="attr">IPADDR</span>=<span class="string">192.168.1.199                 # 网卡的固定IP地址</span></span><br><span class="line"><span class="attr">PREFIX</span>=<span class="string">24                            # 子网掩码</span></span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="string">192.168.1.1                  # 默认网关IP地址</span></span><br><span class="line"><span class="attr">DNS1</span>=<span class="string">8.8.8.8                         # DNS域名解析服务器的IP地址</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完后，执行 <code>systemctl restart network.service</code> 重启网卡服务。</p>
+<h2 id="2-系统维护"><a href="#2-系统维护" class="headerlink" title="#2. 系统维护"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_2-%E7%B3%BB%E7%BB%9F%E7%BB%B4%E6%8A%A4">#</a>2. 系统维护</h2><h3 id="2-1-使用-NTP-进行时间同步"><a href="#2-1-使用-NTP-进行时间同步" class="headerlink" title="#2.1. 使用 NTP 进行时间同步"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_2-1-%E4%BD%BF%E7%94%A8-ntp-%E8%BF%9B%E8%A1%8C%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5">#</a>2.1. 使用 NTP 进行时间同步</h3><p>（1）先安装时钟同步工具 ntp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp</span><br></pre></td></tr></table></figure>
+
+<p>ntp 的配置文件路径为： <code>/etc/ntp.conf</code></p>
+<p>（2）启动 NTP 服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start ntpd.service</span><br></pre></td></tr></table></figure>
+
+<p>（3）放开防火墙 123 端口</p>
+<p>NTP 服务的端口是 123,使用的是 udp 协议，所以 NTP 服务器的防火墙必须对外开放 udp 123 这个端口。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -A INPUT -p UDP -i eth0 -s 192.168.0.0/24 --dport 123 -j ACCEPT</span><br></pre></td></tr></table></figure>
+
+<p>（4）执行时间同步</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/sbin/ntpdate ntp.sjtu.edu.cn</span><br></pre></td></tr></table></figure>
+
+<p>ntp.sjtu.edu.cn 是上海交通大学 ntp 服务器。</p>
+<p>（5）自动定时同步时间</p>
+<p>执行如下命令，就可以在每天凌晨 3 点同步系统时间：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn&quot; &gt;&gt; /etc/crontab</span><br><span class="line">systemctl restart crond.service</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>👉 参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/quchunhui/p/7658853.html">https://www.cnblogs.com/quchunhui/p/7658853.html</a></p>
+</blockquote>
+<h2 id="3-自动化脚本"><a href="#3-自动化脚本" class="headerlink" title="#3. 自动化脚本"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_3-%E8%87%AA%E5%8A%A8%E5%8C%96%E8%84%9A%E6%9C%AC">#</a>3. 自动化脚本</h2><h3 id="3-1-Linux-开机自启动脚本"><a href="#3-1-Linux-开机自启动脚本" class="headerlink" title="#3.1. Linux 开机自启动脚本"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_3-1-linux-%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC">#</a>3.1. Linux 开机自启动脚本</h3><p>（1）在 <code>/etc/rc.local</code> 文件中添加命令</p>
+<p>如果不想将脚本粘来粘去，或创建链接，可以在 <code>/etc/rc.local</code> 文件中添加启动命令</p>
+<ol>
+<li>先修改好脚本，使其所有模块都能在任意目录启动时正常执行;</li>
+<li>再在 <code>/etc/rc.local</code> 的末尾添加一行以绝对路径启动脚本的行;</li>
+</ol>
+<p>例：</p>
+<p>执行 <code>vim /etc/rc.local</code> 命令，输入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># This script will be executed *after* all the other init scripts.</span></span><br><span class="line"><span class="comment"># You can put your own initialization stuff in here if you don&#x27;t</span></span><br><span class="line"><span class="comment"># want to do the full Sys V style init stuff.</span></span><br><span class="line"></span><br><span class="line">touch /var/lock/subsys/<span class="built_in">local</span></span><br><span class="line">/opt/pjt_test/test.pl</span><br></pre></td></tr></table></figure>
+
+<p>（2）在 <code>/etc/rc.d/init.d</code> 目录下添加自启动脚本</p>
+<p>Linux 在 <code>/etc/rc.d/init.d</code> 下有很多的文件，每个文件都是可以看到内容的，其实都是一些 shell 脚本或者可执行二进制文件。</p>
+<p>Linux 开机的时候，会加载运行 <code>/etc/rc.d/init.d</code> 目录下的程序，因此我们可以把想要自动运行的脚本放到这个目录下即可。系统服务的启动就是通过这种方式实现的。</p>
+<p>（3）运行级别设置</p>
+<p>简单的说，运行级就是操作系统当前正在运行的功能级别。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">不同的运行级定义如下:</span><br><span class="line"># 0 - 停机（千万不能把initdefault 设置为0 ）</span><br><span class="line"># 1 - 单用户模式       　　进入方法#init s = init 1</span><br><span class="line"># 2 - 多用户，没有 NFS</span><br><span class="line"># 3 - 完全多用户模式(标准的运行级)</span><br><span class="line"># 4 - 没有用到</span><br><span class="line"># 5 - X11 多用户图形模式（xwindow)</span><br><span class="line"># 6 - 重新启动 （千万不要把initdefault 设置为6 ）</span><br></pre></td></tr></table></figure>
+
+<p>这些级别在 <code>/etc/inittab</code> 文件里指定，这个文件是 init 程序寻找的主要文件，最先运行的服务是放在/etc/rc.d 目录下的文件。</p>
+<p>在 <code>/etc</code> 目录下面有这么几个目录值得注意：rcS.d rc0.d rc1.d … rc6.d (0，1… 6 代表启动级别 0 代表停止，1 代表单用户模式，2-5 代表多用户模式，6 代表重启) 它们的作用就相当于 redhat 下的 rc.d ，你可以把脚本放到 rcS.d，然后修改文件名，给它一个启动序号，如: S88mysql</p>
+<p>不过，最好的办法是放到相应的启动级别下面。具体作法:</p>
+<p>（1）先把脚本 mysql 放到 /etc/init.d 目录下</p>
+<p>（2）查看当前系统的启动级别</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ runlevel</span><br><span class="line">N 3</span><br></pre></td></tr></table></figure>
+
+<p>（3）设定启动级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#  98 为启动序号</span><br><span class="line">#  2 是系统的运行级别，可自己调整，注意不要忘了结尾的句点</span><br><span class="line">$ update-rc.d mysql start 98 2 .</span><br></pre></td></tr></table></figure>
+
+<p>现在我们到 /etc/rc2.d 下，就多了一个 S98mysql 这样的符号链接。</p>
+<p>（4）重启系统，验证设置是否有效。</p>
+<p>（5）移除符号链接</p>
+<p>当你需要移除这个符号连接时，方法有三种：</p>
+<ol>
+<li>直接到 <code>/etc/rc2.d</code> 下删掉相应的链接，当然不是最好的方法；</li>
+<li>推荐做法：<code>update-rc.d -f s10 remove</code></li>
+<li>如果 update-rc.d 命令你不熟悉，还可以试试看 rcconf 这个命令，也很方便。</li>
+</ol>
+<blockquote>
+<p>👉 参考：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/linuxshine/article/details/50717272">https://blog.csdn.net/linuxshine/article/details/50717272</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ssooking/p/6094740.html">https://www.cnblogs.com/ssooking/p/6094740.html</a></li>
+</ul>
+</blockquote>
+<h3 id="3-2-定时执行脚本"><a href="#3-2-定时执行脚本" class="headerlink" title="#3.2. 定时执行脚本"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_3-2-%E5%AE%9A%E6%97%B6%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC">#</a>3.2. 定时执行脚本</h3><p>（1）安装 crontab</p>
+<p>（2）开启 crontab 服务</p>
+<p>开机自动启动 crond 服务：<code>chkconfig crond on</code></p>
+<p>或者，按以下命令手动启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动服务</span></span><br><span class="line">systemctl start crond.service</span><br><span class="line"><span class="comment"># 停止服务</span></span><br><span class="line">systemctl stop crond.service</span><br><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">systemctl restart crond.service</span><br><span class="line"><span class="comment"># 重新载入配置</span></span><br><span class="line">systemctl reload crond.service</span><br><span class="line"><span class="comment"># 查看状态</span></span><br><span class="line">systemctl status crond.service</span><br></pre></td></tr></table></figure>
+
+<p>（3）设置需要执行的脚本</p>
+<p>有两种方法：</p>
+<ul>
+<li>在命令行输入：<code>crontab -e</code> 然后添加相应的任务，存盘退出。</li>
+<li>直接编辑 <code>/etc/crontab</code> 文件，即 <code>vi /etc/crontab</code>，添加相应的任务。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="comment"># For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of job definition:</span></span><br><span class="line"><span class="comment"># .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="comment"># |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="comment"># |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="comment"># |  |  |  |  |</span></span><br><span class="line"><span class="comment"># *  *  *  *  * user-name  command to be executed</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 每天早上3点时钟同步</span></span><br><span class="line">* 3 * * * /usr/sbin/ntpdate ntp.sjtu.edu.cn</span><br><span class="line"></span><br><span class="line"><span class="comment"># 每两个小时以root身份执行 /home/hello.sh 脚本</span></span><br><span class="line">0 */2 * * * root /home/hello.sh</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>👉 参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/z_yong_cool/article/details/79288397">linux 定时执行脚本</a></p>
+</blockquote>
+<h2 id="4-配置"><a href="#4-配置" class="headerlink" title="#4. 配置"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_4-%E9%85%8D%E7%BD%AE">#</a>4. 配置</h2><h3 id="4-1-设置-Linux-启动模式"><a href="#4-1-设置-Linux-启动模式" class="headerlink" title="#4.1. 设置 Linux 启动模式"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_4-1-%E8%AE%BE%E7%BD%AE-linux-%E5%90%AF%E5%8A%A8%E6%A8%A1%E5%BC%8F">#</a>4.1. 设置 Linux 启动模式</h3><ol>
+<li>停机(记得不要把 initdefault 配置为 0，因为这样会使 Linux 不能启动)</li>
+<li>单用户模式，就像 Win9X 下的安全模式</li>
+<li>多用户，但是没有 NFS</li>
+<li>完全多用户模式，准则的运行级</li>
+<li>通常不用，在一些特殊情况下可以用它来做一些事情</li>
+<li>X11，即进到 X-Window 系统</li>
+<li>重新启动 (记得不要把 initdefault 配置为 6，因为这样会使 Linux 不断地重新启动)</li>
+</ol>
+<p>设置方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i <span class="string">&#x27;s/id:5:initdefault:/id:3:initdefault:/&#x27;</span> /etc/inittab</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-参考资料"><a href="#5-参考资料" class="headerlink" title="#5. 参考资料"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/ops/linux-base-ops.html#_5-%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">#</a>5. 参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/moxiaoan/p/5683743.html">CentOS7 使用 firewalld 打开关闭防火墙与端口</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/z_yong_cool/article/details/79288397">linux 定时执行脚本</a></li>
+</ul>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  09 重要命令
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/12/18/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+                02 Samba 应用
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

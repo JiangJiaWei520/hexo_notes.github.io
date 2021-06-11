@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		02 Linux 文件目录管理 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/24/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/11/07/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/heroku%E6%90%AD%E5%BB%BAv2ray/">
+										heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/21/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/14/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/17/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/26/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	02 Linux 文件目录管理
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-09-01 21:08:36</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="Linux-文件目录管理"><a href="#Linux-文件目录管理" class="headerlink" title="Linux 文件目录管理"></a>Linux 文件目录管理</h1><blockquote>
+<p>关键词：<code>cd</code>, <code>ls</code>, <code>pwd</code>, <code>mkdir</code>, <code>rmdir</code>, <code>tree</code>, <code>touch</code>, <code>ln</code>, <code>rename</code>, <code>stat</code>, <code>file</code>, <code>chmod</code>, <code>chown</code>, <code>locate</code>, <code>find</code>, <code>cp</code>, <code>scp</code>, <code>mv</code>, <code>rm</code></p>
+</blockquote>
+<h2 id="1-Linux-文件目录工作机制"><a href="#1-Linux-文件目录工作机制" class="headerlink" title="#1. Linux 文件目录工作机制"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_1-linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6">#</a>1. Linux 文件目录工作机制</h2><h3 id="1-1-Linux-目录结构"><a href="#1-1-Linux-目录结构" class="headerlink" title="#1.1. Linux 目录结构"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_1-1-linux-%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">#</a>1.1. Linux 目录结构</h3><p>linux 目录结构是树形结构，其根目录是 <code>/</code> 。一张思维导图说明各个目录的作用：</p>
+<p><img src="http://dunwu.test.upcdn.net/cs/os/linux/linux-folders.png!zp" alt="img"></p>
+<h3 id="1-2-Linux-文件属性"><a href="#1-2-Linux-文件属性" class="headerlink" title="#1.2. Linux 文件属性"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_1-2-linux-%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7">#</a>1.2. Linux 文件属性</h3><p>Linux 系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux 系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。 在 Linux 中我们可以使用 ll 或者 ls –l 命令来显示一个文件的属性以及文件所属的用户和组，如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l</span><br><span class="line">total 64</span><br><span class="line">dr-xr-xr-x 2 root root 4096 Dec 14 2012 bin</span><br><span class="line">dr-xr-xr-x 4 root root 4096 Apr 19 2012 boot</span><br></pre></td></tr></table></figure>
+
+<p>实例中，bin 文件的第一个属性用 <code>d</code> 表示。<code>d</code> 在 Linux 中代表该文件是一个目录文件。 在 Linux 中第一个字符代表这个文件是目录、文件或链接文件等等。</p>
+<ul>
+<li>当为 <code>d</code> 则是目录</li>
+<li>当为 <code>-</code> 则是文件；</li>
+<li>若是 <code>l</code> 则表示为链接文档(link file)；</li>
+<li>若是 <code>b</code> 则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；</li>
+<li>若是 <code>c</code> 则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</li>
+</ul>
+<p>接下来的字符中，以三个为一组，且均为『rwx』 的三个参数的组合。其中，<code>r</code> 代表可读(read)、<code>w</code> 代表可写(write)、<code>x</code> 代表可执行(execute)。 要注意的是，这三个权限的位置不会改变，如果没有权限，就会出现减号 <code>-</code> 而已。</p>
+<p>每个文件的属性由左边第一部分的 10 个字符来确定（如下图）。</p>
+<p><img src="http://dunwu.test.upcdn.net/snap/20180920180927171909.png!zp" alt="img"></p>
+<p>从左至右用 0-9 这些数字来表示。</p>
+<ul>
+<li>第 0 位确定文件类型</li>
+<li>第 1-3 位确定属主（该文件的拥有者）拥有该文件的权限。</li>
+<li>第 4-6 位确定属组（拥有者的同组用户）拥有该文件的权限。</li>
+<li>第 7-9 位确定其他用户拥有该文件的权限。</li>
+<li>第 1、4、7 位表示读权限，如果用”r”字符表示，则有读权限，如果用”-“字符表示，则没有读权限。</li>
+<li>第 2、5、8 位表示写权限，如果用”w”字符表示，则有写权限，如果用”-“字符表示没有写权限。</li>
+<li>第 3、6、9 位表示可执行权限，如果用”x”字符表示，则有执行权限，如果用”-“字符表示，则没有执行权限。</li>
+</ul>
+<h4 id="1-2-1-Linux-文件属主和属组"><a href="#1-2-1-Linux-文件属主和属组" class="headerlink" title="#1.2.1. Linux 文件属主和属组"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_1-2-1-linux-%E6%96%87%E4%BB%B6%E5%B1%9E%E4%B8%BB%E5%92%8C%E5%B1%9E%E7%BB%84">#</a>1.2.1. Linux 文件属主和属组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ls -l</span><br><span class="line">total 64</span><br><span class="line">dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin</span><br><span class="line">dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对于文件来说，它都有一个特定的拥有者，也就是对该文件具有所有权的用户。</li>
+<li>同时，在 Linux 系统中，用户是按组分类的，一个用户属于一个或多个组。</li>
+<li>文件拥有者以外的用户又可以分为文件拥有者的同组用户和其他用户。</li>
+<li>因此，Linux 系统按文件拥有者、文件拥有者同组用户和其他用户来规定了不同的文件访问权限。</li>
+<li>在以上实例中，bin 文件是一个目录文件，属主和属组都为 root，属主有可读、可写、可执行的权限；与属主同组的其他用户有可读和可执行的权限；其他用户也有可读和可执行的权限。</li>
+</ul>
+<h2 id="2-Linux-文件目录管理要点"><a href="#2-Linux-文件目录管理要点" class="headerlink" title="#2. Linux 文件目录管理要点"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_2-linux-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E8%A6%81%E7%82%B9">#</a>2. Linux 文件目录管理要点</h2><h3 id="2-1-目录管理"><a href="#2-1-目录管理" class="headerlink" title="#2.1. 目录管理"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_2-1-%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86">#</a>2.1. 目录管理</h3><ul>
+<li>切换目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#cd">cd</a></li>
+<li>查看目录信息 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#ls">ls</a></li>
+<li>显示当前目录的绝对路径 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#pwd">pwd</a></li>
+<li>树状显示目录的内容 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#tree">tree</a></li>
+<li>创建目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#mkdir">mkdir</a></li>
+<li>删除目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#rmdir">rmdir</a></li>
+</ul>
+<h3 id="2-2-文件管理"><a href="#2-2-文件管理" class="headerlink" title="#2.2. 文件管理"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_2-2-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86">#</a>2.2. 文件管理</h3><ul>
+<li>创建空文件 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#touch">touch</a></li>
+<li>为文件创建连接 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#ln">ln</a></li>
+<li>批量重命名 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#rename">rename</a></li>
+<li>显示文件的详细信息 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#stat">stat</a></li>
+<li>探测文件类型 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#file">file</a></li>
+<li>设置文件或目录的权限 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#chmod">chmod</a></li>
+<li>设置文件或目录的拥有者或所属群组 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#chown">chown</a></li>
+<li>查找文件或目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#locate">locate</a></li>
+<li>在指定目录下查找文件 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#find">find</a></li>
+<li>查找命令的绝对路径 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#which">which</a></li>
+<li>查找命令的程序、源代码等相关文件 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#whereis">whereis</a></li>
+</ul>
+<h3 id="2-3-文件和目录通用管理"><a href="#2-3-文件和目录通用管理" class="headerlink" title="#2.3. 文件和目录通用管理"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_2-3-%E6%96%87%E4%BB%B6%E5%92%8C%E7%9B%AE%E5%BD%95%E9%80%9A%E7%94%A8%E7%AE%A1%E7%90%86">#</a>2.3. 文件和目录通用管理</h3><ul>
+<li>复制文件或目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#cp">cp</a></li>
+<li>复制文件或目录到远程服务器 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#scp">scp</a></li>
+<li>移动文件或目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#mv">mv</a></li>
+<li>删除文件或目录 - 使用 <a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#rm">rm</a></li>
+</ul>
+<h2 id="3-命令常见用法"><a href="#3-命令常见用法" class="headerlink" title="#3. 命令常见用法"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-%E5%91%BD%E4%BB%A4%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95">#</a>3. 命令常见用法</h2><h3 id="3-1-cd"><a href="#3-1-cd" class="headerlink" title="#3.1. cd"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-1-cd">#</a>3.1. cd</h3><blockquote>
+<p>cd 命令用来切换工作目录。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/cd">http://man.linuxde.net/cd</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span>          <span class="comment"># 切换到用户主目录</span></span><br><span class="line"><span class="built_in">cd</span> ~        <span class="comment"># 切换到用户主目录</span></span><br><span class="line"><span class="built_in">cd</span> -        <span class="comment"># 切换到上一个工作目录</span></span><br><span class="line"><span class="built_in">cd</span> ..       <span class="comment"># 切换到上级目录</span></span><br><span class="line"><span class="built_in">cd</span> ../..    <span class="comment"># 切换到上两级目录</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-ls"><a href="#3-2-ls" class="headerlink" title="#3.2. ls"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-2-ls">#</a>3.2. ls</h3><blockquote>
+<p>ls 命令用来显示目录信息。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/ls">http://man.linuxde.net/ls</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ls        <span class="comment"># 列出当前目录可见文件</span></span><br><span class="line">ls -l     <span class="comment"># 列出当前目录可见文件详细信息</span></span><br><span class="line">ls -la    <span class="comment"># 列出所有文件（包括隐藏）的详细信息</span></span><br><span class="line">ls -lh    <span class="comment"># 列出详细信息并以可读大小显示文件大小</span></span><br><span class="line">ls -lt    <span class="comment"># 按时间列出文件和文件夹详细信息</span></span><br><span class="line">ls -ltr   <span class="comment"># 按修改时间列出文件和文件夹详细信息</span></span><br><span class="line">ls --color=auto     <span class="comment"># 列出文件并标记颜色分类</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-pwd"><a href="#3-3-pwd" class="headerlink" title="#3.3. pwd"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-3-pwd">#</a>3.3. pwd</h3><blockquote>
+<p>pwd 命令用来显示当前目录的绝对路径。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/pwd">http://man.linuxde.net/pwd</a></p>
+</blockquote>
+<h3 id="3-4-mkdir"><a href="#3-4-mkdir" class="headerlink" title="#3.4. mkdir"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-4-mkdir">#</a>3.4. mkdir</h3><blockquote>
+<p>mkdir 命令用来创建目录。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/mkdir">http://man.linuxde.net/mkdir</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录中创建 zp 和 zp 的子目录 test</span></span><br><span class="line">mkdir -p zp/<span class="built_in">test</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在当前目录中创建 zp 和 zp 的子目录 test；权限设置为文件主可读、写、执行，同组用户可读和执行，其他用户无权访问</span></span><br><span class="line">mkdir -p -m 750 zp/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-5-rmdir"><a href="#3-5-rmdir" class="headerlink" title="#3.5. rmdir"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-5-rmdir">#</a>3.5. rmdir</h3><blockquote>
+<p>rmdir 命令用来删除空目录。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/rmdir">http://man.linuxde.net/rmdir</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除子目录 test 和其父目录 zp</span></span><br><span class="line">rmdir -p zp/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-6-tree"><a href="#3-6-tree" class="headerlink" title="#3.6. tree"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-6-tree">#</a>3.6. tree</h3><blockquote>
+<p>tree 命令以树状显示目录的内。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/tree">http://man.linuxde.net/tree</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出目录 /private 第一级文件名</span></span><br><span class="line">tree /private -L 1</span><br><span class="line">/private/</span><br><span class="line">├── etc</span><br><span class="line">├── tftpboot</span><br><span class="line">├── tmp</span><br><span class="line">└── var</span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略文件夹</span></span><br><span class="line">tree -I node_modules            <span class="comment"># 忽略当前目录文件夹 node_modules</span></span><br><span class="line">tree -P node_modules            <span class="comment"># 列出当前目录文件夹 node_modules 的目录结构</span></span><br><span class="line">tree -P node_modules -L 2       <span class="comment"># 显示目录 node_modules 两层的目录树结构</span></span><br><span class="line">tree -L 2 &gt; /home/www/tree.txt  <span class="comment"># 当前目录结果存到 tree.txt 文件中</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 忽略多个文件夹</span></span><br><span class="line">tree -I <span class="string">&#x27;node_modules|icon|font&#x27;</span> -L 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-7-touch"><a href="#3-7-touch" class="headerlink" title="#3.7. touch"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-7-touch">#</a>3.7. touch</h3><blockquote>
+<p>touch 命令有两个功能：一是用于把已存在文件的时间标签更新为系统当前的时间（默认方式），它们的数据将原封不动地保留下来；二是用来创建空文件。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/touch">http://man.linuxde.net/touch</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ex2</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-8-ln"><a href="#3-8-ln" class="headerlink" title="#3.8. ln"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-8-ln">#</a>3.8. ln</h3><blockquote>
+<p>ln 命令用来为文件创建连接，连接类型分为硬连接和符号连接两种，默认的连接类型是硬连接。如果要创建符号连接必须使用”-s”选项。</p>
+<p>🔔 注意：符号链接文件不是一个独立的文件，它的许多属性依赖于源文件，所以给符号链接文件设置存取权限是没有意义的。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/ln">http://man.linuxde.net/ln</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将目录 /usr/mengqc/mub1 下的文件 m2.c 链接到目录 /usr/liu 下的文件 a2.c</span></span><br><span class="line"><span class="built_in">cd</span> /usr/mengqc</span><br><span class="line">ln /mub1/m2.c /usr/liu/a2.c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在目录 /usr/liu 下建立一个符号链接文件 abc，使它指向目录 /usr/mengqc/mub1</span></span><br><span class="line"><span class="comment"># 执行该命令后，/usr/mengqc/mub1 代表的路径将存放在名为 /usr/liu/abc 的文件中</span></span><br><span class="line">ln -s /usr/mengqc/mub1 /usr/liu/abc</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-9-rename"><a href="#3-9-rename" class="headerlink" title="#3.9. rename"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-9-rename">#</a>3.9. rename</h3><blockquote>
+<p>rename 命令用字符串替换的方式批量重命名。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/rename">http://man.linuxde.net/rename</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 main1.c 重命名为 main.c</span></span><br><span class="line">rename main1.c main.c main1.c</span><br><span class="line"></span><br><span class="line">rename <span class="string">&quot;s/AA/aa/&quot;</span> *             <span class="comment"># 把文件名中的 AA 替换成 aa</span></span><br><span class="line">rename <span class="string">&quot;s//.html//.php/&quot;</span> *      <span class="comment"># 把 .html 后缀的改成 .php 后缀</span></span><br><span class="line">rename <span class="string">&quot;s/$//.txt/&quot;</span> *           <span class="comment"># 把所有的文件名都以 txt 结尾</span></span><br><span class="line">rename <span class="string">&quot;s//.txt//&quot;</span> *            <span class="comment"># 把所有以 .txt 结尾的文件名的.txt 删掉</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-10-stat"><a href="#3-10-stat" class="headerlink" title="#3.10. stat"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-10-stat">#</a>3.10. stat</h3><blockquote>
+<p>stat 命令用于显示文件的状态信息。stat 命令的输出信息比 ls 命令的输出信息要更详细。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/stat">http://man.linuxde.net/stat</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">stat</span> myfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-11-file"><a href="#3-11-file" class="headerlink" title="#3.11. file"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-11-file">#</a>3.11. file</h3><blockquote>
+<p>file 命令用来探测给定文件的类型。file 命令对文件的检查分为文件系统、魔法幻数检查和语言检查 3 个过程。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/file">http://man.linuxde.net/file</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">file install.log          <span class="comment"># 显示文件类型</span></span><br><span class="line">file -b install.log       <span class="comment"># 不显示文件名称</span></span><br><span class="line">file -i install.log       <span class="comment"># 显示 MIME 类型</span></span><br><span class="line">file -L /var/spool/mail   <span class="comment"># 显示符号链接的文件类型</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-12-chmod"><a href="#3-12-chmod" class="headerlink" title="#3.12. chmod"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-12-chmod">#</a>3.12. chmod</h3><blockquote>
+<p>chmod 命令用来变更文件或目录的权限。在 UNIX 系统家族里，文件或目录权限的控制分别以读取、写入、执行 3 种一般权限来区分，另有 3 种特殊权限可供运用。用户可以使用 chmod 指令去变更文件与目录的权限，设置方式采用文字或数字代号皆可。符号连接的权限无法变更，如果用户对符号连接修改权限，其改变会作用在被连接的原始文件。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/chmod">http://man.linuxde.net/chmod</a></p>
+</blockquote>
+<p>知识扩展：</p>
+<p>Linux 用 户分为：拥有者、组群(Group)、其他（other），Linux 系统中，预设的情況下，系统中所有的帐号与一般身份使用者，以及 root 的相关信 息， 都是记录在<code>/etc/passwd</code>文件中。每个人的密码则是记录在<code>/etc/shadow</code>文件下。 此外，所有的组群名称记录在<code>/etc/group</code>內！</p>
+<p>linux 文件的用户权限的分析图</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  -rw-r--r--   1 user  staff   651 Oct 12 12:53 .gitmodules</span><br><span class="line"><span class="comment"># ↑╰┬╯╰┬╯╰┬╯</span></span><br><span class="line"><span class="comment"># ┆ ┆  ┆  ╰┈ 0 其他人</span></span><br><span class="line"><span class="comment"># ┆ ┆  ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ g 属组</span></span><br><span class="line"><span class="comment"># ┆ ╰┈┈┈┈ u 属组</span></span><br><span class="line"><span class="comment"># ╰┈┈ 第一个字母 `d` 代表目录，`-` 代表普通文件</span></span><br></pre></td></tr></table></figure>
+
+<p>例：rwx 　 rw-　 r–</p>
+<p>r=读取属性　　//值＝ 4<br>w=写入属性　　//值＝ 2<br>x=执行属性　　//值＝ 1</p>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chmod u+x,g+w f01　　<span class="comment"># 为文件f01设置自己可以执行，组员可以写入的权限</span></span><br><span class="line">chmod u=rwx,g=rw,o=r f01</span><br><span class="line">chmod 764 f01</span><br><span class="line">chmod a+x f01　　    <span class="comment"># 对文件f01的u,g,o都设置可执行属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将/home/wwwroot/里的所有文件和文件夹设置为755权限</span></span><br><span class="line">chmod -R  755 /home/wwwroot/*</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-13-chown"><a href="#3-13-chown" class="headerlink" title="#3.13. chown"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-13-chown">#</a>3.13. chown</h3><blockquote>
+<p>chown 命令改变某个文件或目录的所有者和所属的组，该命令可以向某个用户授权，使该用户变成指定文件的所有者或者改变文件所属的组。用户可以是用户或者是用户 D，用户组可以是组名或组 id。文件名可以使由空格分开的文件列表，在文件名中可以包含通配符。</p>
+<p>只有文件拥有者和超级用户才可以便用该命令。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/chown">http://man.linuxde.net/chown</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将目录/usr/meng及其下面的所有文件、子目录的文件主改成 liu</span></span><br><span class="line">chown -R liu /usr/meng</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-14-locate"><a href="#3-14-locate" class="headerlink" title="#3.14. locate"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-14-locate">#</a>3.14. locate</h3><blockquote>
+<p>locate 命令和 slocate 命令都用来查找文件或目录。</p>
+<p>locate 命令其实是 find -name 的另一种写法，但是要比后者快得多，原因在于它不搜索具体目录，而是搜索一个数据库/var/lib/locatedb，这个数据库中含有本地所有文件信息。Linux 系统自动创建这个数据库，并且每天自动更新一次，所以使用 locate 命令查不到最新变动过的文件。为了避免这种情况，可以在使用 locate 之前，先使用 updatedb 命令，手动更新数据库。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/locate_slocate">http://man.linuxde.net/locate_slocate</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">locate <span class="built_in">pwd</span>      <span class="comment"># 查找和 pwd 相关的所有文件</span></span><br><span class="line">locate /etc/sh  <span class="comment"># 搜索 etc 目录下所有以 sh 开头的文件</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-15-find"><a href="#3-15-find" class="headerlink" title="#3.15. find"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-15-find">#</a>3.15. find</h3><blockquote>
+<p>find 命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则 find 命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/find">http://man.linuxde.net/find</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前目录搜索所有文件，文件内容 包含 “140.206.111.111” 的内容</span></span><br><span class="line">find . -<span class="built_in">type</span> f -name <span class="string">&quot;*&quot;</span> | xargs grep <span class="string">&quot;140.206.111.111&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出当前目录及子目录下所有文件和文件夹</span></span><br><span class="line">find .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 /home 目录下查找以 .txt 结尾的文件名</span></span><br><span class="line">find /home -name <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"><span class="comment"># 同上，但忽略大小写</span></span><br><span class="line">find /home -iname <span class="string">&quot;*.txt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前目录及子目录下查找所有以 .txt 和 .pdf 结尾的文件</span></span><br><span class="line">find . -name <span class="string">&quot;*.txt&quot;</span> -o -name <span class="string">&quot;*.pdf&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 匹配文件路径或者文件</span></span><br><span class="line">find /usr/ -path <span class="string">&quot;*local*&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 基于正则表达式匹配文件路径</span></span><br><span class="line">find . -regex <span class="string">&quot;.*\(\.txt\|\.pdf\)$&quot;</span></span><br><span class="line"><span class="comment"># 同上，但忽略大小写</span></span><br><span class="line">find . -iregex <span class="string">&quot;.*\(\.txt\|\.pdf\)$&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 找出 /home 下不是以 .txt 结尾的文件</span></span><br><span class="line">find /home ! -name <span class="string">&quot;*.txt&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-16-cp"><a href="#3-16-cp" class="headerlink" title="#3.16. cp"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-16-cp">#</a>3.16. cp</h3><blockquote>
+<p>cp 命令用来将一个或多个源文件或者目录复制到指定的目的文件或目录。它可以将单个源文件复制成一个指定文件名的具体的文件或一个已经存在的目录下。cp 命令还支持同时复制多个文件，当一次复制多个文件时，目标文件参数必须是一个已经存在的目录，否则将出现错误。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/cp">http://man.linuxde.net/cp</a></p>
+</blockquote>
+<p>示例：</p>
+<h4 id="3-16-1-参数"><a href="#3-16-1-参数" class="headerlink" title="#3.16.1. 参数"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-16-1-%E5%8F%82%E6%95%B0">#</a>3.16.1. 参数</h4><ul>
+<li>源文件：制定源文件列表。默认情况下，cp 命令不能复制目录，如果要复制目录，则必须使用<code>-R</code>选项；</li>
+<li>目标文件：指定目标文件。当“源文件”为多个文件时，要求“目标文件”为指定的目录。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将文件 file 复制到目录 /usr/men/tmp 下，并改名为 file1</span></span><br><span class="line">cp file /usr/men/tmp/file1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将目录 /usr/men下的所有文件及其子目录复制到目录 /usr/zh 中</span></span><br><span class="line">cp -r /usr/men /usr/zh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强行将 /usr/men下的所有文件复制到目录 /usr/zh 中，无论是否有文件重复</span></span><br><span class="line">cp -rf /usr/men/* /usr/zh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将目录 /usr/men 中的以 m 打头的所有 .c 文件复制到目录 /usr/zh 中</span></span><br><span class="line">cp -i /usr/men m*.c /usr/zh</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-17-scp"><a href="#3-17-scp" class="headerlink" title="#3.17. scp"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-17-scp">#</a>3.17. scp</h3><blockquote>
+<p>scp 命令用于在 Linux 下进行远程拷贝文件的命令，和它类似的命令有 cp，不过 cp 只是在本机进行拷贝不能跨服务器，而且 scp 传输是加密的。可能会稍微影响一下速度。当你服务器硬盘变为只读 read only system 时，用 scp 可以帮你把文件移出来。另外，scp 还非常不占资源，不会提高多少系统负荷，在这一点上，rsync 就远远不及它了。虽然 rsync 比 scp 会快一点，但当小文件众多的情况下，rsync 会导致硬盘 I/O 非常高，而 scp 基本不影响系统正常使用。</p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拷贝文件到远程服务器的指定目录</span></span><br><span class="line">scp &lt;file&gt; &lt;user&gt;@&lt;ip&gt;:&lt;url&gt;</span><br><span class="line">scp test.txt root@192.168.0.1:/opt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 拷贝目录到远程服务器的指定目录</span></span><br><span class="line">scp -r &lt;folder&gt; &lt;user&gt;@&lt;ip&gt;:&lt;url&gt;</span><br><span class="line">scp -r <span class="built_in">test</span> root@192.168.0.1:/opt</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-17-1-免密码传输"><a href="#3-17-1-免密码传输" class="headerlink" title="#3.17.1. 免密码传输"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-17-1-%E5%85%8D%E5%AF%86%E7%A0%81%E4%BC%A0%E8%BE%93">#</a>3.17.1. 免密码传输</h4><p>（1）生成 ssh 公私钥对</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+
+<p>（2）将服务器 A 的 <code>\~/.ssh/id_rsa.pub</code> 文件内容复制到服务器 B 的 <code>\~/.ssh/authorized_keys</code> 文件中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 服务器 A 上执行以下命令</span></span><br><span class="line">scp ~/.ssh/id_rsa.pub root@192.168.0.2:~/.ssh/id_rsa.pub.tmp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 服务器 B 上执行以下命令</span></span><br><span class="line">cat ~/.ssh/id_rsa.pub.tmp &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">rm ~/.ssh/id_rsa.pub.tmp</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-18-mv"><a href="#3-18-mv" class="headerlink" title="#3.18. mv"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-18-mv">#</a>3.18. mv</h3><blockquote>
+<p>mv 命令用来对文件或目录重新命名，或者将文件从一个目录移到另一个目录中。source 表示源文件或目录，target 表示目标文件或目录。如果将一个文件移到一个已经存在的目标文件中，则目标文件的内容将被覆盖。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/mv">http://man.linuxde.net/mv</a></p>
+</blockquote>
+<p>示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">mv file1.txt /home/office/                      <span class="comment"># 移动单个文件</span></span><br><span class="line">mv file2.txt file3.txt file4.txt /home/office/  <span class="comment"># 移动多个文件</span></span><br><span class="line">mv *.txt /home/office/                          <span class="comment"># 移动所有 txt 文件</span></span><br><span class="line">mv dir1/ /home/office/                          <span class="comment"># 移动目录</span></span><br><span class="line">mv /usr/men/* .                                 <span class="comment"># 将指定目录中的所有文件移到当前目录中</span></span><br><span class="line"></span><br><span class="line">mv file1.txt file2.txt          <span class="comment"># 重命名文件</span></span><br><span class="line">mv dir1/ dir2/                  <span class="comment"># 重命名目录</span></span><br><span class="line">mv -v *.txt /home/office        <span class="comment"># 打印移动信息</span></span><br><span class="line">mv -i file1.txt /home/office    <span class="comment"># 提示是否覆盖文件</span></span><br><span class="line"></span><br><span class="line">mv -uv *.txt /home/office       <span class="comment"># 源文件比目标文件新时才执行更新</span></span><br><span class="line">mv -vn *.txt /home/office       <span class="comment"># 不要覆盖任何已存在的文件</span></span><br><span class="line">mv -f *.txt /home/office        <span class="comment"># 无条件覆盖已经存在的文件</span></span><br><span class="line">mv -bv *.txt /home/office       <span class="comment"># 复制时创建备份</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-19-rm"><a href="#3-19-rm" class="headerlink" title="#3.19. rm"></a><a target="_blank" rel="noopener" href="https://turnon.gitee.io/linux-tutorial/linux/cli/linux-cli-dir.html#_3-19-rm">#</a>3.19. rm</h3><blockquote>
+<p>rm 命令可以删除一个目录中的一个或多个文件或目录，也可以将某个目录及其下属的所有文件及其子目录均删除掉。对于链接文件，只是删除整个链接文件，而原有文件保持不变。</p>
+<p>参考：<a target="_blank" rel="noopener" href="http://man.linuxde.net/rm">http://man.linuxde.net/rm</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rm test.txt               <span class="comment"># 删除文件</span></span><br><span class="line">rm -i test.txt test2.txt  <span class="comment"># 交互式删除文件</span></span><br><span class="line">rm -r *                   <span class="comment"># 删除当前目录下的所有文件和目录</span></span><br><span class="line">rm -r testdir             <span class="comment"># 删除目录下的所有文件和目录</span></span><br><span class="line">rm -rf testdir            <span class="comment"># 强制删除目录下的所有文件和目录</span></span><br><span class="line">rm -v testdir             <span class="comment"># 显示当前删除操作的详情</span></span><br></pre></td></tr></table></figure>
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  01 查看 Linux 命令帮助信息
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

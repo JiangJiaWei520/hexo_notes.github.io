@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+
+	<!-- title -->
+	
+	<title>
+	
+		01 土地基础知识大全解析 | 
+	 
+	蒋家威的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">蒋家威的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a target="_blank" rel="noopener" href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+		</li>
+		<!--
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		-->
+		<li class="menu-item">
+			<a href="https://github.com/JiangJiaWei520" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "https://hm.baidu.com/hm.js?e1f8354d90d4ad82eb84d04abf5b5d18";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/01%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										01 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/02%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										02 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/04%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										04 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/05%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										05 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/06%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										06 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/07%20%E5%85%B6%E4%BB%96/">
+										07 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/08%20Git%20%E7%BB%9F%E8%AE%A1%E6%93%8D%E4%BD%9C/">
+										08 Git 统计操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/09%20Git%20%E4%B9%8B%20reset%20%E6%8F%AD%E7%A7%98/">
+										09 Git 之 reset 揭秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/10%20Git%20%E4%B9%8B%20SSH%20%E4%B8%8E%20HTTPS%20%E5%85%8D%E5%AF%86%E7%A0%81%E9%85%8D%E7%BD%AE/">
+										10 Git 之 SSH 与 HTTPS 免密码配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/11%20Git%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										11 Git 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/01%20Git/12%20Git%E7%9A%84%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7%EF%BC%88%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%89/">
+										12 Git的奇技淫巧（命令大全）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/01%20Git/13%20Git%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+										13 Git从入门到精通
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/01%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										01 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/02%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										02 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/03%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										03 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/04%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										04 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/02%20SVN/05%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										05 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/01%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										01 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/02%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										02 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/01%20DevOps/03%20Linux/03%20Shell%20%E8%84%9A%E6%9C%AC/">
+										03 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Linux 使用笔记
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/01%20Linux%E4%B9%8Bman%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3%E5%8F%8A%E4%B8%AD%E6%96%87%E6%B1%89%E5%8C%96/">
+										01 Linux之man命令详解及中文汉化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/02%20centos7%20%E6%96%B0%E7%8E%AF%E5%A2%83%E5%90%8E%E7%BB%AD%E9%9C%80%E8%A6%81%E5%81%9A%E7%9A%84%E4%BA%8B/">
+										02 centos7 新环境后续需要做的事
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/30/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/03%20Centos%E6%96%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%BF%85%E9%A1%BB%E8%A6%81%E5%81%9A%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A3%80%E6%9F%A5/">
+										03 Centos新服务器系统环境必须要做的一些检查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/07/01%20DevOps/03%20Linux/04%20Linux%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/04%20Linux%E7%BB%88%E6%9E%81shell-zsh%E7%9A%84%E5%AE%8C%E7%BE%8E%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%81%E2%80%94%E2%80%94oh-my-zsh/">
+										04 Linux终极shell-zsh的完美配置方案！——oh-my-zsh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Linux 入门到放弃
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Linux 命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/00%20%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%89%BA%E6%9C%AF/">
+										00 命令行的艺术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/01%20%E6%9F%A5%E7%9C%8B%20Linux%20%E5%91%BD%E4%BB%A4%E5%B8%AE%E5%8A%A9%E4%BF%A1%E6%81%AF/">
+										01 查看 Linux 命令帮助信息
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/02%20Linux%20%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86/">
+										02 Linux 文件目录管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/03%20Linux%20%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B%E7%BC%96%E8%BE%91/">
+										03 Linux 文件内容查看编辑
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/04%20Linux%20%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B/">
+										04 Linux 文件压缩和解压
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/05%20Linux%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/">
+										05 Linux 系统管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/06%20Linux%20%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86/">
+										06 Linux 网络管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/07%20Linux%20%E7%A1%AC%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										07 Linux 硬件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/08%20Linux%20%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										08 Linux 软件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 重要命令
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/01%20free/">
+										01 free
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/02%20grep/">
+										02 grep
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/03%20iostat/">
+										03 iostat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/04%20iotop/">
+										04 iotop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/05%20scp/">
+										05 scp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/06%20top/">
+										06 top
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/01%20Linux%20%E5%91%BD%E4%BB%A4/09%20%E9%87%8D%E8%A6%81%E5%91%BD%E4%BB%A4/07%20vmstat/">
+										07 vmstat
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Linux 系统运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/01%20Linux%20%E5%85%B8%E5%9E%8B%E8%BF%90%E7%BB%B4%E5%BA%94%E7%94%A8/">
+										01 Linux 典型运维应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/02%20Samba%20%E5%BA%94%E7%94%A8/">
+										02 Samba 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/03%20Systemd%20%E5%BA%94%E7%94%A8/">
+										03 Systemd 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/04%20Vim%20%E5%BA%94%E7%94%A8/">
+										04 Vim 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/05%20Iptables%20%E5%BA%94%E7%94%A8/">
+										05 Iptables 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/02%20Linux%20%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4/06%20oh-my-zsh%20%E5%BA%94%E7%94%A8/">
+										06 oh-my-zsh 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 软件运维
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/00%20%E8%AF%B4%E6%98%8E/">
+										00 说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 开发环境
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/01%20JDK%20%E5%AE%89%E8%A3%85/">
+										01 JDK 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/02%20Maven%20%E5%AE%89%E8%A3%85/">
+										02 Maven 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/01%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/03%20Nodejs%20%E5%AE%89%E8%A3%85/">
+										03 Nodejs 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 开发工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/01%20Nexus%20%E8%BF%90%E7%BB%B4/">
+										01 Nexus 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/02%20Kafka%20%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/">
+										02 Kafka 安装部署
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/03%20Jenkins%20%E5%AE%89%E8%A3%85/">
+										03 Jenkins 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/04%20Svn%20%E8%BF%90%E7%BB%B4/">
+										04 Svn 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/02%20%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/05%20YApi%20%E8%BF%90%E7%BB%B4/">
+										05 YApi 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Tomcat%20%E5%AE%89%E8%A3%85/">
+										01 Tomcat 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/02%20Nginx%20%E6%9E%81%E7%AE%80%E6%95%99%E7%A8%8B/">
+										02 Nginx 极简教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 数据库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20Mysql%20%E8%BF%90%E7%BB%B4/">
+										01 Mysql 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20Redis%20%E8%BF%90%E7%BB%B4/">
+										02 Redis 运维
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/04%20%E6%95%B0%E6%8D%AE%E5%BA%93/03%20Mongodb%20%E5%AE%89%E8%A3%85/">
+										03 Mongodb 安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 apollo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/01/01%20DevOps/03%20Linux/05%20Linux%20%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83/03%20%E8%BD%AF%E4%BB%B6%E8%BF%90%E7%BB%B4/05%20apollo/README/">
+										README
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 常见错误及解决方式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/01%20Linux%E6%89%A7%E8%A1%8Cwhatis%E5%91%BD%E4%BB%A4%E6%98%BE%E7%A4%BA%E2%80%9C%E6%B2%A1%E6%9C%89appropriate%E2%80%9D/">
+										01 Linux执行whatis命令显示“没有appropriate”
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/02%20tar%20%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%BC%A9%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/">
+										02 tar 压缩和解压缩使用笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/02/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/03%20%E6%B2%A1%E6%9C%89%E5%8F%AF%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%8C%85%20ifconfig%E5%91%BD%E4%BB%A4/">
+										03 没有可用软件包 ifconfig命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/09/01%20DevOps/03%20Linux/06%20%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/04%20sudo%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
+										04 sudo的安装和使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/02%20%E6%B5%8B%E8%AF%95/01%20JMeter/01%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										01 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/03%20%E6%9C%8D%E5%8A%A1%E5%99%A8/01%20Nginx/01%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										01 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 GitHub Pages
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/08/28/04%20GitHub%20Pages/01%20Hexo+GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E5%B1%9E%E4%BA%8E%E8%87%AA%E5%B7%B1%E7%9A%84%20blog/">
+										01 Hexo+GitHub Pages 搭建属于自己的 blog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 数据处理工具
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 ETL知识
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Kettle 实战教程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/01%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0/">
+										01 基本概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/02%20ETL%20-%20%E4%BB%80%E4%B9%88%E6%98%AF%20Kettle%20%E5%8F%8A%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85/">
+										02 ETL - 什么是 Kettle 及如何安装
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/03%20ETL%20-%20%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										03 ETL - 准备数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/04%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%80%E8%AE%B2/">
+										04 ETL - 实战 Kettle 第一讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/05%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%BA%8C%E8%AE%B2/">
+										05 ETL - 实战 Kettle 第二讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/06%20ETL%20-%20%E5%AE%9E%E6%88%98%20Kettle%20%E7%AC%AC%E4%B8%89%E8%AE%B2/">
+										06 ETL - 实战 Kettle 第三讲
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/01%20Kettle%20%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/07%20ETL%20-%20%E6%94%B6%E5%B0%BE/">
+										07 ETL - 收尾
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/23/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/01%20ETL%E7%9F%A5%E8%AF%86/02%20kettle%E5%90%84%E7%BB%84%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+										02 kettle各组件说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 ETL方案数据库迁移
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/24/05%20%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B7%A5%E5%85%B7/01%20ETL/02%20ETL%E6%96%B9%E6%A1%88%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%81%E7%A7%BB/01%20%E4%BD%BF%E7%94%A8Kettle%E6%8A%8AOracle%E4%B8%AD%E7%9A%84%E8%A1%A8%E8%BF%81%E7%A7%BB%E5%88%B0MongoDB%E4%B8%AD/">
+										01 使用Kettle把Oracle中的表迁移到MongoDB中
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 土地基础知识
+									</a>
+									
+							<ul>
+								<li class="file active">
+									<a href="/2020/11/07/07%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/01%20%E5%9C%9F%E5%9C%B0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%A4%A7%E5%85%A8%E8%A7%A3%E6%9E%90/">
+										01 土地基础知识大全解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%5B%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										[如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/centos%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/">
+										centos服务器使用过程记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/19/euserv%E7%9A%84ipv6only%E7%9A%84vps%E6%90%AD%E5%BB%BA/">
+										euserv的ipv6only的vps搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/03/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/heroku%E6%90%AD%E5%BB%BAv2ray/">
+										heroku搭建v2ray
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/18/linux-command%E9%83%A8%E7%BD%B2%E8%AE%B0%E5%BD%95/">
+										linux-command部署记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/21/nicemusic%E4%BB%BF%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90PC%E7%BD%91%E7%AB%99%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/">
+										nicemusic仿网易云音乐PC网站源码使用宝塔面板搭建教程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/10/14/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+										免费在线MySQL-PostgreSQL-MongoDB-Redis 数据库云服务合集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/30/%E5%88%A9%E7%94%A8Github%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDHexo%E6%BA%90%E6%96%87%E4%BB%B6/">
+										利用Github分支备份Hexo源文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/17/%E5%A6%82%E4%BD%95%E5%9C%A8%20linux%20%E4%B8%8A%E9%83%A8%E7%BD%B2%20onepoint/">
+										如何在 linux 上部署 onepoint
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/08/27/%E6%B5%8B%E8%AF%95/">
+										测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/26/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%BD%91%E9%A1%B5%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88%E5%8A%9F%E8%83%BD/">
+										给博客添加网页鼠标点击特效功能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	01 土地基础知识大全解析
+</h1>
+<div class="article-meta">
+	
+	<span>JiaWei Jiang</span>
+	<span>2020-11-07 11:37:53</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p><strong>一、土地分多少种类型</strong></p>
+<p><strong>（一）**</strong>根据土地所有权分类**</p>
+<p>土地根据所有权分为<strong>国有土地</strong>和<strong>集体土地</strong>。<br>城市市区的土地属于国家所有。农村和城市郊区的土地，除由法律规定属于国家所有的以外，属于农民集体所有；宅基地和自留地、自留山，属于农民集体所有。</p>
+<p><img src="http://notes.jiang7zzz.xyz/images/image-20201107115641099.png"></p>
+<p>土地所有权是土地所有者在法律规定的范围内，对其拥有的土地享有的占有、使用、收益和处分的权利，是一定社会形态下土地所有制的法律表现。新中国成立后，废除了土地私有制，经过社会主义改造和农业合作化，建立了两种所有制形式并存的社会主义土地公有制，并在法律上确认下来，形成了国家土地所有权和集体土地所有权。</p>
+<p>土地使用权是指具备法定条件者，依照法定程序或依约定对国有土地或农民集体土地所享有的占有、利用、收益和有限处分的权利。</p>
+<p>土地使用权是中国土地使用制度在法律上的体现。国有土地使用权是指国有土地的使用人依法利用土地并取得收益的权利，而农民集体土地使用权是指农民集体土地的使用人依法利用土地并取得收益的权利。农民集体土地使用权可分为农用土地使用权、宅基地使用权和建设用地使用权。</p>
+<p><strong>（二）根据土地用途分类</strong></p>
+<p>根据土地用途分为：<strong>农用地</strong>、<strong>建设用地</strong>和<strong>未利用地</strong>。<br>农用地是指直接用于农业生产的土地，包括耕地、林地、草地、农田水利用地、养殖水面等；<br>建设用地是指建造建筑物、构筑物的土地，包括城乡住宅和公共设施用地、工矿用地、交通水利设施用地、旅游用地、军事设施用地等；<br>未利用地是指农用地和建设用地以外的土地。</p>
+<p><strong>（三）</strong>根据土地利用现状分类</p>
+<p>《土地利用现状分类》国家标准采用一级、二级两个层次的分类体系，<strong>共分12个一级类、57个二级类。</strong>其中一级类包括：耕地、园地、林地、草地、商服用地、工矿仓储用地、住宅用地、公共管理与公共服务用地、特殊用地、交通运输用地、水域及水利设施用地、其他土地。《中华人民共和国土地管理法》与《土地利用现状分类》中类别的对照关系：</p>
+<p><img src="http://notes.jiang7zzz.xyz/images/195839646_3_20200715084230568.jpg"></p>
+<p><strong>二、建设用地分几类？各是什么含义？</strong></p>
+<p>建设用地按用地性质一般分五类：商业用地、综合用地、住宅用地、工业用地和其他用地。</p>
+<p><strong>（一）商**</strong>服**<strong>用地</strong></p>
+<p>商服用地是指该宗地块规划的用地性质是用于建设商业服务业用房屋，出让后用地的使用年限为40年。可细分为批发零售用地、住宿餐饮用地、商务金融用地、其他商服用地。</p>
+<p><strong>（二）综合用地</strong></p>
+<p>综合用地是指不同用途的土地所构成的土地，即同一宗地包含两种或两种以上不同用途的土地，例如商业、居住综合用9地，科研设计、办公综合用地等。</p>
+<p><strong>（三）住宅用地</strong></p>
+<p>传统意义上的住宅用地，有两层意义：</p>
+<p>一是住宅建筑基底占地及其四周合理间距内的用地（含宅间绿地和宅间小路等）的总称。</p>
+<p>二是供人们日常生活居住的房基地（有独立院落的包括院落）。包括：城镇单一住宅用地，即城镇居民的普通住宅、公寓、别墅用地；城镇混合住宅用地，即城镇居民以居住为主的住宅与工业或商业等混合用地；农村宅基地，即农村村民居住的宅基地；空闲宅基地，即村庄内部的空闲旧宅基地及其他空闲土地等。</p>
+<p><strong>（四）工业用地</strong></p>
+<p>工业用地就是指独立设置的工厂、车间、手工业作坊、建筑安装的生产场地、排渣（灰）场地等用地。工业用地进一步细分为一类、二类、三类工业用地。</p>
+<p><strong>一类工业用地：</strong>对居住和公共设施等环境基本无干扰和污染的工业用地如电子工业、缝纫工业、工艺品制造工业等用地</p>
+<p><strong>二类工业用地：</strong>对居住和公共设施等环境有一定干扰和污染的工业用地如食品工业、医药制造工业、纺织工业等用地</p>
+<p><strong>三类工业用地：</strong>对居住和公共设施等环境有严重干扰和污染的工业用地如采掘工业、冶金工业、大中型机械制造工业、化学工业、造纸工业、制革工业、建材工业等用地</p>
+<p><strong>（五）其他用地</strong></p>
+<p>其他用地是指规划范围内除居住区用地以外的各种用地，包括非直接为本区居民配建的道路用地、其他单位用地、保留的自然村或不可建设用地等。</p>
+<p><strong>三、建设用地使用权如何取得？</strong></p>
+<p>土地使用权取得有划拨与出让两种方式。</p>
+<p><strong>（一）划拨</strong></p>
+<p>根据《划拨土地使用权管理暂行办法》第二条规定：划拨土地使用权，是指土地使用者通过除出让土地使用权以外的其他各种方式依法取得的国有土地使用权。</p>
+<p>《中华人民共和国城市房地产管理法》第二十三条对划拨土地使用权的取得途径进行了规定：土地使用权划拨，是指县级以上人民政府依法批准，在土地使用者缴纳补偿、安置等费用后将该幅土地交付其使用，或者将土地使用权无偿交付给土地使用者使用的行为。依照本法规定以划拨方式取得土地使用权的，除法律、行政法规另有规定外，没有使用期限的限制。</p>
+<p>划拨的土地不得进行转让、出租和抵押。</p>
+<p>由于承担公共项目的职责，国有企业与政府平台公司的无形资产科目经常出现划拨土地。</p>
+<p><strong>（二）出让</strong></p>
+<p>出让方式有四种：招标、拍卖、挂牌和协议方式。出让的土地使用权人具有法定规范内的处置权，可进行转让、出租和抵押。</p>
+<p><strong>1.招标</strong></p>
+<p>招标出让国有土地使用权，是指市、县人民政府土地行政主管部门发布招标公告，邀请特定或者不特定的公民、法人和其他组织参加国有土地使用权投标，根据投标结果确定土地使用者的行为。</p>
+<p><strong>2.拍卖</strong></p>
+<p>拍卖出让国有土地使用权，是指市、县人民政府土地行政主管部门发布拍卖公告，由竞买人在指定时间、地点进行公开竞价，根据出价结果确定土地使用者的行为。</p>
+<p><strong>3.挂牌</strong></p>
+<p>挂牌出让国有土地使用权，是指市、县人民政府土地行政主管部门发布挂牌公告，按公告规定的期限将拟出让宗地的交易条件在指定的土地交易场所挂牌公布，接受竞买人的报价申请并更新挂牌价格，根据挂牌期限截止时的出价结果确定土地使用者的行为。</p>
+<p><strong>4.协议出让</strong></p>
+<p>协议出让国有土地使用权，是指国家以协议方式将国有土地使用权在一定年限内出让给土地使用者，由土地使用者向国家支付土地使用权出让金的行为。</p>
+<p>出让国有土地使用权，除依照法律、法规和规章的规定应当采用招标、拍卖或者挂牌方式外，方可采取协议方式。</p>
+<p><strong>四、哪些土地使用权可以通过划拨获得？</strong></p>
+<p>对国家重点扶持的能源、交通、水利等基础设施用地项目，可以以划拨方式提供土地使用权。对以营利为目的，非国家重点扶持的能源、交通、水利等基础设施用地项目，应当以有偿方式提供土地使用权。</p>
+<p>根据中华人民共和国国土资源部令第9号《划拨用地目录》，下列土地可以划拨获得</p>
+<p> （一）党政机关和人民团体用地</p>
+<p>  1.办公用地。 </p>
+<p>  2.安全、保密、通讯等特殊专用设施。 </p>
+<p> （二）军事用地<br> （三）城市基础设施用地<br>  1．供水设施<br>  2．燃气供应设施<br>  3．供热设施<br>  4．公共交通设施<br>  5．环境卫生设施<br>  6．道路广场<br>  7．绿地</p>
+<p> （四）非营利性邮政设施用地<br> （五）非营利性教育设施用地</p>
+<p> （六）公益性科研机构用地</p>
+<p> （七）非营利性体育设施用地   </p>
+<p> （八）非营利性公共文化设施用地</p>
+<p>  1.图书馆 </p>
+<p>  2.博物馆  </p>
+<p>  3.文化馆</p>
+<p>  4.青少年宫、青少年科技馆、青少年（儿童）活动中心</p>
+<p> （九）非营利性医疗卫生设施用地 </p>
+<p>  1．医院、门诊部（所）、急救中心（站）、城乡卫生院。 </p>
+<p>  2.各级政府所属的卫生防疫站（疾病控制中心）、健康教育所、专科疾病防治所(站)。 </p>
+<p>  3.各级政府所属的妇幼保健所(院、站)、母婴保健机构、儿童保健机构、血站（血液中心、中心血站）。 </p>
+<p> （十）非营利性社会福利设施用地<br>  1.福利性住宅。  </p>
+<p>  2.综合性社会福利设施。  </p>
+<p>  3.老年人社会福利设施。   </p>
+<p>  4.儿童社会福利设施。   </p>
+<p>  5.残疾人社会福利设施。  </p>
+<p>  6.收容遣送设施。</p>
+<p>  7.殡葬设施。</p>
+<p> （十一）石油天然气设施用地</p>
+<p> （十二）煤炭设施用地  </p>
+<p> （十三）电力设施用地</p>
+<p> （十四）水利设施用地</p>
+<p> （十五）铁路交通设施用地</p>
+<p> （十六）公路交通设施用地</p>
+<p> （十七）水路交通设施用地</p>
+<p> （十八）民用机场设施用地</p>
+<p> （十九）特殊用地<br>  1.监狱。<br>  2.劳教所。<br>  3.戒毒所、看守所、治安拘留所、收容教育所。</p>
+<p><strong>五、哪些土地使用权可以通过协议出让获得？</strong></p>
+<p>根据《中华人民共和国土地管理法》、《中华人民共和国城市房地产管理法》、2003年国土资源部令第21号《协议出让国有土地使用权规定》等规定，以下土地使用权可通过协议出让方式获得：</p>
+<p>（一）商业、旅游、娱乐和商品住宅等各类经营性用地和工业用地以外用途的土地，其供地公告公布后同一宗地只有一个意向用地者的；</p>
+<p>（二）原划拨、承租土地使用权人申请办理协议出让，经依法批准，可以采取协议方式，但《国有建设用地使用权划拨决定书》、《国有建设用地使用权租赁合同》、法律、法规、行政规定等明确应当收回土地使用权重新公开出让的除外；</p>
+<p>（三）划拨土地使用权转让申请办理协议出让，经依法批准，可以采取协议方式，但《国有建设用地使用权划拨决定书》、法律、法规、行政规定等明确应当收回土地使用权重新公开出让的除外；</p>
+<p>（四）已出让、租赁土地申请改变用地规划条件的，经规划行政主管部门批准，可以采用协议方式，但《国有土地使用权出让合同》、《国有土地使用权租赁合同》另有约定的除外；</p>
+<p>（五）出让的国有建设用地使用权人申请续期，可以采用协议方式；</p>
+<p>（六）在划拨供应的建设项目中，需要整体规划建设的配套项目，建设用地不能分割供应的，可以采用协议方式供应；</p>
+<p>（七）对无法单独确定规划条件实施供应的城市边角地、夹心地、插花地等，可以按规划部门批准的相邻建设用地规划条件，协议出让给该建设项目主体；</p>
+<p>（八）利用地铁站（场）、公共服务设施、交通枢纽等公共空间进行上盖物业或多功能立体开发利用的，其建设用地使用权以协议方式出让给已经取得交通建设项目建设用地的使用权人；以协议方式取得的地铁站（场）、公共服务设施、交通枢纽等配套开发建设用地使用权，以自主开发为主，物业自持；</p>
+<p>（九）对营利性养老服务机构利用存量建设用地从事养老设施建设，涉及划拨建设用地使用权出让（租赁）或转让的，在原土地用途符合规划的前提下，可不改变土地用途，允许补缴土地出让金（租金），办理协议出让或租赁手续；</p>
+<p>（十）经营性文化事业单位转制为一般竞争性企业的，原生产经营性划拨用地可采用协议出让或租赁方式进行土地资产处置；</p>
+<p>（十一）由于城市规划调整、经济形势发生变化、企业转型等原因，土地使用权人已依法取得的国有划拨工业用地补办出让、国有承租工业用地补办出让，符合规划并经依法批准，可以采取协议方式；</p>
+<p>（十二）对因搬迁改造被收回原国有土地使用权的企业，经批准可采取协议出让方式，按土地使用标准为其安排同类用途用地；</p>
+<p>（十三）企业改制（破产、兼并、合并等）时，未纳入企业改制资产的生产经营性建设用地使用权可以协议方式出让给改制文件确定的承接主体；</p>
+<p>（十四）采矿、采石、采砂、盐田等地面生产和尾矿堆放用地，鼓励采取租赁，也可协议方式出让；</p>
+<p>（十五）本实施意见发布前已形成的历史违法用地，包括集体建设用地上已建成项目的，经行政部门处罚后，需完善国有建设用地供应手续的，可以采取协议方式出让；</p>
+<p>（十六）人民法院生效法律文书和协助执行通知书要求办理国有建设用地手续，涉及出让的，可以采取协议方式出让给协助执行通知书明确的土地使用者；</p>
+<p>（十七）法律、法规、行政规定明确可以协议出让的其他情形</p>
+<p>一共分为17类土地，土地使用权转让申请办理协议出让，必须要经过相关部门的审批或者人民法院的执行通知书才可以进行，必须要符合相关的法律法规的规定。</p>
+<p><strong>六、哪些土地使用权必须通过招拍挂获得？</strong></p>
+<p>（一）供应商业、旅游、娱乐和商品住宅等各类经营性用地以及有竞争要求的工业用地；</p>
+<p>（二）其他土地供地计划公布后同一宗地有两个或者两个以上意向用地者的；</p>
+<p>（三）划拨土地使用权改变用途，《国有土地划拨决定书》或法律、法规、行政规定等明确应当收回土地使用权，实行招标拍卖挂牌出让的；</p>
+<p>（四）划拨土地使用权转让，《国有土地划拨决定书》或法律、法规、行政规定等明确应当收回土地使用权，实行招标拍卖挂牌出让的；</p>
+<p>（五）出让土地使用权改变用途，《国有土地使用权出让合同》约定或法律、法规、行政规定等明确应当收回土地使用权，实行招标拍卖挂牌出让的；</p>
+<p>（六）法律、法规、行政规定明确应当招标拍卖挂牌出让的其他情形。</p>
+<p><strong>七、什么是宗地？</strong></p>
+<p>土地使用权人的权属界址范围内的地块，权属界址线所封闭的地块。一般情况下，一宗地为一个权属单位；同一个土地使用者使用不相连接的若干地块时，则每一地块分别为一宗。</p>
+<p>以宗地为基本单位统一编号，叫宗地号，又称地号，其有四层含义，称为:区、带、片、宗，从大范围逐级体现其所在的地理位置。如:B107-24这个地号表示福田区第1带07片第24宗地。</p>
+<p><strong>八、什么是红线图？</strong></p>
+<p>红线图是规划局确定的项目建筑总平面图，或城市规范管理部门正式确定的项目建筑的总用地面积的示意图，其中红线是用来表示建筑物的边界外沿界限，即实际可使用土地的边界图。</p>
+<p>建筑红线一般为建筑物的占地界限，用实红线表示，二层以上有阳台用虚红线表示，表示底层不占用地。也称“建筑控制线”，指城市规划管理中，控制城市道路两侧沿街建筑物或构筑物(如外墙、台阶等)靠临街面的界线。任何临街建筑物或构筑物不得超过建筑红线。</p>
+<p><strong>九、什么是边角地、夹心地、插花地？</strong></p>
+<p><strong>（一）边角地</strong></p>
+<p>边角地是指在城市规划区或者村庄建设规划区内难以单独出具规划条件、被’三旧’改造范围地块与建设规划边沿或者线性工程控制用地范围边沿分隔（割）、面积小于3亩的地块。</p>
+<p><strong>（二）夹心地</strong></p>
+<p>夹心地是指在城市规划区或者村庄建设规划区内难以单独出具规划条件、被’三旧’改造范围地块包围或者夹杂于其中、面积小于3亩的地块。</p>
+<p><strong>（三）插花地</strong></p>
+<p>插花地是指在城市规划区或者村庄建设规划区内难以单独出具规划条件、与’三旧’改造范围地块形成交互楔入状态、面积小于3亩的地块。</p>
+<p><strong>十、什么是容积率、建筑密度、楼面地价？</strong></p>
+<p>容积率是指一个小区的地上总建筑面积与净用地面积的比率。对于开发商来说，容积率决定地价成本在房屋中占的比例，而对于住户来说，容积率直接涉及到居住的舒适度。</p>
+<p>建筑密度是指在一定范围内，建筑物的基底面积总和与占用地面积的比例(%)。是指建筑物的覆盖率，具体指项目用地范围内所有建筑的基底总面积与规划建设用地面积之比（%），它可以反映出一定用地范围内的空地率和建筑密集程度 。</p>
+<p>楼面地价：是指单位建筑面积平均分摊的土地价格。</p>
+<p>一般来说，出让土地都是带容积率、建筑密度等规划要求的，规划也决定了土地的价值。容积率和建筑密度越高，开发商在一块地上可盖的房子越多，楼面地价就越低，理论上，开发商在地块上开发的利润就高。但也不一定，因为容积率和建筑密度太高，住户的舒适度降低，将影响房屋的租售价格。</p>
+<p><strong>十一、建设用地使用权转让有何要求？</strong></p>
+<p>《国务院办公厅关于完善建设用地使用权转让、出租、抵押二级市场的指导意见》国办发〔2019〕34号：</p>
+<p>以划拨方式取得的建设用地使用权转让，需经依法批准，土地用途符合《划拨用地目录》的，可不补缴土地出让价款，按转移登记办理；不符合《划拨用地目录》的，在符合规划的前提下，由受让方依法依规补缴土地出让价款。</p>
+<p>以出让方式取得的建设用地使用权转让，在符合法律法规规定和出让合同约定的前提下，应充分保障交易自由；原出让合同对转让条件另有约定的，从其约定。</p>
+<p>以作价出资或入股方式取得的建设用地使用权转让，参照以出让方式取得的建设用地使用权转让有关规定，不再报经原批准建设用地使用权作价出资或入股的机关批准；转让后，可保留为作价出资或入股方式，或直接变更为出让方式。</p>
+<p><strong>十二、什么是土地增减挂钩？</strong></p>
+<p>《城乡建设用地增减挂钩节余指标跨省域调剂管理办法》：</p>
+<p>城乡建设用地增减挂钩节余指标跨省域调剂，是指“三区三州”及其他深度贫困县城乡建设用地增减挂钩节余指标（以下简称节余指标）由国家统筹跨省域调剂使用。其中“三区三州”（即西藏、四省西藏、南疆四地州和四川凉山州、云南怒江州、甘肃临夏州）。</p>
+<p>“土地增减挂钩”，增是指城镇建设用地指标的增加，减是指农村建设用地指标的减少（主要是深度贫困地区），增减要挂钩，从以宅基地为主的村庄占地中腾出土地复垦，将这种“耕地的增加”作为指标卖给建设用地紧缺的城里，城里购买了多少指标，就可以增加利用多少耕地，将这指标一增一减进行跨区域挂钩。</p>
+<p><strong>十三、什么是耕地占补平衡？</strong></p>
+<p>耕地占补平衡政策是指建设占用多少耕地，各地人民政府就应补充划入多少数量和质量相当的耕地。占用耕地的单位要负责开垦与所占用耕地的数量和质量相当的耕地；没有条件开垦的，应依法缴纳耕地开垦费，专款用于开垦新的耕地。</p>
+<p><strong>十四、什么是全域土地综合整治？</strong></p>
+<p>《自然资源部关于开展全域土地综合整治试点工作的通知》</p>
+<p>“全域土地综合整治是以科学规划为前提，以乡镇为基本实施单元，整体开展农用地、建设用地整理和乡村生态保护修复等，对闲置、利用低效、生态退化及环境破坏的区域实施国土空间综合治理的活动。”</p>
+<p><strong>十五、农用地转成建设用地要经过哪些程序？</strong></p>
+<p>（一）预选符合规划的农用地</p>
+<p>农用地转用必须符合土地利用总体规划、城市建设总体规划和土地利用年度计划中确定的农用地转用指标。城市和村庄、集镇建设占用土地，涉及农用地转用的，还应当符合城市规划和村庄、集镇规划。不符合规定的，不得批准农用地转为建设用地。</p>
+<p>（二）编制建设项目可行性论证</p>
+<p>确认该农用地可以用于建设，再根据建设部门的要求，进行和编制建设项目可行性论证，向建设部门提交用地申请，建设部门审查符合的，颁发建设项目的《选址意见书》，用地单位应按规定缴纳选址规费。</p>
+<p>（三）提出用地预审申请</p>
+<p>（四）办理手续、缴纳审批费用</p>
+<p>（五）提出项目用地的正式申请</p>
+<p>（六）各级政府审批</p>
+<p>按照《土地管理法》有关规定，建设占用土地，农用地转为建设用地的审批权限：省、自治区、直辖市人民政府批准的道路、管线工程和大型基础设施建设项目，国务院批准的建设项目占用土地，涉及农用地转为建设用地，由国务院批准。</p>
+<p>在土地利用总体规划确定的城市和村庄、集镇建设用地规模范围内，为实施该规划而将农用地转为建设用地的，按土地利用年度计划分批次由原批准土地利用总体规划的机关批准。</p>
+<p>上述以外的建设项目占用土地，涉及农用地转为建设用地的，由省、自治区、直辖市人民政府批准。</p>
+<p>▲征收土地的审批权限：征收基本农田、基本农田以外的耕地超过35公顷（525亩）或其他土地超过70公顷（1050亩）由国务院批准（近期已试点下放权限至8省市），其余由省、自治区、直辖市人民政府批准。</p>
+<p>除此之外的单独选址建设项目，涉及农用地转用和土地征收的，报省级人民政府批准，其中征收土地面积超过省级批准权限的，土地征收必须报国务院批准；建设项目确需占用基本农田的，必须报国务院批准。</p>
+<p>▲其中，如占用农用地没有涉及占用耕地的，则不需拟定补充耕地方案；农村集体经济组织占用本集体农用地和单位占用国有农用地的，不需拟定征地方案。</p>
+<p>（七）办理征地手续</p>
+<p>由国土资源局具体负责对该农用地的所有权人和使用权人进行征用，签订补偿安置协议，按征地程序办理征地手续。</p>
+<p>（八）领取用地批准文件</p>
+<p>国土资源局根据批准的供地方案，在征地的补偿、安置补助完成后，向用地单位发出批准用地文件和《建设用地批准书》，被征地单位应在规定的期限内交出土地。</p>
+<p>（九）缴纳出让费，获得土地使用权</p>
+<p>土地征用后，该土地即成为国有土地，由国土资源局与土地使用者按照相关规定，签订《国有土地有偿使用合同》出让供地。用地单位按约定缴纳出让费用。</p>
+<p><strong>十六、什么是储备土地？</strong></p>
+<p><strong>（一）土地储备</strong></p>
+<p>土地储备，是指各级人民政府依照法定程序在批准权限范围内，对通过收回、收购、征用或其他方式取得土地使用权的土地，进行储存或前期开发整理，并向社会提供各类建设用地的行为。</p>
+<p><strong>（二）土地储备机构</strong></p>
+<p>《土地储备管理办法》总体要求的第三条规定：土地储备机构应为县（含）以上人民政府批准成立、具有独立的法人资格、隶属于所在行政区划的国土资源主管部门、承担本行政辖区内土地储备工作的事业单位。国土资源主管部门对土地储备机构实施名录制管理。</p>
+<p><strong>十七、什么是生地、毛地、净地、熟地？</strong></p>
+<p>一般而言，生地、熟地重点着眼于建设；而毛地、净地更多着眼于出让。</p>
+<p><strong>（一）生地</strong></p>
+<p>生地是指国土局尚未出让、拍卖、划拨土地使用权的土地。</p>
+<p><strong>（二）毛地</strong></p>
+<p>毛地是指在城市旧区范围内，尚未经过拆迁安置补偿等土地开发过程、不具备基本建设条件的土地。</p>
+<p><strong>（三）净地</strong></p>
+<p>净地是指已经完成拆除，地面平整，并且不存在未被拆除的建筑物、构筑物等其他设施的土地。</p>
+<p>与其相对的是毛地，毛地指地上存在需要被拆除的建筑物、构筑物等其他设施的土地。从物质的角度来讲，净地是指完成基础设施配套，场地内达到开工条件的土地；从权属的角度看，净地是指没有设定他项权利，土地占有、使用、收益、处分等权利不受限制的土地。</p>
+<p><strong>（四）熟地</strong></p>
+<p>熟地主要是指经过征地、拆迁和市政基础设施投入，可直接用于建设的土地。</p>
+<p><strong>十八、什么是土地一级开发？</strong></p>
+<p>从生地到熟地的过程就是土地一级开发的诉求。土地一级开发，是由政府或其授权委托的企业，对一定区域范围内的城市国有土地（毛地）、乡村集体土地（生地）进行统一的征地、拆迁、安置、补偿，使之成为净地，并进行适当的市政配套设施建设，使该区域范围内的土地达到“三通一平”（通水、通电、通路和土地平整），’五通一平’（通水、通电、通路、通讯、通气、土地平整），或“七通一平”（通给水、通排水、通电、通讯、通路、通燃气、通热力、土地平整）的建设条件（熟地），再对熟地进行有偿出让或转让的过程。</p>
+<p><strong>十九、土地一级开发流程有哪些？</strong></p>
+<p>（一）、土地一级阶段包括“前期手续阶段”、“组织实施阶段”和“土地入市阶段”。</p>
+<p><img src="http://notes.jiang7zzz.xyz/images/image-20201107115837347.png" alt="image-20201107115837347"></p>
+<p>一般而言，规范的一级开发主要子工作阶段包括取得授权、完成立项核准、融资、签订征地补偿协议、取得征地批复、取得拆迁许可证、完成拆迁、市政工程施工许可证获取、市政工程移交、供地验收、成本与地价审核、土地入市交易和一级市场投入回收。在实际操作中，这些节点在时间上存在交叉性。</p>
+<p><img src="http://notes.jiang7zzz.xyz/images/image-20201107115857433.png" alt="image-20201107115857433"></p>
+<p><strong>二十、土地一级开发有哪些模式？</strong></p>
+<p>一级开发项目模式具体可细分为八大类：旧城改造项目、城中村改造项目、旧厂房改造项目国有土地收购储备项目、土地一级开发项目、中心城区棚改项目、一次性招标棚改项目、土地开发棚改项目。虽然项目模式名称存在差异，但实际中有些模式只是由于历史原因导致项目模式发生变化，项目性质并未改变。  （转自 国土自然资源空间规划）</p>
+<p><strong>各模式对比</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>模式</strong></th>
+<th><strong>组织实施单位</strong></th>
+<th><strong>用地性质</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>旧城改造</td>
+<td>由政府相关部门统筹，实施</td>
+<td>国有土地</td>
+</tr>
+<tr>
+<td>城中村改造</td>
+<td>由政府相关部门统筹，下设单位或市更新部门实施</td>
+<td>集体用地</td>
+</tr>
+<tr>
+<td>旧厂房改造</td>
+<td>土地储备机构或国有企业</td>
+<td>国有土地</td>
+</tr>
+<tr>
+<td>国有土地收储</td>
+<td>土地储备机构</td>
+<td>国有土地</td>
+</tr>
+<tr>
+<td>土地一级开发项目</td>
+<td>土地储备机构或企业</td>
+<td>集体土地或国有土地</td>
+</tr>
+<tr>
+<td>中心城区棚户区改造</td>
+<td>国有企业为主</td>
+<td>多数为国有土地</td>
+</tr>
+<tr>
+<td>一次性招标棚户改造</td>
+<td>国有企业为主</td>
+<td>国有土地</td>
+</tr>
+<tr>
+<td>土地开发棚户区改造</td>
+<td>企业</td>
+<td>集体土地</td>
+</tr>
+</tbody></table>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/10/14/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BFMySQL-PostgreSQL-MongoDB-Redis%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%90%88%E9%9B%86/">
+                
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'er9s5mkzqVETIeU2IhRxQ808-gzGzoHsz',
+			appKey: 'ytiQJKw34rRYQBh84DOBEU7n',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">JiaWei Jiang</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+<!--
+	Theme Tree
+	by <a href="//github.com/JiangJiaWei520" target="_blank">JiaWei Jiang</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+-->
+<div>
+	<span style="color:'white';size:'7'">
+			<font size="2">本站已运行:</font>
+		</span>
+		<span id="span_dt_dt">
+		</span>
+		<script>
+			/*建站时间*/
+			function show_date_time() {
+				window.setTimeout("show_date_time()", 1e3);
+				var BirthDay = new Date("2020/08/20"),
+				today = new Date,
+				timeold = today.getTime() - BirthDay.getTime(),
+				msPerDay = 864e5,
+				e_daysold = timeold / msPerDay,
+				daysold = Math.floor(e_daysold),
+				e_hrsold = 24 * (e_daysold - daysold),
+				hrsold = Math.floor(e_hrsold),
+				e_minsold = 60 * (e_hrsold - hrsold),
+				minsold = Math.floor(60 * (e_hrsold - hrsold)),
+				seconds = Math.floor(60 * (e_minsold - minsold));
+				span_dt_dt.innerHTML = daysold + "天" + hrsold + "小时" + minsold + "分" + seconds + "秒";
+			}
+			show_date_time();
+		</script>
+</div>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
